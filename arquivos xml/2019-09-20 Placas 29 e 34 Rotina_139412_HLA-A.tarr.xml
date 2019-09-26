@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectXml d1p1:noNamespaceSchemaLocation="https://www.gendx.com/NGSengine/XSD/20190613/TARR.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectName>2019-09-20 Placas 29 e 34 Rotina</ProjectName>
+  <User Name="Samuel1" DateTime="2019-09-25T15:00:25.6241398Z" Level="First reviewer" />
+  <ProjectFolder>C:\Corridas NGS\Projetos\2019-09-20 Placas 29 e 34 Rotina</ProjectFolder>
+  <DataFolders>
+    <Folder>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina</Folder>
+  </DataFolders>
+  <AnalysisSoftware>
+    <Software>NGSengine</Software>
+    <Version>2.14.0.14234</Version>
+  </AnalysisSoftware>
+  <LociCount Analyzed="373">373</LociCount>
+  <SampleCount Analyzed="112">112</SampleCount>
+  <Samples>
+    <Sample>
+      <Name>139412</Name>
+      <Mappability AcceptedReads="42606" UsedReads="46698" TotalReads="46698" PercentageUsed="91.2" />
+      <SequencingType>Illumina</SequencingType>
+      <Files>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\139412_S90_L001_R1_001.fastq.gz</File>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\139412_S90_L001_R2_001.fastq.gz</File>
+      </Files>
+      <Loci>
+        <Locus>
+          <Name>HLA-A</Name>
+          <SampleName>139412</SampleName>
+          <User Name="Samuel1" DateTime="2019-09-20T20:04:38.8520775Z" Level="First reviewer" />
+          <Mappability AcceptedReads="7608" UsedReads="7713" TotalReads="7713" PercentageUsed="98.6" />
+          <ReadLength Minimum="1" Maximum="151" Median="-1" Mean="134" />
+          <ReadDepth Minimum="211" Maximum="873" Median="611" Mean="-1" />
+          <QuestionMarkPositions />
+          <PhasingRegions>1</PhasingRegions>
+          <NumberOfGenotypes>25</NumberOfGenotypes>
+          <AlleleDB>
+            <Gene>HLA-A</Gene>
+            <Version>IMGT/HLA 3.36.0</Version>
+            <NrAlleles>0</NrAlleles>
+            <Length>3848</Length>
+            <Regions>
+              <Region begin="-300" end="-1" ID="UTR" />
+              <Region begin="1" end="73" ID="Exon 1" />
+              <Region begin="74" end="203" ID="Intron 1" />
+              <Region begin="204" end="473" ID="Exon 2" />
+              <Region begin="474" end="714" ID="Intron 2" />
+              <Region begin="715" end="990" ID="Exon 3" />
+              <Region begin="991" end="1569" ID="Intron 3" />
+              <Region begin="1570" end="1845" ID="Exon 4" />
+              <Region begin="1846" end="1947" ID="Intron 4" />
+              <Region begin="1948" end="2064" ID="Exon 5" />
+              <Region begin="2065" end="2506" ID="Intron 5" />
+              <Region begin="2507" end="2539" ID="Exon 6" />
+              <Region begin="2540" end="2681" ID="Intron 6" />
+              <Region begin="2682" end="2729" ID="Exon 7" />
+              <Region begin="2730" end="2898" ID="Intron 7" />
+              <Region begin="2899" end="2903" ID="Exon 8" />
+              <Region begin="2904" end="3203" ID="UTR" />
+            </Regions>
+            <PriorityRegions>
+              <Region begin="-103" end="-99" />
+              <Region begin="1" end="75" />
+              <Region begin="176" end="482" />
+              <Region begin="707" end="992" />
+              <Region begin="1568" end="1847" />
+              <Region begin="1946" end="2066" />
+              <Region begin="2505" end="2541" />
+              <Region begin="2680" end="2731" />
+              <Region begin="2897" end="2903" />
+            </PriorityRegions>
+          </AlleleDB>
+          <Haplotypes>
+            <Haplotype begin="-107" end="27" ID="homozygous1">TCCCATTGGGTGTCGGGTTTCCAGAGAAGCCAATCAGTGTCGTCGCGGTCGCGGTTCTAAAGTCCGCACGCACCCACCGGGACTCAGATTCT-CCCCAGACGCCGAGGATGGCCGTCATGGCGCCCCGAACCCTC</Haplotype>
+            <Haplotype begin="28" end="2937" ID="heterozygous1.1">CTCCTGCTACTCTTGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGTG-GGGAAACCGCCTCTGCGGGGAGAAGCAAGGGGCCCGCCCGGCGGGGGCGCAGGACCCGGGTAGCCGCGCCGGGAGGAGGGTCGGGCGGATCTCAGCCACTCCTCGCCCCCAGGCTCCC-ACTCCATGAGGTATTTCACCACATCCGTGTCCC-----GGCCCGGCCGCGGGGAGCC----CCGCTTCATCGCCGTGGGC-----------------------TACGTGGAC----GACACG-CAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGA--GGATGGAGCCG--------------------CGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCGGA--------------ACACACGGA-ATGTGAAGGCCC-ACTCACAGATTGACCGAGTGGACCTGGGGACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGTGAGTGACCCCAGCCCGGGG-CGCAGGTCACGACCTCTCATCCCCC-ACGGACGGGCCAGGTCACCCACAGTCTCCGGGTCCGAGATCCACCCCGAAGCCGCGGGACCCCGAGACCCTTGCCCCGGGAGAGGCCCAGGCGCCTTTA-CCCGGTTTCATTTTCAGTTTAGGCCAAAAA-TCCCCCCGGGTTGGTCGGGGCCGGACGGGGCTCGGGGGA-------------------CTGGGCTGACCGTGGGGTCGGGGCCAGGTTCTCACACC-ATCCAGATGATGTATGGCTGCGACG--------------TGGGGTCGG-ACGGGCGCTTCCTCCGCGGGTACCAGCAGGACGCCTACGACGGCAAGGATTACATCGCCTTGA-----------------------AC-GAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCGG--------CTCAGATCACCCAGCGC-AAGTGGGA--------------------------------------G--GCGGCCCGTGTGGC-GG------------------------------------------AGCAGTTGAGAGCCTACCTGGAGGGCACG--------TGCGTG----GAGTGG--------------CTCCGCAGATA-CCTGGAGAACGGGAAGGAGACGCTGCAGC-----------------GCACGGGTACCAGGGGCCACGGGGCG-----CCTCCCTGATCGCCTGT-----------------------AGATCTCCCGGGCTGGCCTC--CCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCACCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTTCCAGATCCTGTACCAGAGAGTGACTCTGAGGTTCCGCCCTGCTCTGTGACACAATTAAGGGATAAAA-TCTCTGAAGGAATGACGGGAAGACGATCCCTCGAATACTGATGAGTGGTTCCCTTTGACACACACCGGCAGCAGCCTTGGGCCCGTGACTTTTCCTCTCAGGCCTTGTTCTCTGCTTCACACTCAATGTGTGTGGGGGTCTGAGTCCAGCACTTCTGAGTCCCTCAGCCTCCACTCAGGTCAGGACCAGAAGTCGCTGTTCCCTCTTCA-GGGACTAGAATTTTCCACGGAATAGGAGATTATCCCAGGTGCCTGTGTCCAGGCTGGTGTCTGGGTTCTGTGCTCCCTTCCCCATCCCAGGTGTCCTGTCCATTCTCAAGATAGCCACA-TGTGTGCTGGAGGAGTGTCCCATTACAGATGCAAAATGCCTGAATGTTCTGACTCTTCCTGACAGACCCCCCC--AAGACGCATATGACTCACCACGCTGTCTCTGACCAT----GAGGCC----ACCCTGAGGTGCTGGGCCCTGAGCTTCTACCCTGCGGAGATCACACTGACCTGGCAGCGGGATGGGG-AGGACCAGACCCAGGACACGGAGCTCGTGGAGACCAGGCCTGC-AGGGGATGGAACCTTCCAGAAGTGGGCGTCTGTGGTGGTGCCTTCTGGACAGGAGCAGAGATACACCTGCCATGTGCAGCATGAGGGTCTCCCCAAGCCCCTCACCCTGAGATGGGGTAAGGAGGGAGATGGGGGTGTCATGTCTTTTAGGGAAAGCAGGAGCCTCTCTG---ACCTTTAGCAGGGTCAGGGCCCCTCACCTTCCCCTCTTTTCCCAGAGCCGTCTTCCCAGCCCACCATCCCCATCGTGGGCATCATTGCTGGCCTAGTTCTCTTTGGAGCTGTGTTCGCTGGAGCTGTGGTCGCTGCTGTGAGGTGGAGGAGGAAGAGCTCAGGTGGGGTGAAGGGGTGAAGGGTGGG-TCTGAGATTTCTTGTCTCACTGAGGGTTCCAAGACCCAGGTAGAAGTGTGCCCTGCCTCGTTACTGGGAAGCACCATCCACAATTATGGGCCTACCCAGCCTGGGCCCTGTGTGCCAGCACTTACTCTTTTGTAAAGCACCTGTTAAAATGAAGGACAGATTTATCACCTTGATTATGGCGGTGATGGGACCTGATCCCAGCAGTCACAAGTCACAGGGGAAGGTCCCTGAGGAC---CTTCAGGAGGGCGGTTGGTCCAGGACCCACACCTGCTTTCTTCATGTTTCCTGATCCCGCCCTGGGTCTGCAGTCACACATTTCTGGAAACTTCTCTGAGGTCCAAGACTTGGAGGTTCCTCTAGGACCTTAAGGCCCTGGCTCCTTTCTGGTATCTCACAGGACATTTTCTTCCCACAGATAGAAAAGGAGGGAGCTACTCTCAGGCTGCAAGTAAGTATGAAGGAGGATGATCCAAGAAATCACTGGGATATTGTGTTTGGGAGCCCGTGGGGGAGCTCACCCACCCCACAATTCCTCCTCTAGCCACATCTTCTGTGGGATCTGACCAGGTTCTGTTTTTGTCCTACCCCAGGCAGTGACAGTGCCCAGGGCTCTGATATGTCTCTCACAGCTTGTAAAGGTGAGAGCCTGGAGGGCCTGATGTGTGTTGGGTGTTGGGCGGAACAGTGGACGCAGCTGTGCTATGGGGTTTCTTTGCATTGGATGTATTGAGCATGCGATGGGCTGTTTAAAGTGTGACTCCTCACTGTGACAGATACGAATTTGTTCATGAATATTTTTTTCTATAGTGTGAGACAGCTGCCTTGTGTGGGACTGAGAGGCAAGAT</Haplotype>
+            <Haplotype begin="28" end="2937" ID="heterozygous1.2">GTCCTGCTACTCTCGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGGGAGGGAAACGGCCTCTGTGGGGAGAAGCAAGGGGCCCGCCCGGCGGGGGCGCAGGACCCGGGAAGCCGCGCCTGGAGGAGGGTCGGGCGGGTCTCAGCCACTCCTCGCCCCCAGGCTCCC-ACTCCATGAGGTATTTCTACACCTCCATGTCCC-----GGCCCGGCCGCGGGGAGCC----CCGCTTCATCGCCGTGGGC-----------------------TACGTGGAC----GACACG-CAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGA--GGATGGAGCCG--------------------CGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCGGA--------------ACACACGGA-ATGTGAAGGCCC-AGTCACAGACTGACCGAGTGGACCTGGGGACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGTGAGTGACCCCGGCCCGGGG-CGCAGGTCACGACCCCTCATCCCCC-ACGGACGGGCCAGGTCGCCCACAGTCTCCGGGTCCGAGATCCGCCCCGAAGCCGCGGGACCCCGAGACCCTTGCCCCGGGAGAGGCCCAGGCGCCTTTA-CCCGGTTTCATTTTCAGTTTAGGCCAAAAA-TCCCCCCGGGTTGGTCGGGGCGGGGCGGGGCTCGGGGGA-------------------CCGGGCTGACCTCGGGGTCCGGGCCAGGTTCTCACACC-ATCCAGAGGATGTATGGCTGCGACG--------------TGGGGCCGG-ACGGGCGCTTCCTCCGCGGGTACCACCAGTACGCCTACGACGGCAAGGATTACATCGCCCTGA-----------------------AA-GAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCAG--------CTCAGACCACCAAGCAC-AAGTGGGA--------------------------------------G--GCGGCCCATGTGGC-GG------------------------------------------AGCAGTGGAGAGCCTACCTGGAGGGCACG--------TGCGTG----GAGTGG--------------CTCCGCAGATA-CCTGGAGAACGGGAAGGAGACGCTGCAGC-----------------GCACGGGTACCAGGGGCCACGGGGCG-----CCTCCCTGATCGCCTGT-----------------------AGATCTCCCGGGCTGGCCTC--CCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCGCCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTTCCAGATCCTGTACCAGAGAGTGACTCTGAGGTTCCGCCCTGCTCTCTGACACAATTAAGGGATAAAA-TCTCTGAAGGAATGACGGGAAGACGATCCCTCGAATACTGATGAGTGGTTCCCTTTGACACACACAGGCAGCAGCCTTGGGCCCGTGACTTTTCCTCTCAGGCCTTGTTCTCTGCTTCACACTCAATGTGTGTGGGGGTCTGAGTCCAGCACTTCTGAGTCCCTCAGCCTCCACTCAGGTCAGGACCAGAAGTCGCTGTTCCCTCTTCA-GGGACTAGAATTTTCCACGGAATAGGAGATTATCCCAGGTGCCTGTGTCCAGGCTGGTGTCTGGGTTCTGTGCTCCCTTCCCCATCCCAGGTGTCCTGTCCATTCTCAAGATAGCCACA-TGTGTGCTGGAGGAGTGTCCCATGACAGATGCAAAATGCCTGAATGATCTGACTCTTCCTGACAGACGCCCCC--AAAACGCATATGACTCACCACGCTGTCTCTGACCAT----GAAGCC----ACCCTGAGGTGCTGGGCCCTGAGCTTCTACCCTGCGGAGATCACACTGACCTGGCAGCGGGATGGGG-AGGACCAGACCCAGGACACGGAGCTCGTGGAGACCAGGCCTGC-AGGGGATGGAACCTTCCAGAAGTGGGTGGCTGTGGTGGTGCCTTCTGGACAGGAGCAGAGATACACCTGCCATGTGCAGCATGAGGGTTTGCCCAAGCCCCTCACCCTGAGATGGGGTAAGGAGGGAGACGGGGGTGTCATGTCTTTTAGGGAAAGCAGGAGCCTCTCTG---ACCTTTAGCAGGGTCAGGGCCCCTCACCTTCCCCTCTTTTCCCAGAGCCGTCTTCCCAGCCCACCATCCCCATCGTGGGCATCATTGCTGGCCTGGTTCTCTTTGGAGCTGTGATCACTGGAGCTGTGGTCGCTGCTGTGATGTGGAGGAGGAAGAGCTCAGGTGGGG--AAGGGGTGAAGGGTGGG-TCTGAGATTTCTTGTCTCACTGAGGGTTCCAAGACCCAGGTAGAAGTGTGCCCTGCCTCGTTACTGGGAAGCACCACCCACAATTATGGGCCTACCCAGCCTGGGCCCTGTGTGCCAGCACTTACTCTTTTGTAAAGCACCTGTTAAAATGAAGGACAGATTTATCACCTTGATTACAGCGGTGATGGGACCTGATCCCAGCAGTCACAAGTCACAGGGGAAGGTCCCTGAGGAC---CTTCAGGAGGGCGGTTGGTCCAGGACCCACACCTGCTTTCTTCATGTTTCCTGATCCCGCCCTGGGTCTGCAGTCACACATTTCTGGAAACTTCTCTGAGGTCCAAGACTTGGAGGTTCCTCTAGGACCTTAAGGCCCTGACTCCTTTCTGGTATCTCACAGGACATTTTCTTCCCACAGATAGAAAAGGAGGGAGCTACTCTCAGGCTGCAAGTAAGTATGAAGGAGGCTGATGCCTGAGGTCCTTGGGATATTGTGTTTGGGAGCCCATGGGGGAGCTCACCCACCCCACAATTCCTCCTCTAGCCACATCTTCTGTGGGATCTGACCAGGTTCTGTTTTTGTTCTACCCCAGGCAGTGACAGTGCCCAGGGCTCTGATGTGTCTCTCACAGCTTGTAAAGGTGAGAGCCTGGAGGGCCTGATGTGTGTTGGGTGTTGGGCGGAACAGTGGACACAGCTGTGCTATGGGGTTTCTTTCCATTGGATGTATTGAGCATGCGATGGGCTGTTTAAAGTGTGACCCCTCACTGTGACAGATACGAATTTGTTCATGAATATTTTTTTCTATAGTGTGAGACAGCTGCCTTGTGTGGGACTGAGAGGCAAGAG</Haplotype>
+            <Haplotype begin="2938" end="2966" ID="homozygous2">TTGTTCCTGCCCTTCCCTTTGTGACTTGA</Haplotype>
+          </Haplotypes>
+          <AnnotatedAlleles>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: A*33:03:01:01" Match="A*33:03:01:01" ExonMismatches="0" IntronMismatches="0">TCCCATTGGGTGTCGGGTTTCCAGAGAAGCCAATCAGTGTCGTCGCGGTCGCGGTTCTAAAGTCCGCACGCACCCACCGGGACTCAGATTCTCCCCAGACGCCGAGGATGGCCGTCATGGCGCCCCGAACCCTCCTCCTGCTACTCTTGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGTGGGGAAACCGCCTCTGCGGGGAGAAGCAAGGGGCCCGCCCGGCGGGGGCGCAGGACCCGGGTAGCCGCGCCGGGAGGAGGGTCGGGCGGATCTCAGCCACTCCTCGCCCCCAGGCTCCCACTCCATGAGGTATTTCACCACATCCGTGTCCCGGCCCGGCCGCGGGGAGCCCCGCTTCATCGCCGTGGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGAGGATGGAGCCGCGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCGGAACACACGGAATGTGAAGGCCCACTCACAGATTGACCGAGTGGACCTGGGGACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGTGAGTGACCCCAGCCCGGGGCGCAGGTCACGACCTCTCATCCCCCACGGACGGGCCAGGTCACCCACAGTCTCCGGGTCCGAGATCCACCCCGAAGCCGCGGGACCCCGAGACCCTTGCCCCGGGAGAGGCCCAGGCGCCTTTACCCGGTTTCATTTTCAGTTTAGGCCAAAAATCCCCCCGGGTTGGTCGGGGCCGGACGGGGCTCGGGGGACTGGGCTGACCGTGGGGTCGGGGCCAGGTTCTCACACCATCCAGATGATGTATGGCTGCGACGTGGGGTCGGACGGGCGCTTCCTCCGCGGGTACCAGCAGGACGCCTACGACGGCAAGGATTACATCGCCTTGAACGAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCGGCTCAGATCACCCAGCGCAAGTGGGAGGCGGCCCGTGTGGCGGAGCAGTTGAGAGCCTACCTGGAGGGCACGTGCGTGGAGTGGCTCCGCAGATACCTGGAGAACGGGAAGGAGACGCTGCAGCGCACGGGTACCAGGGGCCACGGGGCGCCTCCCTGATCGCCTGTAGATCTCCCGGGCTGGCCTCCCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCACCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTTCCAGATCCTGTACCAGAGAGTGACTCTGAGGTTCCGCCCTGCTCTGTGACACAATTAAGGGATAAAATCTCTGAAGGAATGACGGGAAGACGATCCCTCGAATACTGATGAGTGGTTCCCTTTGACACACACCGGCAGCAGCCTTGGGCCCGTGACTTTTCCTCTCAGGCCTTGTTCTCTGCTTCACACTCAATGTGTGTGGGGGTCTGAGTCCAGCACTTCTGAGTCCCTCAGCCTCCACTCAGGTCAGGACCAGAAGTCGCTGTTCCCTCTTCAGGGACTAGAATTTTCCACGGAATAGGAGATTATCCCAGGTGCCTGTGTCCAGGCTGGTGTCTGGGTTCTGTGCTCCCTTCCCCATCCCAGGTGTCCTGTCCATTCTCAAGATAGCCACATGTGTGCTGGAGGAGTGTCCCATTACAGATGCAAAATGCCTGAATGTTCTGACTCTTCCTGACAGACCCCCCCAAGACGCATATGACTCACCACGCTGTCTCTGACCATGAGGCCACCCTGAGGTGCTGGGCCCTGAGCTTCTACCCTGCGGAGATCACACTGACCTGGCAGCGGGATGGGGAGGACCAGACCCAGGACACGGAGCTCGTGGAGACCAGGCCTGCAGGGGATGGAACCTTCCAGAAGTGGGCGTCTGTGGTGGTGCCTTCTGGACAGGAGCAGAGATACACCTGCCATGTGCAGCATGAGGGTCTCCCCAAGCCCCTCACCCTGAGATGGGGTAAGGAGGGAGATGGGGGTGTCATGTCTTTTAGGGAAAGCAGGAGCCTCTCTGACCTTTAGCAGGGTCAGGGCCCCTCACCTTCCCCTCTTTTCCCAGAGCCGTCTTCCCAGCCCACCATCCCCATCGTGGGCATCATTGCTGGCCTAGTTCTCTTTGGAGCTGTGTTCGCTGGAGCTGTGGTCGCTGCTGTGAGGTGGAGGAGGAAGAGCTCAGGTGGGGTGAAGGGGTGAAGGGTGGGTCTGAGATTTCTTGTCTCACTGAGGGTTCCAAGACCCAGGTAGAAGTGTGCCCTGCCTCGTTACTGGGAAGCACCATCCACAATTATGGGCCTACCCAGCCTGGGCCCTGTGTGCCAGCACTTACTCTTTTGTAAAGCACCTGTTAAAATGAAGGACAGATTTATCACCTTGATTATGGCGGTGATGGGACCTGATCCCAGCAGTCACAAGTCACAGGGGAAGGTCCCTGAGGACCTTCAGGAGGGCGGTTGGTCCAGGACCCACACCTGCTTTCTTCATGTTTCCTGATCCCGCCCTGGGTCTGCAGTCACACATTTCTGGAAACTTCTCTGAGGTCCAAGACTTGGAGGTTCCTCTAGGACCTTAAGGCCCTGGCTCCTTTCTGGTATCTCACAGGACATTTTCTTCCCACAGATAGAAAAGGAGGGAGCTACTCTCAGGCTGCAAGTAAGTATGAAGGAGGATGATCCAAGAAATCACTGGGATATTGTGTTTGGGAGCCCGTGGGGGAGCTCACCCACCCCACAATTCCTCCTCTAGCCACATCTTCTGTGGGATCTGACCAGGTTCTGTTTTTGTCCTACCCCAGGCAGTGACAGTGCCCAGGGCTCTGATATGTCTCTCACAGCTTGTAAAGGTGAGAGCCTGGAGGGCCTGATGTGTGTTGGGTGTTGGGCGGAACAGTGGACGCAGCTGTGCTATGGGGTTTCTTTGCATTGGATGTATTGAGCATGCGATGGGCTGTTTAAAGTGTGACTCCTCACTGTGACAGATACGAATTTGTTCATGAATATTTTTTTCTATAGTGTGAGACAGCTGCCTTGTGTGGGACTGAGAGGCAAGATTTGTTCCTGCCCTTCCCTTTGTGACTTGA</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..3088" Key="source" Gene="HLA-A" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;3088" Key="gene" Gene="HLA-A" />
+                <Feature location="108..180,310..579,821..1096,1697..1972,2072..2188,2629..2661,2804..2851,3021..3025" Key="CDS" Gene="HLA-A" Codon_start="1" Product="MHC class I protein (HLA-A)" Allele="A*33:03:01:01" Translation="MAVMAPRTLLLLLLGALALTQTWAGSHSMRYFTTSVSRPGRGEPRFIAVGYVDDTQFVRFDSDAASQRMEPRAPWIEQEGPEYWDRNTRNVKAHSQIDRVDLGTLRGYYNQSEAGSHTIQMMYGCDVGSDGRFLRGYQQDAYDGKDYIALNEDLRSWTAADMAAQITQRKWEAARVAEQLRAYLEGTCVEWLRRYLENGKETLQRTDPPKTHMTHHAVSDHEATLRCWALSFYPAEITLTWQRDGEDQTQDTELVETRPAGDGTFQKWASVVVPSGQEQRYTCHVQHEGLPKPLTLRWEPSSQPTIPIVGIIAGLVLFGAVFAGAVVAAVRWRRKSSDRKGGSYSQAASSDSAQGSDMSLTACKV*" />
+                <Feature location="&lt;1..107" Number="" Key="5'UTR" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="&lt;1..180" Number="1" Key="exon" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="181..309" Number="1" Key="intron" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="310..579" Number="2" Key="exon" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="580..820" Number="2" Key="intron" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="821..1096" Number="3" Key="exon" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="1097..1696" Number="3" Key="intron" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="1697..1972" Number="4" Key="exon" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="1973..2071" Number="4" Key="intron" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="2072..2188" Number="5" Key="exon" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="2189..2628" Number="5" Key="intron" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="2629..2661" Number="6" Key="exon" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="2662..2803" Number="6" Key="intron" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="2804..2851" Number="7" Key="exon" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="2852..3020" Number="7" Key="intron" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="3021..&gt;3088" Number="8" Key="exon" Gene="HLA-A" Allele="A*33:03:01:01" />
+                <Feature location="3026..&gt;3088" Number="" Key="3'UTR" Gene="HLA-A" Allele="A*33:03:01:01" />
+              </Features>
+            </AnnotatedAllele>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: A*68:02:01:01" Match="A*68:02:01:01" ExonMismatches="0" IntronMismatches="0">TCCCATTGGGTGTCGGGTTTCCAGAGAAGCCAATCAGTGTCGTCGCGGTCGCGGTTCTAAAGTCCGCACGCACCCACCGGGACTCAGATTCTCCCCAGACGCCGAGGATGGCCGTCATGGCGCCCCGAACCCTCGTCCTGCTACTCTCGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGGGAGGGAAACGGCCTCTGTGGGGAGAAGCAAGGGGCCCGCCCGGCGGGGGCGCAGGACCCGGGAAGCCGCGCCTGGAGGAGGGTCGGGCGGGTCTCAGCCACTCCTCGCCCCCAGGCTCCCACTCCATGAGGTATTTCTACACCTCCATGTCCCGGCCCGGCCGCGGGGAGCCCCGCTTCATCGCCGTGGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGAGGATGGAGCCGCGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCGGAACACACGGAATGTGAAGGCCCAGTCACAGACTGACCGAGTGGACCTGGGGACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGTGAGTGACCCCGGCCCGGGGCGCAGGTCACGACCCCTCATCCCCCACGGACGGGCCAGGTCGCCCACAGTCTCCGGGTCCGAGATCCGCCCCGAAGCCGCGGGACCCCGAGACCCTTGCCCCGGGAGAGGCCCAGGCGCCTTTACCCGGTTTCATTTTCAGTTTAGGCCAAAAATCCCCCCGGGTTGGTCGGGGCGGGGCGGGGCTCGGGGGACCGGGCTGACCTCGGGGTCCGGGCCAGGTTCTCACACCATCCAGAGGATGTATGGCTGCGACGTGGGGCCGGACGGGCGCTTCCTCCGCGGGTACCACCAGTACGCCTACGACGGCAAGGATTACATCGCCCTGAAAGAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCAGCTCAGACCACCAAGCACAAGTGGGAGGCGGCCCATGTGGCGGAGCAGTGGAGAGCCTACCTGGAGGGCACGTGCGTGGAGTGGCTCCGCAGATACCTGGAGAACGGGAAGGAGACGCTGCAGCGCACGGGTACCAGGGGCCACGGGGCGCCTCCCTGATCGCCTGTAGATCTCCCGGGCTGGCCTCCCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCGCCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTTCCAGATCCTGTACCAGAGAGTGACTCTGAGGTTCCGCCCTGCTCTCTGACACAATTAAGGGATAAAATCTCTGAAGGAATGACGGGAAGACGATCCCTCGAATACTGATGAGTGGTTCCCTTTGACACACACAGGCAGCAGCCTTGGGCCCGTGACTTTTCCTCTCAGGCCTTGTTCTCTGCTTCACACTCAATGTGTGTGGGGGTCTGAGTCCAGCACTTCTGAGTCCCTCAGCCTCCACTCAGGTCAGGACCAGAAGTCGCTGTTCCCTCTTCAGGGACTAGAATTTTCCACGGAATAGGAGATTATCCCAGGTGCCTGTGTCCAGGCTGGTGTCTGGGTTCTGTGCTCCCTTCCCCATCCCAGGTGTCCTGTCCATTCTCAAGATAGCCACATGTGTGCTGGAGGAGTGTCCCATGACAGATGCAAAATGCCTGAATGATCTGACTCTTCCTGACAGACGCCCCCAAAACGCATATGACTCACCACGCTGTCTCTGACCATGAAGCCACCCTGAGGTGCTGGGCCCTGAGCTTCTACCCTGCGGAGATCACACTGACCTGGCAGCGGGATGGGGAGGACCAGACCCAGGACACGGAGCTCGTGGAGACCAGGCCTGCAGGGGATGGAACCTTCCAGAAGTGGGTGGCTGTGGTGGTGCCTTCTGGACAGGAGCAGAGATACACCTGCCATGTGCAGCATGAGGGTTTGCCCAAGCCCCTCACCCTGAGATGGGGTAAGGAGGGAGACGGGGGTGTCATGTCTTTTAGGGAAAGCAGGAGCCTCTCTGACCTTTAGCAGGGTCAGGGCCCCTCACCTTCCCCTCTTTTCCCAGAGCCGTCTTCCCAGCCCACCATCCCCATCGTGGGCATCATTGCTGGCCTGGTTCTCTTTGGAGCTGTGATCACTGGAGCTGTGGTCGCTGCTGTGATGTGGAGGAGGAAGAGCTCAGGTGGGGAAGGGGTGAAGGGTGGGTCTGAGATTTCTTGTCTCACTGAGGGTTCCAAGACCCAGGTAGAAGTGTGCCCTGCCTCGTTACTGGGAAGCACCACCCACAATTATGGGCCTACCCAGCCTGGGCCCTGTGTGCCAGCACTTACTCTTTTGTAAAGCACCTGTTAAAATGAAGGACAGATTTATCACCTTGATTACAGCGGTGATGGGACCTGATCCCAGCAGTCACAAGTCACAGGGGAAGGTCCCTGAGGACCTTCAGGAGGGCGGTTGGTCCAGGACCCACACCTGCTTTCTTCATGTTTCCTGATCCCGCCCTGGGTCTGCAGTCACACATTTCTGGAAACTTCTCTGAGGTCCAAGACTTGGAGGTTCCTCTAGGACCTTAAGGCCCTGACTCCTTTCTGGTATCTCACAGGACATTTTCTTCCCACAGATAGAAAAGGAGGGAGCTACTCTCAGGCTGCAAGTAAGTATGAAGGAGGCTGATGCCTGAGGTCCTTGGGATATTGTGTTTGGGAGCCCATGGGGGAGCTCACCCACCCCACAATTCCTCCTCTAGCCACATCTTCTGTGGGATCTGACCAGGTTCTGTTTTTGTTCTACCCCAGGCAGTGACAGTGCCCAGGGCTCTGATGTGTCTCTCACAGCTTGTAAAGGTGAGAGCCTGGAGGGCCTGATGTGTGTTGGGTGTTGGGCGGAACAGTGGACACAGCTGTGCTATGGGGTTTCTTTCCATTGGATGTATTGAGCATGCGATGGGCTGTTTAAAGTGTGACCCCTCACTGTGACAGATACGAATTTGTTCATGAATATTTTTTTCTATAGTGTGAGACAGCTGCCTTGTGTGGGACTGAGAGGCAAGAGTTGTTCCTGCCCTTCCCTTTGTGACTTGA</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..3087" Key="source" Gene="HLA-A" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;3087" Key="gene" Gene="HLA-A" />
+                <Feature location="108..180,311..580,822..1097,1698..1973,2073..2189,2628..2660,2803..2850,3020..3024" Key="CDS" Gene="HLA-A" Codon_start="1" Product="MHC class I protein (HLA-A)" Allele="A*68:02:01:01" Translation="MAVMAPRTLVLLLSGALALTQTWAGSHSMRYFYTSMSRPGRGEPRFIAVGYVDDTQFVRFDSDAASQRMEPRAPWIEQEGPEYWDRNTRNVKAQSQTDRVDLGTLRGYYNQSEAGSHTIQRMYGCDVGPDGRFLRGYHQYAYDGKDYIALKEDLRSWTAADMAAQTTKHKWEAAHVAEQWRAYLEGTCVEWLRRYLENGKETLQRTDAPKTHMTHHAVSDHEATLRCWALSFYPAEITLTWQRDGEDQTQDTELVETRPAGDGTFQKWVAVVVPSGQEQRYTCHVQHEGLPKPLTLRWEPSSQPTIPIVGIIAGLVLFGAVITGAVVAAVMWRRKSSDRKGGSYSQAASSDSAQGSDVSLTACKV*" />
+                <Feature location="&lt;1..107" Number="" Key="5'UTR" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="&lt;1..180" Number="1" Key="exon" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="181..310" Number="1" Key="intron" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="311..580" Number="2" Key="exon" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="581..821" Number="2" Key="intron" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="822..1097" Number="3" Key="exon" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="1098..1697" Number="3" Key="intron" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="1698..1973" Number="4" Key="exon" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="1974..2072" Number="4" Key="intron" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="2073..2189" Number="5" Key="exon" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="2190..2627" Number="5" Key="intron" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="2628..2660" Number="6" Key="exon" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="2661..2802" Number="6" Key="intron" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="2803..2850" Number="7" Key="exon" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="2851..3019" Number="7" Key="intron" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="3020..&gt;3087" Number="8" Key="exon" Gene="HLA-A" Allele="A*68:02:01:01" />
+                <Feature location="3025..&gt;3087" Number="" Key="3'UTR" Gene="HLA-A" Allele="A*68:02:01:01" />
+              </Features>
+            </AnnotatedAllele>
+          </AnnotatedAlleles>
+          <Matching>
+            <Matches>
+              <Match ID="A*33:03:01:01" phasing="1">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.1</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+              <Match ID="A*68:02:01:01" phasing="2">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.2</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+            </Matches>
+            <Matchset ID="1">
+              <MatchCombination PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0">
+                <MatchID Phasing="1" RefAllele="A*33:03:01:01" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+                <MatchID Phasing="2" RefAllele="A*68:02:01:01" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+              </MatchCombination>
+            </Matchset>
+          </Matching>
+          <TypingResult>
+            <GenoTypeList Count="25">
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="8" ExonMM="0" IntronMM="8" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="11" ExonMM="0" IntronMM="11" CWD="Well-Documented" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="8" ExonMM="0" IntronMM="8" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="11" ExonMM="0" IntronMM="11" CWD="Well-Documented" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="8" ExonMM="0" IntronMM="8" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="11" ExonMM="0" IntronMM="11" CWD="Well-Documented" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="8" ExonMM="0" IntronMM="8" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="11" ExonMM="0" IntronMM="11" CWD="Well-Documented" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="8" ExonMM="0" IntronMM="8" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="11" ExonMM="0" IntronMM="11" CWD="Well-Documented" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:02</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:01</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:02</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:03</allele>
+                  <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:04</allele>
+                  <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*33:03P" GGroup="A*33:03:01G" Serology="A33">A*33:03:01:05</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:01</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:04</allele>
+                  <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:05</allele>
+                  <allele PriorityMM="0" NonPriorityMM="8" ExonMM="0" IntronMM="8" CWD="No" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:03</allele>
+                  <allele PriorityMM="0" NonPriorityMM="11" ExonMM="0" IntronMM="11" CWD="Well-Documented" PGroup="A*68:02P" GGroup="A*68:02:01G" Serology="A68">A*68:02:01:02</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <NMDPCodes TableDate="06/27/19" Nomenclature="nc3">
+              <allele_1 Name="A*33:03" />
+              <allele_2 Name="A*68:02" />
+            </NMDPCodes>
+            <GLString>A*33:03:01:01/A*33:03:01:02/A*33:03:01:03+A*68:02:01:01</GLString>
+          </TypingResult>
+          <TypingResultThreeFields>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02:01</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02:01</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*33:03:01+A*68:02:01</GLString>
+          </TypingResultThreeFields>
+          <TypingResultTwoFields>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*33:03+A*68:02</GLString>
+          </TypingResultTwoFields>
+          <TypingResultPGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03P</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02P</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03P</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02P</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*33:03P+A*68:02P</GLString>
+          </TypingResultPGroup>
+          <TypingResultGGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03:01G</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02:01G</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03:01G</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02:01G</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*33:03:01G+A*68:02:01G</GLString>
+          </TypingResultGGroup>
+          <TypingResultOptimized Resolutions="4-3-2-P">
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02:01:01</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A33">A*33:03:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A68">A*68:02:01:01</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*33:03:01+A*68:02:01:01</GLString>
+          </TypingResultOptimized>
+          <AnalysisSoftware>
+            <Software>NGSengine 2.14.0.14234</Software>
+            <Version>2.14.0.14234</Version>
+          </AnalysisSoftware>
+          <AnalysisSettings>
+            <AmpliconMethod>NGSgo</AmpliconMethod>
+            <AnalysisRegion>Amplicon</AnalysisRegion>
+            <IgnoreRegions>Default</IgnoreRegions>
+            <PhasingMethod MinimumReadDepth="20" AlleleRatioThreshold="20" NoiseThreshold="14">Classic</PhasingMethod>
+            <ReadTrimmer Applied="Yes">
+              <Settings RelativeThreshold="70" AbsoluteThreshold="20" WindowSize="10" />
+            </ReadTrimmer>
+            <ApplyCWDList>true</ApplyCWDList>
+          </AnalysisSettings>
+          <Edits />
+          <Warnings />
+          <ReviewList CurrentApprovalStatus="Approved" Level="Second reviewer">
+            <Review Action="Approve">
+              <User Name="Alessandro2" DateTime="2019-09-25T12:53:33.1121099Z" Level="Second reviewer" />
+              <Comment />
+            </Review>
+            <Review Action="Approve">
+              <User Name="MariaEduarda1" DateTime="2019-09-23T19:00:01.4179877Z" Level="First reviewer" />
+              <Comment />
+            </Review>
+          </ReviewList>
+          <PreferredAnalysisRegionsQualityMetrics>
+            <RegionQualityMetrics region="Amplicon" start="-300" end="3203" ampliconFraction="0.888" analysisCoveredFraction="0.888" analysisAmpliconFraction="1" qmFraction="0.888">
+              <InputData>
+                <ReadDepth minimum="211" maximum="873" average="609" median="611" sd="142.44" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.3081">
+                <TotalNoiseLevel minimum="0" maximum="0.066" average="0.0036" median="0.0023" sd="0.0057" count="3417" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.066" average="0.0037" median="0.0023" sd="0.0057" count="3342" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0246" average="0.0025" median="0.0014" sd="0.004" count="75" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.3741" maximum="0.499" average="0.4704" median="0.4787" sd="0.0276" count="75" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="75" homozygousPosnsCount="3342" ignoredPosnsCount="0">
+                <Aligning indelsCount="330" isIllumina="True" />
+                <AnalysisReadDepth minimum="211" maximum="873" average="609" median="611" sd="142.44" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Core+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="1" qmFraction="1">
+              <InputData>
+                <ReadDepth minimum="263" maximum="698" average="544" median="541" sd="77.404" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.3511">
+                <TotalNoiseLevel minimum="0" maximum="0.066" average="0.0048" median="0.0019" sd="0.0092" count="845" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.066" average="0.0048" median="0.0019" sd="0.0093" count="825" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.015" average="0.0033" median="0.0017" sd="0.0044" count="20" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.4171" maximum="0.4982" average="0.4659" median="0.4691" sd="0.0221" count="20" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="20" homozygousPosnsCount="825" ignoredPosnsCount="0">
+                <Aligning indelsCount="252" isIllumina="True" />
+                <AnalysisReadDepth minimum="263" maximum="698" average="544" median="541" sd="77.404" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Exon+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="1" qmFraction="1">
+              <InputData>
+                <ReadDepth minimum="263" maximum="850" average="606" median="585" sd="132.358" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.3511">
+                <TotalNoiseLevel minimum="0" maximum="0.066" average="0.0043" median="0.0023" sd="0.0076" count="1434" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.066" average="0.0043" median="0.0024" sd="0.0076" count="1400" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.015" average="0.0028" median="0.0015" sd="0.0037" count="34" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.4171" maximum="0.4982" average="0.4702" median="0.4728" sd="0.0199" count="34" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="34" homozygousPosnsCount="1400" ignoredPosnsCount="0">
+                <Aligning indelsCount="264" isIllumina="True" />
+                <AnalysisReadDepth minimum="263" maximum="850" average="606" median="585" sd="132.358" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+          </PreferredAnalysisRegionsQualityMetrics>
+          <TotalLocusQualityMetrics start="-300" end="3203">
+            <ReadLength minimum="19" maximum="151" average="137" median="150" sd="30.539" />
+            <Analysis>
+              <Aligning>
+                <InsertSizeDistributionAllReads minimum="35" maximum="2927" average="481" median="461" sd="-1" avgInsertSizeReadLengthRatio="3.58955216" />
+              </Aligning>
+            </Analysis>
+          </TotalLocusQualityMetrics>
+        </Locus>
+      </Loci>
+    </Sample>
+  </Samples>
+</ProjectXml>

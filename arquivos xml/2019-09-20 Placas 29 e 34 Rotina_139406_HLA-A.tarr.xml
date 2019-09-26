@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectXml d1p1:noNamespaceSchemaLocation="https://www.gendx.com/NGSengine/XSD/20190613/TARR.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectName>2019-09-20 Placas 29 e 34 Rotina</ProjectName>
+  <User Name="Samuel1" DateTime="2019-09-25T15:00:23.4984312Z" Level="First reviewer" />
+  <ProjectFolder>C:\Corridas NGS\Projetos\2019-09-20 Placas 29 e 34 Rotina</ProjectFolder>
+  <DataFolders>
+    <Folder>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina</Folder>
+  </DataFolders>
+  <AnalysisSoftware>
+    <Software>NGSengine</Software>
+    <Version>2.14.0.14234</Version>
+  </AnalysisSoftware>
+  <LociCount Analyzed="373">373</LociCount>
+  <SampleCount Analyzed="112">112</SampleCount>
+  <Samples>
+    <Sample>
+      <Name>139406</Name>
+      <Mappability AcceptedReads="49286" UsedReads="56580" TotalReads="56580" PercentageUsed="87.1" />
+      <SequencingType>Illumina</SequencingType>
+      <Files>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\139406_S84_L001_R1_001.fastq.gz</File>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\139406_S84_L001_R2_001.fastq.gz</File>
+      </Files>
+      <Loci>
+        <Locus>
+          <Name>HLA-A</Name>
+          <SampleName>139406</SampleName>
+          <User Name="Samuel1" DateTime="2019-09-20T19:56:36.8261494Z" Level="First reviewer" />
+          <Mappability AcceptedReads="6971" UsedReads="7054" TotalReads="7054" PercentageUsed="98.8" />
+          <ReadLength Minimum="1" Maximum="151" Median="-1" Mean="133" />
+          <ReadDepth Minimum="145" Maximum="731" Median="575" Mean="-1" />
+          <QuestionMarkPositions />
+          <PhasingRegions>5</PhasingRegions>
+          <NumberOfGenotypes>69</NumberOfGenotypes>
+          <AlleleDB>
+            <Gene>HLA-A</Gene>
+            <Version>IMGT/HLA 3.36.0</Version>
+            <NrAlleles>0</NrAlleles>
+            <Length>3848</Length>
+            <Regions>
+              <Region begin="-300" end="-1" ID="UTR" />
+              <Region begin="1" end="73" ID="Exon 1" />
+              <Region begin="74" end="203" ID="Intron 1" />
+              <Region begin="204" end="473" ID="Exon 2" />
+              <Region begin="474" end="714" ID="Intron 2" />
+              <Region begin="715" end="990" ID="Exon 3" />
+              <Region begin="991" end="1569" ID="Intron 3" />
+              <Region begin="1570" end="1845" ID="Exon 4" />
+              <Region begin="1846" end="1947" ID="Intron 4" />
+              <Region begin="1948" end="2064" ID="Exon 5" />
+              <Region begin="2065" end="2506" ID="Intron 5" />
+              <Region begin="2507" end="2539" ID="Exon 6" />
+              <Region begin="2540" end="2681" ID="Intron 6" />
+              <Region begin="2682" end="2729" ID="Exon 7" />
+              <Region begin="2730" end="2898" ID="Intron 7" />
+              <Region begin="2899" end="2903" ID="Exon 8" />
+              <Region begin="2904" end="3203" ID="UTR" />
+            </Regions>
+            <PriorityRegions>
+              <Region begin="-103" end="-99" />
+              <Region begin="1" end="75" />
+              <Region begin="176" end="482" />
+              <Region begin="707" end="992" />
+              <Region begin="1568" end="1847" />
+              <Region begin="1946" end="2066" />
+              <Region begin="2505" end="2541" />
+              <Region begin="2680" end="2731" />
+              <Region begin="2897" end="2903" />
+            </PriorityRegions>
+          </AlleleDB>
+          <Haplotypes>
+            <Haplotype begin="-107" end="-46" ID="homozygous1">TCCCATTGGGTGTCGGGTTTCCAGAGAAGCCAATCAGTGTCGTCGCGGTCGCTGTTCTAAAG</Haplotype>
+            <Haplotype begin="-45" end="1026" ID="heterozygous1.1">CCCGCACGCACCCACCGGGACTCAGATTCT-CCCCAGACGCCGAGGATGGCCGTCATGGCGCCCCGAACCCTCCTCCTGCTACTCTCGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGGGAGGGAAACCGCCTCTGCGGGGAGAAGCAAGGGGCCCTCCTGGCGGGGGCGCAGGACCGGGGGAGCCGCGCCGGGAGGAGGGTCGGTCAGGTCTCAGCCACTGCTCGCCCCCAGGCTCCC-ACTCCATGAGGTATTTCTCCACATCCGTGTCCC-----GGCCCGGCAGTGGAGAGCC----CCGCTTCATCGCAGTGGGC-----------------------TACGTGGAC----GACACG-CAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGA--GGATGGAGCCG--------------------CGGGCGCCGTGGATAGAGCAGGAGAGGCCTGAGTATTGGGACCAGG--------------AGACACGGA-ATGTGAAGGCCC-AGTCACAGACTGACCGAGTGGACCTGGGGACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGTGAGTGACCCCGGCCGGGGG-CGCAGGTCACGACCCCTCATCCCCC-ACGGACGGGCCAGGTCGCCCACAGTCTCCGGGTCCGAGATCCACCCCGAAGCCGCGGGACCCCGAGACCCTTGACCCGGGAGAGGCCCAGGCGCCTTTA-CCCGGTTTCATTTTCAGTTTAGGCCAAAAA-TTCCCCCGGGTTGGTCGGGGCTGGGCGGGGCTCGGGGGA-------------------CTGGGCTGACCGCGGGGTCGGGGCCAGGTTCTCACACC-ATCCAGATAATGTATGGCTGCGACG--------------TGGGGTCGG-ACGGGCGCTTCCTCCGCGGGTATGAACAGCACGCCTACGACGGCAAGGATTACATCGCCCTGA-----------------------AC-GAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCGG--------CTCAGATCACCCAGCGC-AAGTGGGA--------------------------------------G--GCGGCCCGTTGGGC-GG------------------------------------------AGCAGTTGAGAGCCTACCTGGAGGGCACG--------TGCGTG----GAGTGG--------------CTCCGCAGATA-CCTGGAGAACGGGAAGGAGACGCTGCAGC-----------------GCACGGGTACCAGGGGCCACGGGGCG-----CCTTCCTGATCGCCTG</Haplotype>
+            <Haplotype begin="-45" end="1026" ID="heterozygous1.2">TCCGCACGCACCCACCGGGACTCAGATTCT-CCCCAGACGCCGAGGATGGCCGTCATGGCGCCCCGAACCCTCCTCCTGCTACTCTCGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGGGAGGGAAACCGCCTCTGCGGGGAGAAGCAAGGGGCCCTCCTGGCGGGGGCGCAGGACCGGGGGAGCCGCGCCGGGAGGAGGGTCGGGCAGGTCTCAGCCACTGCTCGCCCCCAGGCTCCC-ACTCCATGAGGTATTTCTTCACATCCGTGTCCC-----GGCCCGGCCGCGGGGAGCC----CCGCTTCATCGCCGTGGGC-----------------------TACGTGGAC----GACACG-CAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGA--AGATGGAGCCG--------------------CGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCAGG--------------AGACACGGA-ATATGAAGGCCC-ACTCACAGACTGACCGAGCGAACCTGGGGACCCTGCGCGGCTACTACAACCAGAGCGAGGACGGTGAGTGACCCCGGCCCGGGG-CGCAGGTCACGACCCCTCATCCCCC-ACGGACGGGCCAGGTCGCCCACAGTCTCCGGGTCCGAGATCCACCCCGAAGCCGCGGGACTCCGAGACCCTTGTCCCGGGAGAGGCCCAGGCGCCTTTA-CCCGGTTTCATTTTCAGTTTAGGCCAAAAA-TCCCCCCGGGTTGGTCGGGGCGGGGCGGGGCTCGGGGGA-------------------CTGGGCTGACCGCGGGGTCGGGGCCAGGTTCTCACACC-ATCCAGATAATGTATGGCTGCGACG--------------TGGGGCCGG-ACGGGCGCTTCCTCCGCGGGTACCGGCAGGACGCCTACGACGGCAAGGATTACATCGCCCTGA-----------------------AC-GAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCAG--------CTCAGATCACCAAGCGC-AAGTGGGA--------------------------------------G--GCGGTCCATGCGGC-GG------------------------------------------AGCAGCGGAGAGTCTACCTGGAGGGCCGG--------TGCGTG----GACGGG--------------CTCCGCAGATA-CCTGGAGAACGGGAAGGAGACGCTGCAGC-----------------GCACGGGTACCAGGGGCCACGGGGCG-----CCTCCCTGATCGCCTA</Haplotype>
+            <Haplotype begin="1027" end="1354" ID="homozygous2">T-----------------------AGATCTCCCGGGCTGGCCTC--CCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCACCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTTCCAGATCCTGTACCAGAGAGTGACTCTGAGGTTCCGCCCTGCTCTCTGACACAATTAAGGGATAAAA-TCTCTGAAGGAGTGACGGGAAGACGATCCCTCGAATACTGATGAGTGGTTCCCTTTGA----CACCGGCAGCAGCCTTGGGCCCGTGACTTTTCCTCTCAGGCCTTGTTCTCTGCTTCACACTCAATGTGTGTGGGGGTCTGAGTCCAGCACTTCTGAGTC</Haplotype>
+            <Haplotype begin="1355" end="1355" ID="heterozygous2.1">C</Haplotype>
+            <Haplotype begin="1355" end="1355" ID="heterozygous2.2">T</Haplotype>
+            <Haplotype begin="1356" end="2163" ID="homozygous3">CTCAGCCTCCACTCAGGTCAGGACCAGAAGTCGCTGTTCCCTTCTCA-GGGA-----------------ATAGAAGATTATCCCAGGTGCCTGTGTCCAGGCTGGTGTCTGGGTTCTGTGCTCTCTTCCCCATCCCGGGTGTCCTGTCCATTCTCAAGATGGCCACA-TGCGTGCTGGTGGAGTGTCCCATGACAGATGCAAAATGCCTGAATTTTCTGACTCTTCCCGTCAGACCCCCCC--AAGACACATATGACCCACCACCCCATCTCTGACCAT----GAGGCC----ACCCTGAGGTGCTGGGCCCTGGGCTTCTACCCTGCGGAGATCACACTGACCTGGCAGCGGGATGGGG-AGGACCAGACCCAGGACACGGAGCTCGTGGAGACCAGGCCTGC-AGGGGATGGAACCTTCCAGAAGTGGGCGGCTGTGGTGGTGCCTTCTGGAGAGGAGCAGAGATACACCTGCCATGTGCAGCATGAGGGTCTGCCCAAGCCCCTCACCCTGAGATGGGGTAAGGAGGGAGATGGGGGTGTCATGTCTCTTAGGGAAAGCAGGAGCCTCTCTGGAGACCTTTAGCAGGGTCAGGGCCCCTCACCTTCCCCTCTTTTCCCAGAGCTGTCTTCCCAGCCCACCATCCCCATCGTGGGCATCATTGCTGGCCTGGTTCTCCTTGGAGCTGTGATCACTGGAGCTGTGGTCGCTGCCGTGATGTGGAGGAGGAAGAGCTCAGGTGGAG--AAGGGGTGAAGGGTGGGGTCTGAGATTTCTTGTCTCACTGAGGGTTCCAAGCCCCAGCTAGAAATGTGCCCTGTCTCATTACTGGGAAGCACC</Haplotype>
+            <Haplotype begin="2164" end="2181" ID="heterozygous3.1">TTCCACAATCATGGGCCG</Haplotype>
+            <Haplotype begin="2164" end="2181" ID="heterozygous3.2">ATCCACAATCATGGGCCT</Haplotype>
+            <Haplotype begin="2182" end="2500" ID="homozygous4">ACCCAGCCTGGGCCCTGTGTGCCAGCACTTACTCTTTTGTAAAGCACCTGTTAAAATGAAGGACAGATTTATCACCTTGATTACGGCGGTGATGGGACCTGATCCCAGCAGTCACAAGTCACAGGGGAAGGTCCCTGAGGACAGACCTCAGGAGGGCTATTGGTCCAGGACCCACACCTGCTTTCTTCATGTTTCCTGATCCCGCCCTGGGTCTGCAGTCACACATTTCTGGAAACTTCTCTGGGGTCCAAGACTAGGAGGTTCCTCTAGGACCTTAAGGCCCTGGCTCCTTTCTGGTATCTCACAGGACATTTTCTTC</Haplotype>
+            <Haplotype begin="2501" end="2501" ID="heterozygous4.1">C</Haplotype>
+            <Haplotype begin="2501" end="2501" ID="heterozygous4.2">T</Haplotype>
+            <Haplotype begin="2502" end="2744" ID="homozygous5">CACAGATAGAAAAGGAGGGAGTTACACTCAGGCTGCAAGTAAGTATGAAGGAGGCTGATGCCTGAGGTCCTTGGGATATTGTGTTTGGGAGCCCATGGGGGAGCTCACCCACCCCACAATTCCTCCTCTAGCCACATCTTCTGTGGGATCTGACCAGGTTCTGTTTTTGTTCTACCCCAGGCAGTGACAGTGCCCAGGGCTCTGATGTGTCTCTCACAGCTTGTAAAGGTGAGAGCTTGGAGG</Haplotype>
+            <Haplotype begin="2745" end="2808" ID="heterozygous5.1">GCCTGATGTGTGTTGGGTGTTGGGTGGAACAGTGGACACAGCTGTGCTATGGGGTTTCTTTGCG</Haplotype>
+            <Haplotype begin="2745" end="2808" ID="heterozygous5.2">ACCTAATGTGTGTTGGGTGTTGGGCGGAACAGTGGACACAGCTGTGCTATGGGGTTTCTTTGCA</Haplotype>
+            <Haplotype begin="2809" end="2966" ID="homozygous6">TTGGATGTATTGAGCATGCGATGGGCTGTTTAAGGTGTGACCCCTCACTGTGATGGATATGAATTTGTTCATGAATATTTTTTTCTATAGTGTGAGACAGCTGCCTTGTGTGGGACTGAGAGGCAAGAGTTGTTCCTGCCCTTCCCTTTGTGACTTGA</Haplotype>
+          </Haplotypes>
+          <AnnotatedAlleles>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: A*30:01:01:01" Match="A*30:01:01:01" ExonMismatches="0" IntronMismatches="0">TCCCATTGGGTGTCGGGTTTCCAGAGAAGCCAATCAGTGTCGTCGCGGTCGCTGTTCTAAAGCCCGCACGCACCCACCGGGACTCAGATTCTCCCCAGACGCCGAGGATGGCCGTCATGGCGCCCCGAACCCTCCTCCTGCTACTCTCGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGGGAGGGAAACCGCCTCTGCGGGGAGAAGCAAGGGGCCCTCCTGGCGGGGGCGCAGGACCGGGGGAGCCGCGCCGGGAGGAGGGTCGGTCAGGTCTCAGCCACTGCTCGCCCCCAGGCTCCCACTCCATGAGGTATTTCTCCACATCCGTGTCCCGGCCCGGCAGTGGAGAGCCCCGCTTCATCGCAGTGGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGAGGATGGAGCCGCGGGCGCCGTGGATAGAGCAGGAGAGGCCTGAGTATTGGGACCAGGAGACACGGAATGTGAAGGCCCAGTCACAGACTGACCGAGTGGACCTGGGGACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGTGAGTGACCCCGGCCGGGGGCGCAGGTCACGACCCCTCATCCCCCACGGACGGGCCAGGTCGCCCACAGTCTCCGGGTCCGAGATCCACCCCGAAGCCGCGGGACCCCGAGACCCTTGACCCGGGAGAGGCCCAGGCGCCTTTACCCGGTTTCATTTTCAGTTTAGGCCAAAAATTCCCCCGGGTTGGTCGGGGCTGGGCGGGGCTCGGGGGACTGGGCTGACCGCGGGGTCGGGGCCAGGTTCTCACACCATCCAGATAATGTATGGCTGCGACGTGGGGTCGGACGGGCGCTTCCTCCGCGGGTATGAACAGCACGCCTACGACGGCAAGGATTACATCGCCCTGAACGAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCGGCTCAGATCACCCAGCGCAAGTGGGAGGCGGCCCGTTGGGCGGAGCAGTTGAGAGCCTACCTGGAGGGCACGTGCGTGGAGTGGCTCCGCAGATACCTGGAGAACGGGAAGGAGACGCTGCAGCGCACGGGTACCAGGGGCCACGGGGCGCCTTCCTGATCGCCTGTAGATCTCCCGGGCTGGCCTCCCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCACCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTTCCAGATCCTGTACCAGAGAGTGACTCTGAGGTTCCGCCCTGCTCTCTGACACAATTAAGGGATAAAATCTCTGAAGGAGTGACGGGAAGACGATCCCTCGAATACTGATGAGTGGTTCCCTTTGACACCGGCAGCAGCCTTGGGCCCGTGACTTTTCCTCTCAGGCCTTGTTCTCTGCTTCACACTCAATGTGTGTGGGGGTCTGAGTCCAGCACTTCTGAGTC</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..1461" Key="source" Gene="HLA-A" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;1461" Key="gene" Gene="HLA-A" />
+                <Feature location="108..180,311..580,822..&gt;1097" Key="CDS" Gene="HLA-A" Codon_start="1" Product="MHC class I protein (HLA-A)" Allele="A*30:01:01:01" Translation="MAVMAPRTLLLLLSGALALTQTWAGSHSMRYFSTSVSRPGSGEPRFIAVGYVDDTQFVRFDSDAASQRMEPRAPWIEQERPEYWDQETRNVKAQSQTDRVDLGTLRGYYNQSEAGSHTIQIMYGCDVGSDGRFLRGYEQHAYDGKDYIALNEDLRSWTAADMAAQITQRKWEAARWAEQLRAYLEGTCVEWLRRYLENGKETLQRT" />
+                <Feature location="&lt;1..107" Number="" Key="5'UTR" Gene="HLA-A" Allele="A*30:01:01:01" />
+                <Feature location="&lt;1..180" Number="1" Key="exon" Gene="HLA-A" Allele="A*30:01:01:01" />
+                <Feature location="181..310" Number="1" Key="intron" Gene="HLA-A" Allele="A*30:01:01:01" />
+                <Feature location="311..580" Number="2" Key="exon" Gene="HLA-A" Allele="A*30:01:01:01" />
+                <Feature location="581..821" Number="2" Key="intron" Gene="HLA-A" Allele="A*30:01:01:01" />
+                <Feature location="822..1097" Number="3" Key="exon" Gene="HLA-A" Allele="A*30:01:01:01" />
+                <Feature location="1098..&gt;1461" Number="3" Key="intron" Gene="HLA-A" Allele="A*30:01:01:01" />
+              </Features>
+            </AnnotatedAllele>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: A*01:01:01:01" Match="A*01:01:01:01" ExonMismatches="0" IntronMismatches="0">TCCCATTGGGTGTCGGGTTTCCAGAGAAGCCAATCAGTGTCGTCGCGGTCGCTGTTCTAAAGTCCGCACGCACCCACCGGGACTCAGATTCTCCCCAGACGCCGAGGATGGCCGTCATGGCGCCCCGAACCCTCCTCCTGCTACTCTCGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGGGAGGGAAACCGCCTCTGCGGGGAGAAGCAAGGGGCCCTCCTGGCGGGGGCGCAGGACCGGGGGAGCCGCGCCGGGAGGAGGGTCGGGCAGGTCTCAGCCACTGCTCGCCCCCAGGCTCCCACTCCATGAGGTATTTCTTCACATCCGTGTCCCGGCCCGGCCGCGGGGAGCCCCGCTTCATCGCCGTGGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGAAGATGGAGCCGCGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCAGGAGACACGGAATATGAAGGCCCACTCACAGACTGACCGAGCGAACCTGGGGACCCTGCGCGGCTACTACAACCAGAGCGAGGACGGTGAGTGACCCCGGCCCGGGGCGCAGGTCACGACCCCTCATCCCCCACGGACGGGCCAGGTCGCCCACAGTCTCCGGGTCCGAGATCCACCCCGAAGCCGCGGGACTCCGAGACCCTTGTCCCGGGAGAGGCCCAGGCGCCTTTACCCGGTTTCATTTTCAGTTTAGGCCAAAAATCCCCCCGGGTTGGTCGGGGCGGGGCGGGGCTCGGGGGACTGGGCTGACCGCGGGGTCGGGGCCAGGTTCTCACACCATCCAGATAATGTATGGCTGCGACGTGGGGCCGGACGGGCGCTTCCTCCGCGGGTACCGGCAGGACGCCTACGACGGCAAGGATTACATCGCCCTGAACGAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCAGCTCAGATCACCAAGCGCAAGTGGGAGGCGGTCCATGCGGCGGAGCAGCGGAGAGTCTACCTGGAGGGCCGGTGCGTGGACGGGCTCCGCAGATACCTGGAGAACGGGAAGGAGACGCTGCAGCGCACGGGTACCAGGGGCCACGGGGCGCCTCCCTGATCGCCTATAGATCTCCCGGGCTGGCCTCCCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCACCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTTCCAGATCCTGTACCAGAGAGTGACTCTGAGGTTCCGCCCTGCTCTCTGACACAATTAAGGGATAAAATCTCTGAAGGAGTGACGGGAAGACGATCCCTCGAATACTGATGAGTGGTTCCCTTTGACACCGGCAGCAGCCTTGGGCCCGTGACTTTTCCTCTCAGGCCTTGTTCTCTGCTTCACACTCAATGTGTGTGGGGGTCTGAGTCCAGCACTTCTGAGTC</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..1461" Key="source" Gene="HLA-A" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;1461" Key="gene" Gene="HLA-A" />
+                <Feature location="108..180,311..580,822..&gt;1097" Key="CDS" Gene="HLA-A" Codon_start="1" Product="MHC class I protein (HLA-A)" Allele="A*01:01:01:01" Translation="MAVMAPRTLLLLLSGALALTQTWAGSHSMRYFFTSVSRPGRGEPRFIAVGYVDDTQFVRFDSDAASQKMEPRAPWIEQEGPEYWDQETRNMKAHSQTDRANLGTLRGYYNQSEDGSHTIQIMYGCDVGPDGRFLRGYRQDAYDGKDYIALNEDLRSWTAADMAAQITKRKWEAVHAAEQRRVYLEGRCVDGLRRYLENGKETLQRT" />
+                <Feature location="&lt;1..107" Number="" Key="5'UTR" Gene="HLA-A" Allele="A*01:01:01:01" />
+                <Feature location="&lt;1..180" Number="1" Key="exon" Gene="HLA-A" Allele="A*01:01:01:01" />
+                <Feature location="181..310" Number="1" Key="intron" Gene="HLA-A" Allele="A*01:01:01:01" />
+                <Feature location="311..580" Number="2" Key="exon" Gene="HLA-A" Allele="A*01:01:01:01" />
+                <Feature location="581..821" Number="2" Key="intron" Gene="HLA-A" Allele="A*01:01:01:01" />
+                <Feature location="822..1097" Number="3" Key="exon" Gene="HLA-A" Allele="A*01:01:01:01" />
+                <Feature location="1098..&gt;1461" Number="3" Key="intron" Gene="HLA-A" Allele="A*01:01:01:01" />
+              </Features>
+            </AnnotatedAllele>
+          </AnnotatedAlleles>
+          <Matching>
+            <Matches>
+              <Match ID="A*01:01:01:01" phasing="2,2,1,1,1">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.2</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>heterozygous2.2</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous3.1</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                  <HaplotypeID>heterozygous4.1</HaplotypeID>
+                  <HaplotypeID>homozygous5</HaplotypeID>
+                  <HaplotypeID>heterozygous5.1</HaplotypeID>
+                  <HaplotypeID>homozygous6</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+              <Match ID="A*30:01:01:01" phasing="1,1,2,2,2">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.1</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>heterozygous2.1</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous3.2</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                  <HaplotypeID>heterozygous4.2</HaplotypeID>
+                  <HaplotypeID>homozygous5</HaplotypeID>
+                  <HaplotypeID>heterozygous5.2</HaplotypeID>
+                  <HaplotypeID>homozygous6</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+            </Matches>
+            <Matchset ID="1">
+              <MatchCombination PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0">
+                <MatchID Phasing="2,2,1,1,1" RefAllele="A*01:01:01:01" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+                <MatchID Phasing="1,1,2,2,2" RefAllele="A*30:01:01:01" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+              </MatchCombination>
+            </Matchset>
+          </Matching>
+          <TypingResult>
+            <GenoTypeList Count="69">
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:12</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:12</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:12</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:13</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:13</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:13</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:14</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:14</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:14</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:15</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:15</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:15</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:16</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:16</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:16</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:17</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:17</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:17</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:19</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:19</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:19</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:20</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:20</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:20</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:22</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:22</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:22</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:23</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:23</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:23</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:18</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:18</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:18</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:24</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:24</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:24</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="5" ExonMM="0" IntronMM="5" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:21</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="5" ExonMM="0" IntronMM="5" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:21</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="5" ExonMM="0" IntronMM="5" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:21</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:01</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:03</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:04</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:06</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:07</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:08</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:09</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:10</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:11</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:12</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:13</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:14</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:15</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:16</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:17</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:19</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:20</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:22</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:23</allele>
+                  <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:05</allele>
+                  <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:18</allele>
+                  <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:24</allele>
+                  <allele PriorityMM="0" NonPriorityMM="5" ExonMM="0" IntronMM="5" CWD="No" PGroup="A*01:01P" GGroup="A*01:01:01G" Serology="A1">A*01:01:01:21</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:01</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:02</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="A*30:01P" GGroup="A*30:01:01G" Serology="A30">A*30:01:01:03</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <NMDPCodes TableDate="06/27/19" Nomenclature="nc3">
+              <allele_1 Name="A*01:01" />
+              <allele_2 Name="A*30:01" />
+            </NMDPCodes>
+            <GLString>A*01:01:01:01+A*30:01:01:01</GLString>
+          </TypingResult>
+          <TypingResultThreeFields>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01:01</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01:01</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:01:01+A*30:01:01</GLString>
+          </TypingResultThreeFields>
+          <TypingResultTwoFields>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:01+A*30:01</GLString>
+          </TypingResultTwoFields>
+          <TypingResultPGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01P</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01P</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01P</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01P</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:01P+A*30:01P</GLString>
+          </TypingResultPGroup>
+          <TypingResultGGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01:01G</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01:01G</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01:01G</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01:01G</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:01:01G+A*30:01:01G</GLString>
+          </TypingResultGGroup>
+          <TypingResultOptimized Resolutions="4-3-2-P">
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01:01:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01:01:01</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A1">A*01:01:01:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="A30">A*30:01:01:01</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:01:01:01+A*30:01:01:01</GLString>
+          </TypingResultOptimized>
+          <AnalysisSoftware>
+            <Software>NGSengine 2.14.0.14234</Software>
+            <Version>2.14.0.14234</Version>
+          </AnalysisSoftware>
+          <AnalysisSettings>
+            <AmpliconMethod>NGSgo</AmpliconMethod>
+            <AnalysisRegion>Amplicon</AnalysisRegion>
+            <IgnoreRegions>Default</IgnoreRegions>
+            <PhasingMethod MinimumReadDepth="20" AlleleRatioThreshold="20" NoiseThreshold="14">Classic</PhasingMethod>
+            <ReadTrimmer Applied="Yes">
+              <Settings RelativeThreshold="70" AbsoluteThreshold="20" WindowSize="10" />
+            </ReadTrimmer>
+            <ApplyCWDList>true</ApplyCWDList>
+          </AnalysisSettings>
+          <Edits />
+          <Warnings />
+          <ReviewList CurrentApprovalStatus="Approved" Level="Second reviewer">
+            <Review Action="Approve">
+              <User Name="Alessandro2" DateTime="2019-09-25T12:46:53.8202109Z" Level="Second reviewer" />
+              <Comment />
+            </Review>
+            <Review Action="Approve">
+              <User Name="MariaEduarda1" DateTime="2019-09-23T18:41:05.5716601Z" Level="First reviewer" />
+              <Comment />
+            </Review>
+          </ReviewList>
+          <PreferredAnalysisRegionsQualityMetrics>
+            <RegionQualityMetrics region="Amplicon" start="-300" end="3203" ampliconFraction="0.888" analysisCoveredFraction="0.888" analysisAmpliconFraction="1" qmFraction="0.888">
+              <InputData>
+                <ReadDepth minimum="145" maximum="731" average="545" median="575" sd="109.476" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.369">
+                <TotalNoiseLevel minimum="0" maximum="0.0526" average="0.0039" median="0.0021" sd="0.0064" count="3417" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0526" average="0.0039" median="0.0021" sd="0.0062" count="3368" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0489" average="0.0086" median="0.0036" sd="0.0134" count="49" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.4216" maximum="0.4978" average="0.464" median="0.4685" sd="0.0228" count="49" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="49" homozygousPosnsCount="3368" ignoredPosnsCount="0">
+                <Aligning indelsCount="344" isIllumina="True" />
+                <AnalysisReadDepth minimum="145" maximum="731" average="545" median="575" sd="109.476" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Core+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="1" qmFraction="1">
+              <InputData>
+                <ReadDepth minimum="327" maximum="671" average="535" median="549" sd="71.128" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.369">
+                <TotalNoiseLevel minimum="0" maximum="0.0526" average="0.0048" median="0.0018" sd="0.0092" count="845" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0526" average="0.0046" median="0.0018" sd="0.0088" count="812" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0489" average="0.0116" median="0.0052" sd="0.0153" count="33" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.4216" maximum="0.4978" average="0.4663" median="0.4704" sd="0.0247" count="33" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="33" homozygousPosnsCount="812" ignoredPosnsCount="0">
+                <Aligning indelsCount="252" isIllumina="True" />
+                <AnalysisReadDepth minimum="327" maximum="671" average="535" median="549" sd="71.128" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Exon+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="1" qmFraction="1">
+              <InputData>
+                <ReadDepth minimum="274" maximum="703" average="558" median="575" sd="88.737" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.369">
+                <TotalNoiseLevel minimum="0" maximum="0.0526" average="0.0047" median="0.0019" sd="0.0083" count="1434" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0526" average="0.0045" median="0.0019" sd="0.008" count="1401" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0489" average="0.0116" median="0.0052" sd="0.0153" count="33" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.4216" maximum="0.4978" average="0.4663" median="0.4704" sd="0.0247" count="33" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="33" homozygousPosnsCount="1401" ignoredPosnsCount="0">
+                <Aligning indelsCount="264" isIllumina="True" />
+                <AnalysisReadDepth minimum="274" maximum="703" average="558" median="575" sd="88.737" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+          </PreferredAnalysisRegionsQualityMetrics>
+          <TotalLocusQualityMetrics start="-300" end="3203">
+            <ReadLength minimum="19" maximum="151" average="135" median="150" sd="31.82" />
+            <Analysis>
+              <Aligning>
+                <InsertSizeDistributionAllReads minimum="35" maximum="2939" average="404" median="381" sd="-1" avgInsertSizeReadLengthRatio="3.037594" />
+              </Aligning>
+            </Analysis>
+          </TotalLocusQualityMetrics>
+        </Locus>
+      </Loci>
+    </Sample>
+  </Samples>
+</ProjectXml>

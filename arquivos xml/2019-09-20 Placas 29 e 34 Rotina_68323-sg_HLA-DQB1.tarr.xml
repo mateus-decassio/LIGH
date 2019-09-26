@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectXml d1p1:noNamespaceSchemaLocation="https://www.gendx.com/NGSengine/XSD/20190613/TARR.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectName>2019-09-20 Placas 29 e 34 Rotina</ProjectName>
+  <User Name="Samuel1" DateTime="2019-09-25T15:00:38.3478793Z" Level="First reviewer" />
+  <ProjectFolder>C:\Corridas NGS\Projetos\2019-09-20 Placas 29 e 34 Rotina</ProjectFolder>
+  <DataFolders>
+    <Folder>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina</Folder>
+  </DataFolders>
+  <AnalysisSoftware>
+    <Software>NGSengine</Software>
+    <Version>2.14.0.14234</Version>
+  </AnalysisSoftware>
+  <LociCount Analyzed="373">373</LociCount>
+  <SampleCount Analyzed="112">112</SampleCount>
+  <Samples>
+    <Sample>
+      <Name>68323-sg</Name>
+      <Mappability AcceptedReads="157974" UsedReads="169786" TotalReads="169786" PercentageUsed="93" />
+      <SequencingType>Illumina</SequencingType>
+      <Files>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\68323-sg_S5_L001_R1_001.fastq.gz</File>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\68323-sg_S5_L001_R2_001.fastq.gz</File>
+      </Files>
+      <Loci>
+        <Locus>
+          <Name>HLA-DQB1</Name>
+          <SampleName>68323-sg</SampleName>
+          <User Name="Samuel1" DateTime="2019-09-20T20:40:48.8121054Z" Level="First reviewer" />
+          <Mappability AcceptedReads="9157" UsedReads="9256" TotalReads="9256" PercentageUsed="98.9" />
+          <ReadLength Minimum="2" Maximum="151" Median="-1" Mean="139" />
+          <ReadDepth Minimum="219" Maximum="926" Median="628" Mean="-1" />
+          <QuestionMarkPositions />
+          <PhasingRegions>2</PhasingRegions>
+          <NumberOfGenotypes>84</NumberOfGenotypes>
+          <AlleleDB>
+            <Gene>HLA-DQB1</Gene>
+            <Version>IMGT/HLA 3.36.0</Version>
+            <NrAlleles>0</NrAlleles>
+            <Length>7765</Length>
+            <Regions>
+              <Region begin="-524" end="-1" ID="UTR" />
+              <Region begin="1" end="109" ID="Exon 1" />
+              <Region begin="110" end="1567" ID="Intron 1" />
+              <Region begin="1568" end="1837" ID="Exon 2" />
+              <Region begin="1838" end="4346" ID="Intron 2" />
+              <Region begin="4347" end="4628" ID="Exon 3" />
+              <Region begin="4629" end="5139" ID="Intron 3" />
+              <Region begin="5140" end="5250" ID="Exon 4" />
+              <Region begin="5251" end="5714" ID="Intron 4" />
+              <Region begin="5715" end="5738" ID="Exon 5" />
+              <Region begin="5739" end="6347" ID="Intron 5" />
+              <Region begin="6348" end="6361" ID="Exon 6" />
+              <Region begin="6362" end="6566" ID="UTR" />
+            </Regions>
+            <PriorityRegions>
+              <Region begin="1" end="111" />
+              <Region begin="1566" end="1839" />
+              <Region begin="4345" end="4630" />
+              <Region begin="5138" end="5252" />
+              <Region begin="5713" end="5740" />
+              <Region begin="6346" end="6361" />
+            </PriorityRegions>
+          </AlleleDB>
+          <Haplotypes>
+            <Haplotype begin="1566" end="1579" ID="homozygous1">AGAGGATTTCGTGT</Haplotype>
+            <Haplotype begin="1580" end="1834" ID="heterozygous1.1">ACCAGTTTAAGGGCATGTGCTACTTCACCAACGGGACGGAGCGCGTGCGTCTTGTGACCAGATACATCTATAACCGAGAGGAGTACGCACGCTTCGACAGC-----GACGTGGGGG-TGTATCGGGCGGTGACGCCGCTGGGGCCGCCTGCCGCCGAGTACTGGAACAGCCAGAAGGAAGTCCTGGAGAGGACCCGGG-CGGAGTTGGACACGGTGTGCAGACACAACTACCAGTTGGAGCTCCGCACGACCTTGCAGCGGC</Haplotype>
+            <Haplotype begin="1580" end="1834" ID="heterozygous1.2">TCCAGTTTAAGGGCATGTGCTACTTCACCAACGGGACGGAGCGCGTGCGTCTTGTGACCAGATACATCTATAACCGAGAGGAGTACGCGCGCTTCGACAGC-----GACGTGGGGG-TGTACCGCGCGGTGACGCCGCAGGGGCGGCCTGATGCCGAGTACTGGAACAGCCAGAAGGAAGTCCTGGAGGGGACCCGGG-CGGAGTTGGACACGGTGTGCAGACACAACTACGAGGTGGCGTTCCGCGGGATCTTGCAGAGGA</Haplotype>
+            <Haplotype begin="1835" end="1839" ID="homozygous2">GAGGT</Haplotype>
+            <Haplotype begin="4345" end="4416" ID="homozygous3">AGTGGAGCCCACAGTGACCATCTCCCCATCCAGGACAGAGGCCCTCAACCACCACAACCTGCTGGTCTGCTC</Haplotype>
+            <Haplotype begin="4417" end="4617" ID="heterozygous2.1">GGTGACAGATTTCTATCCAGGCCAGATCAAAGTCCGGTGGTTTCGGAATGATCAGGAGGAGACAGCCGGCGTTGTGTCCACCCCCCTTATTAGGAATGGTGACTGGACTTTCCAGATCCTGGTGATGCTGGAAATGACTCCCCAG---------CGTGGAGATGTCTACACCTGCCACGTGGAGCACCCCAGCCTCCAGAGCCCCATCAC</Haplotype>
+            <Haplotype begin="4417" end="4617" ID="heterozygous2.2">AGTGACAGATTTCTATCCAGCCCAGATCAAAGTCCGGTGGTTTCGGAATGACCAGGAGGAGACAACTGGCGTTGTGTCCACCCCCCTTATTAGGAACGGTGACTGGACCTTCCAGATCCTGGTGATGCTGGAAATGACTCCCCAG---------CGTGGAGACGTCTACACCTGCCACGTGGAGCACCCCAGCCTCCAGAACCCCATCAT</Haplotype>
+            <Haplotype begin="4618" end="4630" ID="homozygous4">CGTGGAGTGGCGT</Haplotype>
+            <Haplotype begin="5138" end="5173" ID="homozygous5">AGGGGCTCAGTCTGAATCTGCCCAGAGCAAGATGCT</Haplotype>
+          </Haplotypes>
+          <AnnotatedAlleles>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: DQB1*03:02:01:01" Match="DQB1*03:02:01:01" ExonMismatches="0" IntronMismatches="0">AGAGGATTTCGTGTACCAGTTTAAGGGCATGTGCTACTTCACCAACGGGACGGAGCGCGTGCGTCTTGTGACCAGATACATCTATAACCGAGAGGAGTACGCACGCTTCGACAGCGACGTGGGGGTGTATCGGGCGGTGACGCCGCTGGGGCCGCCTGCCGCCGAGTACTGGAACAGCCAGAAGGAAGTCCTGGAGAGGACCCGGGCGGAGTTGGACACGGTGTGCAGACACAACTACCAGTTGGAGCTCCGCACGACCTTGCAGCGGCGAGGT</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..274" Key="source" Gene="DQB1" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;274" Key="gene" Gene="DQB1" />
+                <Feature location="&lt;3..&gt;272" Key="CDS" Gene="DQB1" Codon_start="3" Product="MHC class II DQ beta chain" Allele="DQB1*03:02:01:01" Translation="DFVYQFKGMCYFTNGTERVRLVTRYIYNREEYARFDSDVGVYRAVTPLGPPAAEYWNSQKEVLERTRAELDTVCRHNYQLELRTTLQRR" />
+                <Feature location="&lt;1..2" Number="1" Key="intron" Gene="DQB1" Allele="DQB1*03:02:01:01" />
+                <Feature location="3..272" Number="2" Key="exon" Gene="DQB1" Allele="DQB1*03:02:01:01" />
+                <Feature location="273..&gt;274" Number="2" Key="intron" Gene="DQB1" Allele="DQB1*03:02:01:01" />
+              </Features>
+            </AnnotatedAllele>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: DQB1*06:02:01:01" Match="DQB1*06:02:01:01" ExonMismatches="0" IntronMismatches="0">AGAGGATTTCGTGTTCCAGTTTAAGGGCATGTGCTACTTCACCAACGGGACGGAGCGCGTGCGTCTTGTGACCAGATACATCTATAACCGAGAGGAGTACGCGCGCTTCGACAGCGACGTGGGGGTGTACCGCGCGGTGACGCCGCAGGGGCGGCCTGATGCCGAGTACTGGAACAGCCAGAAGGAAGTCCTGGAGGGGACCCGGGCGGAGTTGGACACGGTGTGCAGACACAACTACGAGGTGGCGTTCCGCGGGATCTTGCAGAGGAGAGGT</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..274" Key="source" Gene="DQB1" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;274" Key="gene" Gene="DQB1" />
+                <Feature location="&lt;3..&gt;272" Key="CDS" Gene="DQB1" Codon_start="3" Product="MHC class II DQ beta chain" Allele="DQB1*06:02:01:01" Translation="DFVFQFKGMCYFTNGTERVRLVTRYIYNREEYARFDSDVGVYRAVTPQGRPDAEYWNSQKEVLEGTRAELDTVCRHNYEVAFRGILQRR" />
+                <Feature location="&lt;1..2" Number="1" Key="intron" Gene="DQB1" Allele="DQB1*06:02:01:01" />
+                <Feature location="3..272" Number="2" Key="exon" Gene="DQB1" Allele="DQB1*06:02:01:01" />
+                <Feature location="273..&gt;274" Number="2" Key="intron" Gene="DQB1" Allele="DQB1*06:02:01:01" />
+              </Features>
+            </AnnotatedAllele>
+          </AnnotatedAlleles>
+          <Matching>
+            <Matches>
+              <Match ID="DQB1*03:02:01:01" phasing="1,2">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.1</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous2.2</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                  <HaplotypeID>homozygous5</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+              <Match ID="DQB1*06:02:01:01" phasing="2,1">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.2</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous2.1</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                  <HaplotypeID>homozygous5</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+            </Matches>
+            <Matchset ID="1">
+              <MatchCombination PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0">
+                <MatchID Phasing="1,2" RefAllele="DQB1*03:02:01:01" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+                <MatchID Phasing="2,1" RefAllele="DQB1*06:02:01:01" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+              </MatchCombination>
+            </Matchset>
+          </Matching>
+          <TypingResult>
+            <GenoTypeList Count="84">
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:01</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:02</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:03</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:04</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:05</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:06</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:07</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:01:08</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ8">DQB1*03:02:26</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:289</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:295</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*03:02P" GGroup="DQB1*03:02:01G" Serology="DQ3">DQB1*03:296</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:01</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:02</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:03</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:01:04</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:02:36</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:293</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DQB1*06:02P" GGroup="DQB1*06:02:01G" Serology="DQ6">DQB1*06:295</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <NMDPCodes TableDate="06/27/19" Nomenclature="nc3">
+              <allele_1 Name="DQB1*03:BJKCB">02/289/295/296</allele_1>
+              <allele_2 Name="DQB1*06:BNMSP">02/293/295</allele_2>
+            </NMDPCodes>
+            <GLString>DQB1*03:02:01:01/DQB1*03:02:01:02/DQB1*03:02:01:03/DQB1*03:02:01:04/DQB1*03:02:01:05/DQB1*03:02:01:06/DQB1*03:02:01:07/DQB1*03:02:01:08/DQB1*03:02:26/DQB1*03:289/DQB1*03:295/DQB1*03:296+DQB1*06:02:01:01/DQB1*06:02:01:02/DQB1*06:02:01:03/DQB1*06:02:01:04/DQB1*06:02:36/DQB1*06:293/DQB1*06:295</GLString>
+          </TypingResult>
+          <TypingResultThreeFields>
+            <GenoTypeList Count="20">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ8">DQB1*03:02:26</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:02:36</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02:01</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ8">DQB1*03:02:26</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:289</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:295</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:296</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02:01</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:02:36</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DQB1*03:02:01/DQB1*03:02:26/DQB1*03:289/DQB1*03:295/DQB1*03:296+DQB1*06:02:01/DQB1*06:02:36/DQB1*06:293/DQB1*06:295</GLString>
+          </TypingResultThreeFields>
+          <TypingResultTwoFields>
+            <GenoTypeList Count="12">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:289</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:295</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:296</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:289</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:295</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ3">DQB1*03:296</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:293</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DQ6">DQB1*06:295</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DQB1*03:02/DQB1*03:289/DQB1*03:295/DQB1*03:296+DQB1*06:02/DQB1*06:293/DQB1*06:295</GLString>
+          </TypingResultTwoFields>
+          <TypingResultPGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02P</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02P</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02P</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02P</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DQB1*03:02P+DQB1*06:02P</GLString>
+          </TypingResultPGroup>
+          <TypingResultGGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02:01G</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02:01G</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02:01G</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02:01G</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DQB1*03:02:01G+DQB1*06:02:01G</GLString>
+          </TypingResultGGroup>
+          <TypingResultOptimized Resolutions="4-3-2-P">
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02P</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02P</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ8">DQB1*03:02P</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DQ6">DQB1*06:02P</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DQB1*03:02P+DQB1*06:02P</GLString>
+          </TypingResultOptimized>
+          <AnalysisSoftware>
+            <Software>NGSengine 2.14.0.14234</Software>
+            <Version>2.14.0.14234</Version>
+          </AnalysisSoftware>
+          <AnalysisSettings>
+            <AmpliconMethod>NGSgo</AmpliconMethod>
+            <AnalysisRegion>ExonOnly</AnalysisRegion>
+            <IgnoreRegions />
+            <PhasingMethod MinimumReadDepth="20" AlleleRatioThreshold="20" NoiseThreshold="14">Classic</PhasingMethod>
+            <ReadTrimmer Applied="Yes">
+              <Settings RelativeThreshold="70" AbsoluteThreshold="20" WindowSize="10" />
+            </ReadTrimmer>
+            <ApplyCWDList>true</ApplyCWDList>
+          </AnalysisSettings>
+          <Edits />
+          <Warnings />
+          <ReviewList CurrentApprovalStatus="Not Reviewed" Level="Unknown" />
+          <PreferredAnalysisRegionsQualityMetrics>
+            <RegionQualityMetrics region="Amplicon" start="-524" end="6566" ampliconFraction="0.5538" analysisCoveredFraction="0.5538" analysisAmpliconFraction="0.1423" qmFraction="0.0788">
+              <InputData>
+                <ReadDepth minimum="219" maximum="926" average="625" median="628" sd="132.117" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.3105">
+                <TotalNoiseLevel minimum="0" maximum="0.0248" average="0.0029" median="0.0024" sd="0.003" count="612" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0248" average="0.0029" median="0.0024" sd="0.003" count="584" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0074" average="0.0022" median="0.0018" sd="0.0022" count="28" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.3353" maximum="0.4671" average="0.4126" median="0.4077" sd="0.0347" count="28" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="28" homozygousPosnsCount="584" ignoredPosnsCount="3688">
+                <Aligning indelsCount="586" isIllumina="True" />
+                <AnalysisReadDepth minimum="219" maximum="924" average="617" median="580" sd="212.144" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Core+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="1" qmFraction="1">
+              <InputData>
+                <ReadDepth minimum="316" maximum="589" average="442" median="432" sd="68.158" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.3105">
+                <TotalNoiseLevel minimum="0" maximum="0.0248" average="0.0032" median="0.0023" sd="0.0036" count="281" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0248" average="0.0032" median="0.0023" sd="0.0036" count="263" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0074" average="0.0026" median="0.0021" sd="0.0026" count="18" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.3353" maximum="0.4149" average="0.3905" median="0.3915" sd="0.0199" count="18" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="18" homozygousPosnsCount="263" ignoredPosnsCount="0">
+                <Aligning indelsCount="7" isIllumina="True" />
+                <AnalysisReadDepth minimum="316" maximum="589" average="442" median="432" sd="68.158" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Exon+" start="-2147483648" end="-2147483648" ampliconFraction="0.7234" analysisCoveredFraction="0.7234" analysisAmpliconFraction="1" qmFraction="0.7234">
+              <InputData>
+                <ReadDepth minimum="219" maximum="924" average="617" median="580" sd="212.144" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.3105">
+                <TotalNoiseLevel minimum="0" maximum="0.0248" average="0.0029" median="0.0024" sd="0.003" count="612" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0248" average="0.0029" median="0.0024" sd="0.003" count="584" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0074" average="0.0022" median="0.0018" sd="0.0022" count="28" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.3353" maximum="0.4671" average="0.4126" median="0.4077" sd="0.0347" count="28" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="28" homozygousPosnsCount="584" ignoredPosnsCount="0">
+                <Aligning indelsCount="16" isIllumina="True" />
+                <AnalysisReadDepth minimum="219" maximum="924" average="617" median="580" sd="212.144" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+          </PreferredAnalysisRegionsQualityMetrics>
+          <TotalLocusQualityMetrics start="-524" end="6566">
+            <ReadLength minimum="19" maximum="151" average="141" median="150" sd="26.285" />
+            <Analysis>
+              <Aligning>
+                <InsertSizeDistributionAllReads minimum="35" maximum="4283" average="490" median="468" sd="-1" avgInsertSizeReadLengthRatio="3.52517986" />
+              </Aligning>
+            </Analysis>
+          </TotalLocusQualityMetrics>
+        </Locus>
+      </Loci>
+    </Sample>
+  </Samples>
+</ProjectXml>

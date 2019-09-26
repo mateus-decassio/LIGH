@@ -1,0 +1,1883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectXml d1p1:noNamespaceSchemaLocation="https://www.gendx.com/NGSengine/XSD/20190613/TARR.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectName>2019-09-20 Placas 29 e 34 Rotina</ProjectName>
+  <User Name="Samuel1" DateTime="2019-09-25T15:00:40.3919497Z" Level="First reviewer" />
+  <ProjectFolder>C:\Corridas NGS\Projetos\2019-09-20 Placas 29 e 34 Rotina</ProjectFolder>
+  <DataFolders>
+    <Folder>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina</Folder>
+  </DataFolders>
+  <AnalysisSoftware>
+    <Software>NGSengine</Software>
+    <Version>2.14.0.14234</Version>
+  </AnalysisSoftware>
+  <LociCount Analyzed="373">373</LociCount>
+  <SampleCount Analyzed="112">112</SampleCount>
+  <Samples>
+    <Sample>
+      <Name>82189-sg</Name>
+      <Mappability AcceptedReads="146936" UsedReads="159366" TotalReads="159366" PercentageUsed="92.2" />
+      <SequencingType>Illumina</SequencingType>
+      <Files>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\82189-sg_S6_L001_R1_001.fastq.gz</File>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\82189-sg_S6_L001_R2_001.fastq.gz</File>
+      </Files>
+      <Loci>
+        <Locus>
+          <Name>HLA-DPB1</Name>
+          <SampleName>82189-sg</SampleName>
+          <User Name="Samuel1" DateTime="2019-09-20T20:47:45.5971618Z" Level="First reviewer" />
+          <Mappability AcceptedReads="15716" UsedReads="15943" TotalReads="15943" PercentageUsed="98.6" />
+          <ReadLength Minimum="1" Maximum="151" Median="-1" Mean="140" />
+          <ReadDepth Minimum="30" Maximum="743" Median="435" Mean="-1" />
+          <QuestionMarkPositions />
+          <PhasingRegions>3</PhasingRegions>
+          <NumberOfGenotypes>374</NumberOfGenotypes>
+          <AlleleDB>
+            <Gene>HLA-DPB1</Gene>
+            <Version>IMGT/HLA 3.36.0</Version>
+            <NrAlleles>0</NrAlleles>
+            <Length>11609</Length>
+            <Regions>
+              <Region begin="-366" end="-1" ID="UTR" />
+              <Region begin="1" end="100" ID="Exon 1" />
+              <Region begin="101" end="4635" ID="Intron 1" />
+              <Region begin="4636" end="4899" ID="Exon 2" />
+              <Region begin="4900" end="8850" ID="Intron 2" />
+              <Region begin="8851" end="9132" ID="Exon 3" />
+              <Region begin="9133" end="9679" ID="Intron 3" />
+              <Region begin="9680" end="9790" ID="Exon 4" />
+              <Region begin="9791" end="10119" ID="Intron 4" />
+              <Region begin="10120" end="10139" ID="Exon 5" />
+              <Region begin="10140" end="11102" ID="UTR" />
+            </Regions>
+            <PriorityRegions>
+              <Region begin="1" end="102" />
+              <Region begin="4634" end="4901" />
+              <Region begin="8849" end="9134" />
+              <Region begin="9678" end="9792" />
+              <Region begin="10118" end="10139" />
+            </PriorityRegions>
+          </AlleleDB>
+          <Haplotypes>
+            <Haplotype begin="4485" end="4566" ID="homozygous1">GACCACAGAACTCGGTACTAGGAAAACTCCTATTTTAAAATCCAGCCCTGGGTGGGAAGATTTGGGAAGAATCGTTAATATT</Haplotype>
+            <Haplotype begin="4567" end="4881" ID="heterozygous1.1">GAGAGAGAGAGGGAGAAAGAGGATTAGATGAGAGTGGCGCCTCCGCTCATGTCCGCCCCCTCCCCGCAGAGAATTACCTTTTCCAGGGACGGCAGGAATGCTACG----CGTT---------------------TAATGGGACACAGCGCTTCCTGGAGAGATA-CATCTACAACCGGGAGGAGTTCGCG-CGCTTCGACAGCGACGTGGGGGAGTTCCGGGCGGTGACGGAGCTGGGGCGGCCTGCTGCGGAGTACTGG-AACAGCCAGAAGGACATCCTGGAGGAGAAGCGGGCAGTGCCGGACAGGATGTGCAGACACAACTACGAGCTGGGCGGGCCC-A</Haplotype>
+            <Haplotype begin="4567" end="4881" ID="heterozygous1.2">AAGAGAGAGAGGGAGAAAGAGGATTAGATGAGAGTGGCGCCTCCGCTCATGTCCGCCCCCTCCCCGCAGAGAATTACGTGTACCAGTTACGGCAGGAATGCTACG----CGTT---------------------TAATGGGACACAGCGCTTCCTGGAGAGATA-CATCTACAACCGGGAGGAGTTCGTG-CGCTTCGACAGCGACGTGGGGGAGTTCCGGGCGGTGACGGAGCTGGGGCGGCCTGATGAGGACTACTGG-AACAGCCAGAAGGACCTCCTGGAGGAGAAGCGGGCAGTGCCGGACAGGGTATGCAGACACAACTACGAGCTGGACGAGGCC-G</Haplotype>
+            <Haplotype begin="4882" end="5398" ID="homozygous2">TGACCCTGCAGCGCCGAGGTGAGTGAGGGCTTTGGGCCGGCGGTCCCAGGGCAGCCCCGCGGGCCCGTGCCCAGGGCGCAGGAGCAGCCGGGTTGGCCTAAGGGACCTTAGTGCCGGGCGGAAAGGGGACTTTGGGTTGGGGATTCATGGGGGG-AGCCCATCTGGAGCTTGTCAGGGGAGCGAGCGCGGGGACCTGGACTGGGCT-GAGCATGGAGTGAGGAGGACGAGAGCAGAGAGACCCCCGGGACTTCATCAGGCCTGGCAGCTGACTGCATGTGGGGTGAAAAAA-GGAAGCCACAGGACAGCGCACAAGGGTATGGTGTGGAGATGGAGGTGGAGATGGCACA---GCAGGCCACACAGAGAAGAAACCTACAGGGAGGTAGCTGGGTTTGAGGTGCTTGAGGGGCAGATGGGTGGTCTGATGGGCAGGTAGACAGAAGGGTCTGCAGCCGGGGAGGAGACTGAGATACATGAGACCATCCAGGGAGAGGGGACCCAGGGGGAAGAGCAAAGGAC</Haplotype>
+            <Haplotype begin="5399" end="5399" ID="heterozygous2.1">C</Haplotype>
+            <Haplotype begin="5399" end="5399" ID="heterozygous2.2">T</Haplotype>
+            <Haplotype begin="5400" end="6166" ID="homozygous3">GGATCCTGGGAACTGGACAGTTGTGATTTGGCCAAGACAGAAAAGCCTGTGAAAGAGACCAAAAAAACCCAAGTGCAGTGTGAGGAGAGGCCCGCAGAGAAGAGTCTTGGAAGCTGAGGGGAGGTGACCTCAGCAGCACAGTGGACAGCGGTGCCAGTGACTTGGGAAGGTCAGAAAACAGAAGATGGAAA-GTGGGTTTGGAAACCAGGGAGACCTGGGGAGAGCAGGTTGGCCGCAGCGGCAGGAGCTGGAATGGGAGGGGGTGCATGAGGCTGAGTGTGGCGCATCCTCCTCGGGGCTGAGATGGATTTTACTTGTCTTGGGTTCCCCACGGCTGTCACAGGGCAGTGTCTCAGTTCATTCGTCTTTTTCCTTCAGGAAGTCTGGGTGTAAAGGGATGGAGAGAGGTGAGGTGTGTGCAGTAAGAGGATTTCTCAAGGATGGGACAGGAAGGCCTTGGAGCTTTGGCTTCCTCCTGTGAACTTGTGGGGTGGGGAGCCTGGTGCACCAACCTGAGGGACTTGAGGGAGTAGTATCAGGATGTGGGATTGAGCCCTGGACCTTTTTTCTAGAAAGAGGAAAAAAATGAAGGGAGGAGGAGGAGGAAGCTGGGGAGATCACACCTTTGATTTTCTTGTTCCTGGAAAGTGAAAGGAAGTTCACCTGCTATGAGTGAGAAGGTGGACACACTGGGTGGGGATGAGGTGAGTGACATGAGCTTAGGAAAGTTGCTGAGGTAATTGGTTGAGAGAGGTGTTCAAATAAAA</Haplotype>
+            <Haplotype begin="6167" end="10215" ID="heterozygous3.1">ATAACGCAATTGGCAAAAACTGTTACTAAGACTTTGTAGAGGCACCAATCAGTGACATGGCAGCATTTTCTTTCACAGTAATCAACTGCCAGATTGCAGACAGCCCTGATGCCAGCCTAAGGAGTGTGGGTTTCTCCTCCAGGCCCGCAGGTCCCCAACCTCACTCCTCTGAAGACTCTTCTGGAGATCCTCTGTGATGCACAGATCTCCAGACTCAGTGCCCCCAGACTCAGATTCCCTGGGTGGGGAGGTCTGGGGATCTCTGCTTGTAATCAGCTCCCTAGAGGTTCCCATGTAGCCAGATAAGTATTGTCAGAACACTGAAGATTTTTGAAAAATGAAAAAGAGAAGGTTGGAGATGTGTCTTCAGAAGACTACTAAGGGTGCTGGCTAGAGGAGGGACCAGAGGCAGGGAGATGAGGTAGGAAACTGCTATTATTTGTCAGGGAAATTGCAATCAAGGCATGAGTTAGAACAGGGAAAACACAGAGGCAAGGGAGAGGTGGAAGGGGGAGGAAAGAAGTAGTGACAATTCCAGGGTGGATGTCCACCCAAATCTAGAAGTAATTGAGCAAATGTTTTCTGGGCATTAGAGAAGGCAACTAGAACAAACAGGAATCCTTGCCTTGGTGAAATGTATTTGAACTGGGTCAGAAATGAGGCCATTGGGTATCAGGCCTTAACTCCAGCGCACCCTGGAGGTCACTGATGTGGCTCCAGGCTGACCTGCTCCTGTCAAAGAATATTGAGCAAGATGCCTCTCGTGGAATGTTCTGGGACCTTAAAACAGATACCCAAGTATTCCCCCTGATTTCATGGTTCCCAGAAGCTCTATGGGGAAGAAATTGTAGGTAATTCACAACTGAGATTTAGACATAAGTTGAATAGTGTAATGGACATTGAGTTAACCGAGGTAATGAAGTAGTGAGACACAGGTGCCCCTGAAATAAACTCACATTGAGGGAAGAGGCTGACAATGTGGATCAGTCTGAAAACAAGGCAAAAATACAATAGGGAGTAAGGGTTGTGTGTCAGTTCAAGACTGTACTTTTACCTGGCCCAGCGCCATGTTAGGGTATTTGTGTTCTCCAGGAAGTAGAAAGGAAAGAACTGAGTGATTAGGGACCTAGAAGACTAATTTGAGACATTCCTCTTGATGAGCTGTTCTCTAGGGTAGTCCTCTGAAAGAGCTGTTCTCTAGTGGATCTCCCTGAATGAACTGTTCTCTAGGAGCACTTGACCCTTTTCTGTGTTTGTTTTTTGTTTTGTGTTTGTGTTTGTTTTTGAGACAGGTTCTCACTTTGTCTCCCAGGCTGGAGTGCTGTGGCACCATCATGGCTCACTGCAGCCTCAACCTCCTGGGCTCAAGTGATCCTCCTGCCTCAGCCTCCCATGTAGCTAGAACTACAGATACACGTACCACCATGTCTGGCTAATTTATTTTTCTTTTTAGAGATGGGTTCTCACTATGTTGCCCAGGCCGGTCTCAAAACCCTGGGCTCAAGTGATCCTCATGCCTCAACCTCCCAAAGTGCTAAGATTATAGGCATGACCACCATGCCTGGCCTTTTCTGCTTTCTGAGGAGGAAAAAGGTACTGGTGGCAGAGATCCAAAAGAAAAGTTGCCAGTGGCAGTGTGGAAATTCACCTGAGAACAACAGGACAAGCTGGGGCACAAATGCAAAGATGCAGAGGGAGGCAACACCTGGTCATCTGTGAGACCTTCATGGGACCTGAAGACGCAGCACAGAGGAGGAACTTGAAAAAGGACGGGATTTCTACTACTCAAGCATGTAGGAGCTCAGGATATTCTGTAAATATGAAGATTTTGAGTTTTTGTAGGTGAGGTAAAAAAA-TACATAGGTTTTTTACAGAATAAGACATGTAAAGCTCTCTTCATTTTCTTTGTATTTTCATGAA-----GTTATTAGATTCACAGGCCACCATAATGCCATTGTCTGTATATCTTAATTTCAAGATATTATTTGAGTAAATTTTGCTTCCTTTGTATCAAGATAGAACTTTGAAAAGGTAGGTAATTTCACAGTTGATCAAATATTCTTTGCCCAAATTACTTTTGGTTAAAATTTCTCCTAAATGTGCTACAGAGTGCAAACTCTGTCTCCCTGCCATTCCGCTATATACTTACTAACTATTATTTTATTCAAGATCATGCATGCTCTACTTGAAGGTCTATTTCTATCTTTTCAATGCTACCCTTACCCACTAGCCTAATCACATTATTCCTATTTTCAACATCTAGGAATCAATTACATAGTGAACATGCCTAAGAAATAATAATCTGGGCAGATGCAGTGGCTCAGGCCCGTAATCCCAGCCCTTTGAGAGGCCGAGCGGGTGGATCACTTGAGGTCAGGCGTTGGTCAAGTGCTCCTAGAGAACCAGGCTGACCAACATGGAGAAACCTTGTCTCTACTAATAATACAAAAATTAGCCAGGTGAAGTGGCAGGCACCTATAATCCCAGCTATTCGGGAGGCTGAGGAAGGAGAATTGGTTGAAGCCCGGAGGTGGAGGTTGCAGTGAGCCAATATTGCGCCACTGCATTCCAGACTTGGCAACAGAGTGACACTCCATCTCAACAAAAAGAAAGAATGAAAGAAAGAAAGAGCGAGATTATGTCTCANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNAATCTCAAATTCTATTTCATTATTTTTCTTCCACGCTCCTAGTCCAGCCTAGGGTGAATGTTTCCCCC-TCCAAGAAGGGG-CCCTTGCAGCAC--CACAACCTGCTTGTCTGCCACGTGACGGATTTCTACCCAGGCAGCATTCAAGTCCGATGGTTCCTGAATGGACAGGAGGAAACAGCTGGGGTCGTGTCCACCAACCTGATCCGTAATGGAGACTGGACCTTCCAGATCCTGGTGATGCTGGAAATGACCCCCCAGCAGGGAGATGTCTACACCTGCCAAGTGGAGCACACCAGCCTGGATAGTCCTGTCACCGTGGAGTGGAGTGAGTCTCTGATGACCCTCTAGACCCCACCTCTGAAGAGCAGGGGACTCTCTGGCTCTGGGGTCCACTCATCTTATCTTCTGCATCTATACCCTGGGGCCATGTCCAAACCCCATCTTTCTTCTATACCAGCTCCTGAGCATAGTTTGAAGCCAGGGAAATGGAGACTTCCTGACCTTGGCTTAGGGGTTCCTGAAGATTCATAGTTCTCCCCCTTGTCAGAGAATCTAGGGACACTGACTGGTCTCGAAACCCTCACACTTAGGAACTGACCTCACACATAGGAACAGTTCTCTTCCTTCAGCATTTTAGCCTCTTCTCAGGCATTTTGAGAGGCAACTTCCAGAATCAGCATTTGCCACCTTGTTGAGGTCACACCCCTGTTCCAGATATGAGGGTGGCTCTTTCTGAATTTCCTCTTAGCAAGCTTTTTCCGCTGCACTGTCCTCATCCCGATATGCTGCATCAGGCTCCAGAATCTCAGACAGGACATGAGTAGGGATGCAGCTGGTGGAGGTGACACTAAACCTGGGTCTGTCCTTCCCAGAGGCACAGTCTGATTCTGCCCGGAGTAAGACATTGACGGGAGCTGGGGGCTTCGTGCTGGGGCTCATCATCTGTGGAGTGGGCATCTTCATGCACAGGAGGAGCAAGAAAGGTGAGAAAGCCTGCAGGGTGAGCGGGACTTACCTTCCCCTGGCATATTCACACTTATTCCACGATGAGGGGTTTGACAGAAAAGAAATGTCAGAAAGCTCTAGAGGCCA------CTGATATCAGATAATCGGGGAACAAACATGACCTATAGCGAGAGAGGGATCCCAGGCTGGGATCTTAATGCAGCCAGATGCATGAGGTCCCAAGTACTCAGGCTCCTGCGGAGCGTCCATTGAGTGATGGGCAATGGAATTTGGTGGGATGGAAATGTTTCTCTAATTATCTGAGGTGGTTTCAATGGCTGATTATATAACCTTTCGTCTTTCATTTCAGTTCAACGAGGATCTGCATAAACAGGTAATATTCCTGCTTTGATTTCCTTGTGGGGTGGGTTGCAGGAGGATATGAGTCCTTTCTGTGCATTGTAAC</Haplotype>
+            <Haplotype begin="6167" end="10215" ID="heterozygous3.2">GTAATGCAATTGGCAAAAACTGTTACTAAGACTTTGTAGAGGCACAAATCAGTGACACGGCAGCATCTTCTTTCACAGTAATCAACTGCCAGATTGCAGGGAGCCTTGATACCAGCCTAAGGAGTGTGAGTTTCTCCTCTAGGCCCACAGGTCCCCAACCTCACTTCTCCGAAGACTCTCCTGGAGATCATCTGTGATGCGCAGATACCCAGACTCACTGCCCCGAGACTCAGATTCCCTGGGTAGGGAGGTCGGGGGATCTCTGCTTGTAATCAGCTCCCTAGAGGTTCCCATGTAGCCGGATAAGTATTGTCAGAACACTGAAGATTTTTGAAAAATGAAAAAGCGAAGGTTGGAGATGTGTCTTCAGAAGACTACTAAGGGTGCTGGGTAGAGGAGGGACCAGAGGCAGGGAAATGAGGTAGGAAACTGCTATTATTTGTCAGGGAAATTGCAATCAAGAAATGAGTTAGAACAGGGAAAAGACAGAGGCAGGGGAGAGGTGGAAGGGGGAGGAAAGGAGTAGTGACAATTCCAGGGTGTATGCTCACCCAAATCTAGAAGTAATTGAGCAAATGTTTTCTGGGCATTAGAGAAGGCAACTAGAACAAACAGGAATCCTTGCCTTGGTGAAATGTATTTGAACTGGGTCAGAAATGAGGCCATTGGGTATCAAGCCTTAACTCCAGCGCCCCCTGGAGGTCGCTGATGTGGCTCCAGGCTGACCTGCTCCTGTCAAAGAATATTGAGCAAGATGCCTCTCATGGAATGTTCTGGGACCTTAAAACAGATACCCAAGTATTCCCCCTGATTTCATGGTTCCCAGAAGCTCTATGGGGAAGAAATTGTACGTAATTCACAACTGAGATTTAGACATAAGTTGAATAGTGTAATGGACGTTGAGTTAACCGAGGTAATGAAGTAGTGAGACACAGGTGCCCCTGAAATAAACTCACATTGAGGGAAGAGGCTGACAATGTGGATCAGTCTGTAAACAAGGCAAAAATACAATAGGGAGTAAGGGTTGTGTGTCAGTTCAAGACTGTACTTTTACCTGGCCCAGCGCCATGTTGGGGTATTTGTGTTCTCCAGGAAGTAGAAAGGAAAGAACTGAGTGATTAGGGACCTAGAAGACTAATTTGAGACATTCCTCTTGATGAACTGTTCTCTAGGGTAGTCCTCTGAAAGAGCTGTTCTCTAGTGGATCTCCCTGAATGAACTGTTCTCTAGGAGCACTTGACCCTTTTCTGTGTTTGTTTTTTGTTTTGTGTTTGTGTTTGTTTTTGAGACAGGTTCTCGCTCTGTCTCCCAGGCTGGAGTGCTGTGGCGCCATCATGACTCACTGCAGCCTCAACCTCCTGGGCTCAAGTGATCCTCCTGCCTCAGCCTCCCATGTAGCTAGAACTACAGATACATGTACCACCATGTCTGGCTAATTTATTTTTCTTTTTAGAGATGGGTTCTCACTATGTTGCCCAGGCTGGTCTCGAAACCCTGGGCTCAAGTGATCCTCACGCCTCAGCCTCCCAAAGTGCTAAGATTATAGGCATGACCACCATGCCTGGCCTTTTCTGCCTTCCGAGAAGGAAAAAGGTACTGGTGGCAGAGATCCAAAAGAAAAGTTGCCAGTGGCAGTGTGGAAATTGACCTGAGAACAACAGAACAAGCTGGGGCACAAATGCAAAGATGCAGAGGGAGGCAACATCTGGTTATCTGTGAGACCTTCATGGGACCTGAAGACACATCCT----------TTTGGAAAAGGATGGGATTTCTACTACTCAAGCATGTAGGGGCTCAGGATATTATGTAAATATGAAGATTTTGAGTTTTTGTAAGTGAGGTAAAAAAAATACCTAGGTTATTTACAGAATAAGACATGTCAAGCTCTCTTCATTTTCTTTGTATTTTCATGAAATAAAGGTATTAGATTAACAGGCCACCATAATGCCATTGTCTGTATATCTTAATTTCAAGATATTATTTGAGTAATTTTTGCATCCTTTGTATCAAGATAGAACTTTGAAAAGACAGGTAATTTCACAGTTGATTAAATATTCTTTGCCCAAATTACTTTTGGTTAAAATTTCTCCTATATGTGCTACAGAGTGCAAACTCTGTCTCCCTGCCATTCCGCTATATACTTACTAATTATTATTTTATTCAAGATCATGCATGCTCTACTTGAAGGTCTAT------CTTTTCAGTGCTACCCTTACCCACTAGCCTAATCACATTATATCTATTTTCAACATCTAGGAATCAATTACGTAGTGAACATGCCTAAGAAATAATAATCTGGGCAGATGCAGTGGCTCAGGCCTGTAATCCCAGCACTTTGAGAGGCTGAGCGGGTGGATCACTTGAGGTCAGGAGTTGGTCAAGTGCTCCTAGAGAACCAGCCTGACCAACATGGAGAAACCTTGTCTCTACTGATAATACAAAAATTAGCCAGGTGAGGTGGCAGGCACCTATAATCCCAGCTATTCGGGAGGCTGAGGAAGGAGAATTGCTTGAACCCCTGAGGTGGAGGTTGCAGTGAGCCAATATTGCGCCACTGCATTCCAGACTTGGCAACAGAGCGACACTCCACCTCAACAAAAAGAAAGAA------------AGAGCGAGATTACGTCTCANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNAATCTCAAATGCTATTTCATTATTTTCCTTCCCCACTCGTAGTCCAGCCTAAGGTGAACGTTTCCCCC-TCCAAGAAGGGG-CCCCTGCAGCAC--CACAACCTGCTTGTCTGCCACGTGACAGATTTCTACCCAGGCAGCATTCAAGTCCGATGGTTCCTGAATGGACAGGAGGAAACAGCTGGGGTCGTGTCCACCAACCTGATCCGTAATGGAGACTGGACCTTCCAGATCCTGGTGATGCTGGAAATGACCCCCCAGCAGGGAGACGTCTACATCTGCCAAGTGGAGCACACCAGCCTGGACAGTCCTGTCACCGTGGAGTGGAGTGAGTCTCTGATGACCGTCTAGACCCCACCTCTGAAGAGCAGGGGACTCTCTGGCTCTGGGGTCCACTCATCTTATCTTCTGCATCTATACCCTGGGGCCATGTCCAAACCCCATCTTTCTTCTATACCAGCTCCTGAGCATAGTTTGAAGCCAGGGCAATGGAGACTTCCTGACCTTGGCTTAGGGGTTCCTGAAGATTCATAGTTCTCCCCCTTGTCAGAGAATCTAGGGACACTGGCTGATCTCGAAACCCTCACACACAGGAACTGACCTCACACATAGGAACAGTTCTCTTCTTTCAGCATTTTAGCCTCTTCTCAGGCATTTTGAGAGGCAACTTCTAGAATCAGCATTTGCCACCTTGTTGAGGTCACACCCCTGTTCCGGACATGAGGGTGGCTCTTTCTGAATTTCCTCTTAGCAAGCTTTTTCCCCTGCACTGTCTTCATCCCGATATTCTGCATCACGCTCCAGAATCTCAGACAGGACATGAGTAGGGATGCAGCTGGTGGAGGTGACACTAAACCTGGGTCTGTCCTTCCCAGAGGCACAGTCTGATTCTGCCCGGAGTAAGACATTGACGGGAGCTGGGGGCTTCGTGCTGGGGCTCATCATCTGTGGAGTGGGCATCTTCATGCACAGGAGGAGCAAGAAAGGTGAGAAAGCCTGCAAGGTGAGCGGGACTTACCTTCCCCTGGCATATTCACACTTACTCCATGATGAGGGTTCAGACAGAAAAGAAATGTCAGAAAGCTCTAGAGACCA------CTGAAATCAGATAGTCGGGGAACAAACATGACCTATGGCGAGAGGGGGATCCCAGGCTGGGATCTTAATGCAGCCAGATGCATGAGGTCCCAGGTGCTCAGACTCCTGCGGGGCATCCATTGAGTGGTGGTCAATGGAATTTGGTGGGATGGAAATGTTTCTCTAACTATCTGAGGTGGTTTCAATGGCTGAATACATAACCTTTCCTCTTTCATTTCAGTTCAACGAGGATCTGCATAAACAGGTAATATTCCTGCTTTGATTTCCTTGGGGGGTGGGTTACAGGAGGATATGACTCTTTTCTGTGCATTGTAAT</Haplotype>
+            <Haplotype begin="10216" end="10225" ID="homozygous4">ACTGAGGCTC</Haplotype>
+          </Haplotypes>
+          <AnnotatedAlleles>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: DPB1*04:01:01:01" Match="DPB1*04:01:01:01" ExonMismatches="0" IntronMismatches="0">GACCACAGAACTCGGTACTAGGAAAACTCCTATTTTAAAATCCAGCCCTGGGTGGGAAGATTTGGGAAGAATCGTTAATATTGAGAGAGAGAGGGAGAAAGAGGATTAGATGAGAGTGGCGCCTCCGCTCATGTCCGCCCCCTCCCCGCAGAGAATTACCTTTTCCAGGGACGGCAGGAATGCTACGCGTTTAATGGGACACAGCGCTTCCTGGAGAGATACATCTACAACCGGGAGGAGTTCGCGCGCTTCGACAGCGACGTGGGGGAGTTCCGGGCGGTGACGGAGCTGGGGCGGCCTGCTGCGGAGTACTGGAACAGCCAGAAGGACATCCTGGAGGAGAAGCGGGCAGTGCCGGACAGGATGTGCAGACACAACTACGAGCTGGGCGGGCCCATGACCCTGCAGCGCCGAGGTGAGTGAGGGCTTTGGGCCGGCGGTCCCAGGGCAGCCCCGCGGGCCCGTGCCCAGGGCGCAGGAGCAGCCGGGTTGGCCTAAGGGACCTTAGTGCCGGGCGGAAAGGGGACTTTGGGTTGGGGATTCATGGGGGGAGCCCATCTGGAGCTTGTCAGGGGAGCGAGCGCGGGGACCTGGACTGGGCTGAGCATGGAGTGAGGAGGACGAGAGCAGAGAGACCCCCGGGACTTCATCAGGCCTGGCAGCTGACTGCATGTGGGGTGAAAAAAGGAAGCCACAGGACAGCGCACAAGGGTATGGTGTGGAGATGGAGGTGGAGATGGCACAGCAGGCCACACAGAGAAGAAACCTACAGGGAGGTAGCTGGGTTTGAGGTGCTTGAGGGGCAGATGGGTGGTCTGATGGGCAGGTAGACAGAAGGGTCTGCAGCCGGGGAGGAGACTGAGATACATGAGACCATCCAGGGAGAGGGGACCCAGGGGGAAGAGCAAAGGAC</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..913" Key="source" Gene="DPB1" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;913" Key="gene" Gene="DPB1" />
+                <Feature location="&lt;152..&gt;415" Key="CDS" Gene="DPB1" Codon_start="3" Product="MHC class II DP beta chain" Allele="DPB1*04:01:01:01" Translation="NYLFQGRQECYAFNGTQRFLERYIYNREEFARFDSDVGEFRAVTELGRPAAEYWNSQKDILEEKRAVPDRMCRHNYELGGPMTLQRR" />
+                <Feature location="&lt;1..151" Number="1" Key="intron" Gene="DPB1" Allele="DPB1*04:01:01:01" />
+                <Feature location="152..415" Number="2" Key="exon" Gene="DPB1" Allele="DPB1*04:01:01:01" />
+                <Feature location="416..&gt;913" Number="2" Key="intron" Gene="DPB1" Allele="DPB1*04:01:01:01" />
+              </Features>
+            </AnnotatedAllele>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: DPB1*03:01:01:01" Match="DPB1*03:01:01:01" ExonMismatches="0" IntronMismatches="0">GACCACAGAACTCGGTACTAGGAAAACTCCTATTTTAAAATCCAGCCCTGGGTGGGAAGATTTGGGAAGAATCGTTAATATTAAGAGAGAGAGGGAGAAAGAGGATTAGATGAGAGTGGCGCCTCCGCTCATGTCCGCCCCCTCCCCGCAGAGAATTACGTGTACCAGTTACGGCAGGAATGCTACGCGTTTAATGGGACACAGCGCTTCCTGGAGAGATACATCTACAACCGGGAGGAGTTCGTGCGCTTCGACAGCGACGTGGGGGAGTTCCGGGCGGTGACGGAGCTGGGGCGGCCTGATGAGGACTACTGGAACAGCCAGAAGGACCTCCTGGAGGAGAAGCGGGCAGTGCCGGACAGGGTATGCAGACACAACTACGAGCTGGACGAGGCCGTGACCCTGCAGCGCCGAGGTGAGTGAGGGCTTTGGGCCGGCGGTCCCAGGGCAGCCCCGCGGGCCCGTGCCCAGGGCGCAGGAGCAGCCGGGTTGGCCTAAGGGACCTTAGTGCCGGGCGGAAAGGGGACTTTGGGTTGGGGATTCATGGGGGGAGCCCATCTGGAGCTTGTCAGGGGAGCGAGCGCGGGGACCTGGACTGGGCTGAGCATGGAGTGAGGAGGACGAGAGCAGAGAGACCCCCGGGACTTCATCAGGCCTGGCAGCTGACTGCATGTGGGGTGAAAAAAGGAAGCCACAGGACAGCGCACAAGGGTATGGTGTGGAGATGGAGGTGGAGATGGCACAGCAGGCCACACAGAGAAGAAACCTACAGGGAGGTAGCTGGGTTTGAGGTGCTTGAGGGGCAGATGGGTGGTCTGATGGGCAGGTAGACAGAAGGGTCTGCAGCCGGGGAGGAGACTGAGATACATGAGACCATCCAGGGAGAGGGGACCCAGGGGGAAGAGCAAAGGAC</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..913" Key="source" Gene="DPB1" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;913" Key="gene" Gene="DPB1" />
+                <Feature location="&lt;152..&gt;415" Key="CDS" Gene="DPB1" Codon_start="3" Product="MHC class II DP beta chain" Allele="DPB1*03:01:01:01" Translation="NYVYQLRQECYAFNGTQRFLERYIYNREEFVRFDSDVGEFRAVTELGRPDEDYWNSQKDLLEEKRAVPDRVCRHNYELDEAVTLQRR" />
+                <Feature location="&lt;1..151" Number="1" Key="intron" Gene="DPB1" Allele="DPB1*03:01:01:01" />
+                <Feature location="152..415" Number="2" Key="exon" Gene="DPB1" Allele="DPB1*03:01:01:01" />
+                <Feature location="416..&gt;913" Number="2" Key="intron" Gene="DPB1" Allele="DPB1*03:01:01:01" />
+              </Features>
+            </AnnotatedAllele>
+          </AnnotatedAlleles>
+          <Matching>
+            <Matches>
+              <Match ID="DPB1*03:01:01:01" phasing="2,2,2">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.2</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>heterozygous2.2</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous3.2</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+              <Match ID="DPB1*04:01:01:01" phasing="1,1,1">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.1</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>heterozygous2.1</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous3.1</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+            </Matches>
+            <Matchset ID="1">
+              <MatchCombination PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0">
+                <MatchID Phasing="2,2,2" RefAllele="DPB1*03:01:01:01" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+                <MatchID Phasing="1,1,1" RefAllele="DPB1*04:01:01:01" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+              </MatchCombination>
+            </Matchset>
+          </Matching>
+          <TypingResult>
+            <GenoTypeList Count="374">
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:01</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:02</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:03</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:05</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:06</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:08</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:09</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:04</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:07</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:11</allele>
+                  <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*03:01P" GGroup="DPB1*03:01:01G" Serology="?">DPB1*03:01:01:10</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:01</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:02</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:04</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:05</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:06</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:14</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:15</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:16</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:17</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:26</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:29</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:30</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:07</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:08</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:10</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:11</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:19</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:20</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:21</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:22</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:23</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:25</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:28</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:31</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:32</allele>
+                  <allele PriorityMM="0" NonPriorityMM="1" ExonMM="0" IntronMM="1" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:33</allele>
+                  <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:03</allele>
+                  <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:09</allele>
+                  <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:13</allele>
+                  <allele PriorityMM="0" NonPriorityMM="2" ExonMM="0" IntronMM="2" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:18</allele>
+                  <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:12</allele>
+                  <allele PriorityMM="0" NonPriorityMM="3" ExonMM="0" IntronMM="3" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:27</allele>
+                  <allele PriorityMM="0" NonPriorityMM="4" ExonMM="0" IntronMM="4" CWD="No" PGroup="DPB1*04:01P" GGroup="DPB1*04:01:01G" Serology="?">DPB1*04:01:01:34</allele>
+                  <allele PriorityMM="1" NonPriorityMM="0" ExonMM="0" IntronMM="1" CWD="No" PGroup="" GGroup="DPB1*04:01:01G" Serology="Null">DPB1*04:01:01:24N</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <NMDPCodes TableDate="06/27/19" Nomenclature="nc3">
+              <allele_1 Name="DPB1*03:01" />
+              <allele_2 Name="DPB1*04:01" />
+            </NMDPCodes>
+            <GLString>DPB1*03:01:01:01/DPB1*03:01:01:02/DPB1*03:01:01:03/DPB1*03:01:01:05/DPB1*03:01:01:06/DPB1*03:01:01:08/DPB1*03:01:01:09+DPB1*04:01:01:01/DPB1*04:01:01:02/DPB1*04:01:01:04/DPB1*04:01:01:05/DPB1*04:01:01:06/DPB1*04:01:01:14/DPB1*04:01:01:15/DPB1*04:01:01:16/DPB1*04:01:01:17/DPB1*04:01:01:26/DPB1*04:01:01:29/DPB1*04:01:01:30</GLString>
+          </TypingResult>
+          <TypingResultThreeFields>
+            <GenoTypeList Count="2">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01:01</allele>
+                <allele PriorityMM="1" ExonMM="0" CWD="No" Serology="Null">DPB1*04:01:01N</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01:01</allele>
+                  <allele PriorityMM="1" ExonMM="0" CWD="No" Serology="Null">DPB1*04:01:01N</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DPB1*03:01:01+DPB1*04:01:01</GLString>
+          </TypingResultThreeFields>
+          <TypingResultTwoFields>
+            <GenoTypeList Count="2">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01</allele>
+                <allele PriorityMM="1" ExonMM="0" CWD="No" Serology="Null">DPB1*04:01N</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01</allele>
+                  <allele PriorityMM="1" ExonMM="0" CWD="No" Serology="Null">DPB1*04:01N</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DPB1*03:01+DPB1*04:01</GLString>
+          </TypingResultTwoFields>
+          <TypingResultPGroup>
+            <GenoTypeList Count="2">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01P</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01P</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01P</allele>
+                <allele PriorityMM="1" ExonMM="0" CWD="No" Serology="Null">DPB1*04:01:01:24N</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01P</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01P</allele>
+                  <allele PriorityMM="1" ExonMM="0" CWD="No" Serology="Null">DPB1*04:01:01:24N</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DPB1*03:01P+DPB1*04:01P</GLString>
+          </TypingResultPGroup>
+          <TypingResultGGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01:01G</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01:01G</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01:01G</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01:01G</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DPB1*03:01:01G+DPB1*04:01:01G</GLString>
+          </TypingResultGGroup>
+          <TypingResultOptimized Resolutions="4-3-2-P">
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01:01</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*03:01:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="?">DPB1*04:01:01</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DPB1*03:01:01+DPB1*04:01:01</GLString>
+          </TypingResultOptimized>
+          <AnalysisSoftware>
+            <Software>NGSengine 2.14.0.14234</Software>
+            <Version>2.14.0.14234</Version>
+          </AnalysisSoftware>
+          <AnalysisSettings>
+            <AmpliconMethod>NGSgo</AmpliconMethod>
+            <AnalysisRegion>Amplicon</AnalysisRegion>
+            <IgnoreRegions>Default</IgnoreRegions>
+            <PhasingMethod MinimumReadDepth="20" AlleleRatioThreshold="20" NoiseThreshold="14">Classic</PhasingMethod>
+            <ReadTrimmer Applied="Yes">
+              <Settings RelativeThreshold="70" AbsoluteThreshold="20" WindowSize="10" />
+            </ReadTrimmer>
+            <ApplyCWDList>true</ApplyCWDList>
+          </AnalysisSettings>
+          <Edits />
+          <Warnings />
+          <ReviewList CurrentApprovalStatus="Not Reviewed" Level="Unknown" />
+          <PreferredAnalysisRegionsQualityMetrics>
+            <RegionQualityMetrics region="Amplicon" start="-366" end="11102" ampliconFraction="0.8923" analysisCoveredFraction="0.8923" analysisAmpliconFraction="0.5592" qmFraction="0.499">
+              <InputData>
+                <ReadDepth minimum="30" maximum="743" average="390" median="435" sd="177.577" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.3578">
+                <TotalNoiseLevel minimum="0" maximum="0.0393" average="0.0023" median="0.0018" sd="0.0027" count="5793" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0393" average="0.0024" median="0.0019" sd="0.0027" count="5589" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0088" average="0.0014" median="0" sd="0.0021" count="204" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.3971" maximum="0.5" average="0.4688" median="0.4725" sd="0.0236" count="204" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="204" homozygousPosnsCount="5589" ignoredPosnsCount="4566">
+                <Aligning indelsCount="115" isIllumina="True" />
+                <AnalysisReadDepth minimum="191" maximum="743" average="523" median="531" sd="104.009" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Core+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="1" qmFraction="1">
+              <InputData>
+                <ReadDepth minimum="404" maximum="689" average="572" median="621" sd="95.859" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.4661">
+                <TotalNoiseLevel minimum="0" maximum="0.0187" average="0.0043" median="0.0032" sd="0.0037" count="297" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0187" average="0.0043" median="0.0032" sd="0.0037" count="281" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0077" average="0.0039" median="0.0039" sd="0.0028" count="16" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.4848" maximum="0.4984" average="0.4911" median="0.4904" sd="0.0038" count="16" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="16" homozygousPosnsCount="281" ignoredPosnsCount="0">
+                <Aligning indelsCount="29" isIllumina="True" />
+                <AnalysisReadDepth minimum="404" maximum="689" average="572" median="621" sd="95.859" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Exon+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="0.8765" qmFraction="0.8765">
+              <InputData>
+                <ReadDepth minimum="298" maximum="696" average="555" median="580" sd="112.105" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.4503">
+                <TotalNoiseLevel minimum="0" maximum="0.0187" average="0.0034" median="0.003" sd="0.0031" count="724" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0187" average="0.0034" median="0.003" sd="0.0031" count="701" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0077" average="0.0031" median="0.0023" sd="0.0028" count="23" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.469" maximum="0.4984" average="0.4893" median="0.4905" sd="0.0083" count="23" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="23" homozygousPosnsCount="701" ignoredPosnsCount="102">
+                <Aligning indelsCount="33" isIllumina="True" />
+                <AnalysisReadDepth minimum="404" maximum="696" average="589" median="599" sd="72.092" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+          </PreferredAnalysisRegionsQualityMetrics>
+          <TotalLocusQualityMetrics start="-366" end="11102">
+            <ReadLength minimum="19" maximum="151" average="142" median="151" sd="25.19" />
+            <Analysis>
+              <Aligning>
+                <InsertSizeDistributionAllReads minimum="35" maximum="9298" average="368" median="342" sd="-1" avgInsertSizeReadLengthRatio="2.62857151" />
+              </Aligning>
+            </Analysis>
+          </TotalLocusQualityMetrics>
+        </Locus>
+      </Loci>
+    </Sample>
+  </Samples>
+</ProjectXml>

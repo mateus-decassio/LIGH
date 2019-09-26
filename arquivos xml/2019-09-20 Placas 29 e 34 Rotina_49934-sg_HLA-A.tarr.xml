@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectXml d1p1:noNamespaceSchemaLocation="https://www.gendx.com/NGSengine/XSD/20190613/TARR.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectName>2019-09-20 Placas 29 e 34 Rotina</ProjectName>
+  <User Name="Joandrei1" DateTime="2019-09-25T19:04:07.0121386Z" Level="First reviewer" />
+  <ProjectFolder>C:\Corridas NGS\Projetos\2019-09-20 Placas 29 e 34 Rotina</ProjectFolder>
+  <DataFolders>
+    <Folder>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina</Folder>
+  </DataFolders>
+  <AnalysisSoftware>
+    <Software>NGSengine</Software>
+    <Version>2.14.0.14234</Version>
+  </AnalysisSoftware>
+  <LociCount Analyzed="372">373</LociCount>
+  <SampleCount Analyzed="112">112</SampleCount>
+  <Samples>
+    <Sample>
+      <Name>49934-sg</Name>
+      <Mappability AcceptedReads="154712" UsedReads="174760" TotalReads="174760" PercentageUsed="88.5" />
+      <SequencingType>Illumina</SequencingType>
+      <Files>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\49934-sg_S4_L001_R1_001.fastq.gz</File>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\49934-sg_S4_L001_R2_001.fastq.gz</File>
+      </Files>
+      <Loci>
+        <Locus>
+          <Name>HLA-A</Name>
+          <SampleName>49934-sg</SampleName>
+          <User Name="Joandrei1" DateTime="2019-09-25T19:04:05.9973286Z" Level="First reviewer" />
+          <Mappability AcceptedReads="12385" UsedReads="12592" TotalReads="12592" PercentageUsed="98.4" />
+          <ReadLength Minimum="1" Maximum="151" Median="-1" Mean="137" />
+          <ReadDepth Minimum="424" Maximum="1212" Median="1010" Mean="-1" />
+          <QuestionMarkPositions />
+          <PhasingRegions>24</PhasingRegions>
+          <NumberOfGenotypes>1</NumberOfGenotypes>
+          <AlleleDB>
+            <Gene>HLA-A</Gene>
+            <Version>IMGT/HLA 3.36.0</Version>
+            <NrAlleles>0</NrAlleles>
+            <Length>3848</Length>
+            <Regions>
+              <Region begin="-300" end="-1" ID="UTR" />
+              <Region begin="1" end="73" ID="Exon 1" />
+              <Region begin="74" end="203" ID="Intron 1" />
+              <Region begin="204" end="473" ID="Exon 2" />
+              <Region begin="474" end="714" ID="Intron 2" />
+              <Region begin="715" end="990" ID="Exon 3" />
+              <Region begin="991" end="1569" ID="Intron 3" />
+              <Region begin="1570" end="1845" ID="Exon 4" />
+              <Region begin="1846" end="1947" ID="Intron 4" />
+              <Region begin="1948" end="2064" ID="Exon 5" />
+              <Region begin="2065" end="2506" ID="Intron 5" />
+              <Region begin="2507" end="2539" ID="Exon 6" />
+              <Region begin="2540" end="2681" ID="Intron 6" />
+              <Region begin="2682" end="2729" ID="Exon 7" />
+              <Region begin="2730" end="2898" ID="Intron 7" />
+              <Region begin="2899" end="2903" ID="Exon 8" />
+              <Region begin="2904" end="3203" ID="UTR" />
+            </Regions>
+            <PriorityRegions>
+              <Region begin="-103" end="-99" />
+              <Region begin="1" end="75" />
+              <Region begin="176" end="482" />
+              <Region begin="707" end="992" />
+              <Region begin="1568" end="1847" />
+              <Region begin="1946" end="2066" />
+              <Region begin="2505" end="2541" />
+              <Region begin="2680" end="2731" />
+              <Region begin="2897" end="2903" />
+            </PriorityRegions>
+          </AlleleDB>
+          <Haplotypes>
+            <Haplotype begin="-107" end="-46" ID="homozygous1">TCCCATTGGGTGTCGGGTTTCCAGAGAAGCCAATCAGTGTCGTCGCGGTCGCTGTTCTAAAG</Haplotype>
+            <Haplotype begin="-45" end="-45" ID="heterozygous1.1">C</Haplotype>
+            <Haplotype begin="-45" end="-45" ID="heterozygous1.2">T</Haplotype>
+            <Haplotype begin="-44" end="27" ID="homozygous2">CCGCACGCACCCACCGGGACTCAGATTCT-CCCCAGACGCCGAGGATGGCCGTCATGGCGCCCCGAACCCTC</Haplotype>
+            <Haplotype begin="28" end="152" ID="heterozygous2.1">CTCCTGCTACTCTCGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGGGAGGGAAACCGCCTCTGCGGGGAGAAGCAAGGGGCCCTCCTGGCGGGGGCGCAGGACCGGGGG</Haplotype>
+            <Haplotype begin="28" end="152" ID="heterozygous2.2">GTCCTGCTACTCTCGGGGGCCCTGGCCCTGACCCAGACCTGGGCAGGTGAGTGCGGGGTCGGGAGGGAAACGGCCTCTGCGGGGAGAAGCAAGGGGCCCGCCTGGCGGGGGCGCAAGACCCGGGA</Haplotype>
+            <Haplotype begin="153" end="165" ID="homozygous3">AGCCGCGCCGGGA</Haplotype>
+            <Haplotype begin="166" end="228" ID="heterozygous3.1">GGAGGGTCGGTCAGGTCTCAGCCACTGCTCGCCCCCAGGCTCCC-ACTCCATGAGGTATTTCTT</Haplotype>
+            <Haplotype begin="166" end="228" ID="heterozygous3.2">CGAGGGTCGGGCGGGTCTCAGCCACTCCTCGTCCCCAGGCTCCC-ACTCCATGAGGTATTTCTC</Haplotype>
+            <Haplotype begin="229" end="250" ID="homozygous4">CACATCCGTGTCCC-----GGCCCGGC</Haplotype>
+            <Haplotype begin="251" end="274" ID="heterozygous4.1">AGTGGAGAGCC----CCGCTTCATCGCA</Haplotype>
+            <Haplotype begin="251" end="274" ID="heterozygous4.2">CGCGGGGAGCC----CCGCTTCATCGCC</Haplotype>
+            <Haplotype begin="275" end="332" endGap="2" ID="homozygous5">GTGGGC-----------------------TACGTGGAC----GACACG-CAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGA--</Haplotype>
+            <Haplotype begin="333" end="333" ID="heterozygous5.1">A</Haplotype>
+            <Haplotype begin="333" end="333" ID="heterozygous5.2">G</Haplotype>
+            <Haplotype begin="334" end="367" ID="homozygous6">GATGGAGCCG--------------------CGGGCGCCGTGGATAGAGCAGGAG</Haplotype>
+            <Haplotype begin="368" end="431" ID="heterozygous6.1">AGGCCTGAGTATTGGGACCAGG--------------AGACACGGA-ATATGAAGGCCC-ACTCACAGACTGACCGAGAGA</Haplotype>
+            <Haplotype begin="368" end="431" ID="heterozygous6.2">GGGCCGGAGTATTGGGACGAGG--------------AGACAGGGA-AAGTGAAGGCCC-AGTCACAGACTGACCGAGTGG</Haplotype>
+            <Haplotype begin="432" end="436" ID="homozygous7">ACCTG</Haplotype>
+            <Haplotype begin="437" end="504" ID="heterozygous7.1">GGGACCCTGCGCGGCTACTACAACCAGAGCGAGGACGGTGAGTGACCCCGGCCCGGGG-CGCAGGTCAC</Haplotype>
+            <Haplotype begin="437" end="504" ID="heterozygous7.2">CGGATCGCGCTCCGCTACTACAACCAGAGCGAGGCCGGTGAGTGACCCCGGCCGGGGG-CGCAGGTCAG</Haplotype>
+            <Haplotype begin="505" end="530" ID="homozygous8">GACCCCTCATCCCCC-ACGGACGGGCC</Haplotype>
+            <Haplotype begin="531" end="580" ID="heterozygous8.1">AGGTCGCCCACAGTCTCCGGGTCCGAGATCCACCCCGAAGCCGCGGGACT</Haplotype>
+            <Haplotype begin="531" end="580" ID="heterozygous8.2">GGGTCGCCCACAGTCTCCGGGTCCGAGATCCACCCCGAAGCCGCGGGACC</Haplotype>
+            <Haplotype begin="581" end="592" ID="homozygous9">CCGAGACCCTTG</Haplotype>
+            <Haplotype begin="593" end="650" ID="heterozygous9.1">ACCCGGGAGAGGCCCAGGCGCCTTTA-CCCGGTTTCATTTTCAGTTTAGGCCAAAAA-TT</Haplotype>
+            <Haplotype begin="593" end="650" ID="heterozygous9.2">CCCCGGGAGAGGCCCAGGCGCCTTAA-CCCGGTTTCATTTTCAGTTTAGGCCAAAAA-TC</Haplotype>
+            <Haplotype begin="651" end="669" ID="homozygous10">CCCCCGGGTTGGTCGGGGC</Haplotype>
+            <Haplotype begin="670" end="670" ID="heterozygous10.1">G</Haplotype>
+            <Haplotype begin="670" end="670" ID="heterozygous10.2">T</Haplotype>
+            <Haplotype begin="671" end="725" endGap="1" ID="homozygous11">GGGCGGGGCTCGGGGGA-------------------CTGGGCTGACCGCGGGGTCGGGGCCAGGTTCTCACACC-</Haplotype>
+            <Haplotype begin="726" end="756" ID="heterozygous11.1">ATCCAGATAATGTATGGCTGCGACG--------------TGGGGC</Haplotype>
+            <Haplotype begin="726" end="756" ID="heterozygous11.2">CTCCAGATGATGTTTGGCTGCGACG--------------TGGGGT</Haplotype>
+            <Haplotype begin="757" end="781" ID="homozygous12">CGG-ACGGGCGCTTCCTCCGCGGGTA</Haplotype>
+            <Haplotype begin="782" end="789" ID="heterozygous12.1">TGACCAGC</Haplotype>
+            <Haplotype begin="782" end="789" ID="heterozygous12.2">CCGGCAGG</Haplotype>
+            <Haplotype begin="790" end="823" ID="homozygous13">ACGCCTACGACGGCAAGGATTACATCGCCCTGA-----------------------A</Haplotype>
+            <Haplotype begin="824" end="860" ID="heterozygous13.1">C-GAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCA</Haplotype>
+            <Haplotype begin="824" end="860" ID="heterozygous13.2">A-GAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCG</Haplotype>
+            <Haplotype begin="861" end="872" ID="homozygous14">G--------CTCAGATCACC</Haplotype>
+            <Haplotype begin="873" end="873" ID="heterozygous14.1">C</Haplotype>
+            <Haplotype begin="873" end="873" ID="heterozygous14.2">A</Haplotype>
+            <Haplotype begin="874" end="891" ID="homozygous15">AGCGC-AAGTGGGA--------------------------------------G--GCGG</Haplotype>
+            <Haplotype begin="892" end="892" ID="heterozygous15.1">T</Haplotype>
+            <Haplotype begin="892" end="892" ID="heterozygous15.2">C</Haplotype>
+            <Haplotype begin="893" end="894" ID="homozygous16">CC</Haplotype>
+            <Haplotype begin="895" end="910" ID="heterozygous16.1">GTTGGGC-GG------------------------------------------AGCAGTT</Haplotype>
+            <Haplotype begin="895" end="910" ID="heterozygous16.2">ATGCGGC-GG------------------------------------------AGCAGCG</Haplotype>
+            <Haplotype begin="911" end="915" ID="homozygous17">GAGAG</Haplotype>
+            <Haplotype begin="916" end="916" ID="heterozygous17.1">T</Haplotype>
+            <Haplotype begin="916" end="916" ID="heterozygous17.2">C</Haplotype>
+            <Haplotype begin="917" end="925" ID="homozygous18">CTACCTGGA</Haplotype>
+            <Haplotype begin="926" end="926" ID="heterozygous18.1">T</Haplotype>
+            <Haplotype begin="926" end="926" ID="heterozygous18.2">G</Haplotype>
+            <Haplotype begin="927" end="929" ID="homozygous19">GGC</Haplotype>
+            <Haplotype begin="930" end="931" ID="heterozygous19.1">CG</Haplotype>
+            <Haplotype begin="930" end="931" ID="heterozygous19.2">AC</Haplotype>
+            <Haplotype begin="932" end="940" ID="homozygous20">G--------TGCGTG----GA</Haplotype>
+            <Haplotype begin="941" end="1130" ID="heterozygous20.1">GTGG--------------CTCCGCAGATA-CCTGGAGAACGGGAAGGAGACGCTGCAGC-----------------GCACGGGTACCAGGGGCCACGGGGCG-----CCTCCCTGATCGCCTAT-----------------------AGATCTCCCGGGCTGGCCTC--CCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCACCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTT-</Haplotype>
+            <Haplotype begin="941" end="1130" ID="heterozygous20.2">CGGG--------------CTCCGCAGATA-CCTGGAGAACGGGAAGGAGACGCTGCAGC-----------------GCACGGGTACCAGGGGCCACGGGGCG-----CCTACCTGATCGCCTGT-----------------------AGGTCTCCCGGGCTGGCCTC--CCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCGCCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTT</Haplotype>
+            <Haplotype begin="1131" end="1204" ID="homozygous21">CCAGATCCTGTACCAGAGAGTGACTCTGAGGTTCCGCCCTGCTCTCTGACACAATTAAGGGATAAAA-TCTCTGA</Haplotype>
+            <Haplotype begin="1205" end="1275" ID="heterozygous21.1">AGGAGTGACGGGAAGACGATCCCTCGAATACTGATGAGTGGTTCCCTTTGA----CACCGGCAGCAGCCTTGGGC</Haplotype>
+            <Haplotype begin="1205" end="1275" ID="heterozygous21.2">CGGAATGACGGAAAGACGATCCCTCGAATACTGATGACTGGTTCCCTTTGA----CACCGGCAGCAGCCTTGGGA</Haplotype>
+            <Haplotype begin="1276" end="1354" ID="homozygous22">CCGTGACTTTTCCTCTCAGGCCTTGTTCTCTGCTTCACACTCAATGTGTGTGGGGGTCTGAGTCCAGCACTTCTGAGTC</Haplotype>
+            <Haplotype begin="1355" end="1355" ID="heterozygous22.1">C</Haplotype>
+            <Haplotype begin="1355" end="1355" ID="heterozygous22.2">T</Haplotype>
+            <Haplotype begin="1356" end="1397" ID="homozygous23">CTCAGCCTCCACTCAGGTCAGGACCAGAAGTCGCTGTTCCCT</Haplotype>
+            <Haplotype begin="1398" end="2808" ID="heterozygous23.1">TCTCA-GGGA-----------------ATAGAAGATTATCCCAGGTGCCTGTGTCCAGGCTGGTGTCTGGGTTCTGTGCTCTCTTCCCCATCCCGGGTGTCCTGTCCATTCTCAAGATGGCCACA-TGCGTGCTGGTGGAGTGTCCCATGACAGATGCAAAATGCCTGAATTTTCTGACTCTTCCCGTCAGACCCCCCC--AAGACACATATGACCCACCACCCCATCTCTGACCAT----GAGGCC----ACCCTGAGGTGCTGGGCCCTGGGCTTCTACCCTGCGGAGATCACACTGACCTGGCAGCGGGATGGGG-AGGACCAGACCCAGGACACGGAGCTCGTGGAGACCAGGCCTGC-AGGGGATGGAACCTTCCAGAAGTGGGCGGCTGTGGTGGTGCCTTCTGGAGAGGAGCAGAGATACACCTGCCATGTGCAGCATGAGGGTCTGCCCAAGCCCCTCACCCTGAGATGGGGTAAGGAGGGAGATGGGGGTGTCATGTCTCTTAGGGAAAGCAGGAGCCTCTCTGGAGACCTTTAGCAGGGTCAGGGCCCCTCACCTTCCCCTCTTTTCCCAGAGCTGTCTTCCCAGCCCACCATCCCCATCGTGGGCATCATTGCTGGCCTGGTTCTCCTTGGAGCTGTGATCACTGGAGCTGTGGTCGCTGCCGTGATGTGGAGGAGGAAGAGCTCAGGTGGAG--AAGGGGTGAAGGGTGGGGTCTGAGATTTCTTGTCTCACTGAGGGTTCCAAGCCCCAGCTAGAAATGTGCCCTGTCTCATTACTGGGAAGCACCTTCCACAATCATGGGCCGACCCAGCCTGGGCCCTGTGTGCCAGCACTTACTCTTTTGTAAAGCACCTGTGACAATGAAGGACAGATTTATCACCTTGATTATGGCGGTGATGGGACCTGATCCCAGCAGTCACAAGTCACAGGGGAAGGTCCCTGACGACAGATCTCAGGAGGGCGATTGGTCCAGGGCCCACATCTGCTTTCTTCATGTTTCCTGATCCTGCCCTGGGTCTGCAGTCACACATTTCTGGAAACTTCTCTGGGGTCCAAGACTAGGAGGTTCCTCTAGGACCTTAAGGCCCTGGCTCCTTTCTGGTATCTCACAGGACATTTTCTTCCCACAGATAGAAAAGGAGGGAGCTACTCTCAGGCTGCAAGTAAGTATGAAGGAGGCTGATGCCTGAGGTCCTTGGGATATTGTGTTTGGGAGCCCATGGGGGAGCTCAACCACCCCACAATTCCTCCTCTAGCCACATCTTCTGTGGGATCTGACCAGGTTCTGTTTTTGTTCTACCCCAGGCAGTGACAGTGCCCAGGGCTCTGATGTGTCTCTCACAGCTTGTAAAGGTGAGAGCTTGGAGGGCCTGATGTGTGTTGGGTGTTGGGTGGAACAGTGGACACAGCTGTGCTATGGGGTTTCTTTGCG</Haplotype>
+            <Haplotype begin="1398" end="2808" ID="heterozygous23.2">CCTCA-GGGA-----------------ATAGAAGATTATCCCAGGTGCCTGTGTCCAGGCTGGTGTCTGGGTTCTGTGCTCTCTTCCCCATCCCGGGTGTCCTGTCCATTCTCAAGATGGCCACA-TGCATGCTGGTGGAGTGTCCCATGACAGATGCAAAATGCCTGAATTTTCTGACTCTTCCCGTCAGACCCCCCC--AAGACACATATGACCCACCACCCCATCTCTGACCAT----GAGGCC----ACTCTGAGATGCTGGGCCCTGGGCTTCTACCCTGCGGAGATCACACTGACCTGGCAGCGGGATGGGG-AGGACCAGACCCAGGACACGGAGCTTGTGGAGACCAGGCCTGC-AGGGGATGGAACCTTCCAGAAGTGGGCAGCTGTGGTGGTACCTTCTGGAGAGGAGCAGAGATACACCTGCCATGTGCAGCATGAGGGTCTGCCCAAGCCCCTCACCCTGAGATGGGGTAAGGAGGGAGATGGGGGTGTCATGTCTCTTAGGGAAAGCAGGAGCCTCTCTGGAGACCTTTAGCAGGGTCAGGGCCCCTCACCTTCCCCTCTTTTCCCAGAGCCATCTTCCCAGCCCACCGTCCCCATCGTGGGCATCATTGCTGGCCTGGTTCTCCTTGGAGCTGTGATCACTGGAGCTGTGGTCGCTGCTGTGATGTGGAGGAGGAACAGCTCAGGTGGAG--AAGGGGTGAAGGGTGGGGTCTGAGATTTCTTGTCTCACTGAGGGTTCCAAGCCCCAGCTAGAAATGTGCCCTGTCTCATTACTGGGAAGCACCATCCACAATCATGGGCCTACCCAGTCTGGGCCCTGTGTGCCAGCACTTACTCTTTTGTAAAGCACCTGTTAAAATGAAGGACAGATTTATCACCTTGATTACGGCGGTGATGGGACCTGATCCCAGCAGTCACAAGTCACAGGGGAAGGTCCCTGAGGACAGACCTCAGGAGGGCTATTGGTCCAGGACCCACACCTGCTTTCTTCATGTTTCCTGATCCCGCCCTGGGTCTGCAGTCACACATTTCTGGAAACTTCTCTGGGGTCCAAGACTAGGAGGTTCCTCTAGGACCTTAAGGCCCTGGCTCCTTTCTGGTATCTCACAGGACATTTTCTTCTCACAGATAGAAAAGGAGGGAGTTACACTCAGGCTGCAAGTAAGTATGAAGGAGGCTGATGCCTGAGGTCCTTGGGATATTGTGTTTGGGAGCCCATGGGGGAGCCCACCCACCTCACAATTCCTCCTCTAGCCACATCTTCTGTGGGATCTGACCAGGTTCTGTTTTTGTTCTACCCCAGGCAGTGACAGTGCCCAGGGCTCTGATGTGTCCCTCACAGCTTGTAAAGGTGAGAGCTTGGAGGACCTAATGTGTGTTGGGTGTTGGGCGGAACAGTGGACACAGCTGTGCTATGGGGTTTCTTTGCA</Haplotype>
+            <Haplotype begin="2809" end="2841" ID="homozygous24">TTGGATGTATTGAGCATGCGATGGGCTGTTTAA</Haplotype>
+            <Haplotype begin="2842" end="2885" ID="heterozygous24.1">AGTGTGACCCCTCACTGTGACAGATATGAAGTTGTTCATGAAT-</Haplotype>
+            <Haplotype begin="2842" end="2885" ID="heterozygous24.2">GGTGTGACCCCTCACTGTGATGGATATGAATTTGTTCATGAATA</Haplotype>
+            <Haplotype begin="2886" end="2966" ID="homozygous25">TTTTTTTCTATAGTGTGAGACAGCTGCCTTGTGTGGGACTGAGAGGCAAGAGTTGTTCCTGCCCTTCCCTTTGTGACTTGA</Haplotype>
+          </Haplotypes>
+          <AnnotatedAlleles />
+          <Matching>
+            <Matches>
+              <Match ID="A*01:02" phasing="1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,1,1,1,1,2,1,2">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.1</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>heterozygous2.1</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous3.1</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                  <HaplotypeID>heterozygous4.1</HaplotypeID>
+                  <HaplotypeID>homozygous5</HaplotypeID>
+                  <HaplotypeID>heterozygous5.1</HaplotypeID>
+                  <HaplotypeID>homozygous6</HaplotypeID>
+                  <HaplotypeID>heterozygous6.1</HaplotypeID>
+                  <HaplotypeID>homozygous7</HaplotypeID>
+                  <HaplotypeID>heterozygous7.1</HaplotypeID>
+                  <HaplotypeID>homozygous8</HaplotypeID>
+                  <HaplotypeID>heterozygous8.1</HaplotypeID>
+                  <HaplotypeID>homozygous9</HaplotypeID>
+                  <HaplotypeID>heterozygous9.1</HaplotypeID>
+                  <HaplotypeID>homozygous10</HaplotypeID>
+                  <HaplotypeID>heterozygous10.1</HaplotypeID>
+                  <HaplotypeID>homozygous11</HaplotypeID>
+                  <HaplotypeID>heterozygous11.1</HaplotypeID>
+                  <HaplotypeID>homozygous12</HaplotypeID>
+                  <HaplotypeID>heterozygous12.2</HaplotypeID>
+                  <HaplotypeID>homozygous13</HaplotypeID>
+                  <HaplotypeID>heterozygous13.1</HaplotypeID>
+                  <HaplotypeID>homozygous14</HaplotypeID>
+                  <HaplotypeID>heterozygous14.2</HaplotypeID>
+                  <HaplotypeID>homozygous15</HaplotypeID>
+                  <HaplotypeID>heterozygous15.1</HaplotypeID>
+                  <HaplotypeID>homozygous16</HaplotypeID>
+                  <HaplotypeID>heterozygous16.2</HaplotypeID>
+                  <HaplotypeID>homozygous17</HaplotypeID>
+                  <HaplotypeID>heterozygous17.1</HaplotypeID>
+                  <HaplotypeID>homozygous18</HaplotypeID>
+                  <HaplotypeID>heterozygous18.1</HaplotypeID>
+                  <HaplotypeID>homozygous19</HaplotypeID>
+                  <HaplotypeID>heterozygous19.1</HaplotypeID>
+                  <HaplotypeID>homozygous20</HaplotypeID>
+                  <HaplotypeID>heterozygous20.1</HaplotypeID>
+                  <HaplotypeID>homozygous21</HaplotypeID>
+                  <HaplotypeID>heterozygous21.1</HaplotypeID>
+                  <HaplotypeID>homozygous22</HaplotypeID>
+                  <HaplotypeID>heterozygous22.2</HaplotypeID>
+                  <HaplotypeID>homozygous23</HaplotypeID>
+                  <HaplotypeID>heterozygous23.1</HaplotypeID>
+                  <HaplotypeID>homozygous24</HaplotypeID>
+                  <HaplotypeID>heterozygous24.2</HaplotypeID>
+                  <HaplotypeID>homozygous25</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+              <Match ID="A*23:46" phasing="2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,1,2,2,2,2,2,1,2,1">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.2</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>heterozygous2.2</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous3.2</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                  <HaplotypeID>heterozygous4.2</HaplotypeID>
+                  <HaplotypeID>homozygous5</HaplotypeID>
+                  <HaplotypeID>heterozygous5.2</HaplotypeID>
+                  <HaplotypeID>homozygous6</HaplotypeID>
+                  <HaplotypeID>heterozygous6.2</HaplotypeID>
+                  <HaplotypeID>homozygous7</HaplotypeID>
+                  <HaplotypeID>heterozygous7.2</HaplotypeID>
+                  <HaplotypeID>homozygous8</HaplotypeID>
+                  <HaplotypeID>heterozygous8.2</HaplotypeID>
+                  <HaplotypeID>homozygous9</HaplotypeID>
+                  <HaplotypeID>heterozygous9.2</HaplotypeID>
+                  <HaplotypeID>homozygous10</HaplotypeID>
+                  <HaplotypeID>heterozygous10.2</HaplotypeID>
+                  <HaplotypeID>homozygous11</HaplotypeID>
+                  <HaplotypeID>heterozygous11.2</HaplotypeID>
+                  <HaplotypeID>homozygous12</HaplotypeID>
+                  <HaplotypeID>heterozygous12.1</HaplotypeID>
+                  <HaplotypeID>homozygous13</HaplotypeID>
+                  <HaplotypeID>heterozygous13.2</HaplotypeID>
+                  <HaplotypeID>homozygous14</HaplotypeID>
+                  <HaplotypeID>heterozygous14.1</HaplotypeID>
+                  <HaplotypeID>homozygous15</HaplotypeID>
+                  <HaplotypeID>heterozygous15.2</HaplotypeID>
+                  <HaplotypeID>homozygous16</HaplotypeID>
+                  <HaplotypeID>heterozygous16.1</HaplotypeID>
+                  <HaplotypeID>homozygous17</HaplotypeID>
+                  <HaplotypeID>heterozygous17.2</HaplotypeID>
+                  <HaplotypeID>homozygous18</HaplotypeID>
+                  <HaplotypeID>heterozygous18.2</HaplotypeID>
+                  <HaplotypeID>homozygous19</HaplotypeID>
+                  <HaplotypeID>heterozygous19.2</HaplotypeID>
+                  <HaplotypeID>homozygous20</HaplotypeID>
+                  <HaplotypeID>heterozygous20.2</HaplotypeID>
+                  <HaplotypeID>homozygous21</HaplotypeID>
+                  <HaplotypeID>heterozygous21.2</HaplotypeID>
+                  <HaplotypeID>homozygous22</HaplotypeID>
+                  <HaplotypeID>heterozygous22.1</HaplotypeID>
+                  <HaplotypeID>homozygous23</HaplotypeID>
+                  <HaplotypeID>heterozygous23.2</HaplotypeID>
+                  <HaplotypeID>homozygous24</HaplotypeID>
+                  <HaplotypeID>heterozygous24.1</HaplotypeID>
+                  <HaplotypeID>homozygous25</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+            </Matches>
+            <Matchset ID="1">
+              <MatchCombination PriorityMM="19" NonPriorityMM="35" ExonMM="19" IntronMM="35">
+                <MatchID Phasing="1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,1,1,1,1,2,1,2" RefAllele="A*01:02" PriorityMM="9" NonPriorityMM="14" ExonMM="9" IntronMM="14">
+                  <Mismatch index="613" IMGT="429" refAllele="C" extrapolated="False" base="A" />
+                  <Mismatch index="779" IMGT="593" refAllele="T" extrapolated="False" base="A" />
+                  <Mismatch index="63" IMGT="-45" refAllele="T" extrapolated="False" base="C" />
+                  <Mismatch index="337" IMGT="228" refAllele="C" extrapolated="False" base="T" />
+                  <Mismatch index="536" IMGT="368" refAllele="G" extrapolated="False" base="A" />
+                  <Mismatch index="541" IMGT="373" refAllele="G" extrapolated="False" base="T" />
+                  <Mismatch index="838" IMGT="650" refAllele="C" extrapolated="False" base="T" />
+                  <Mismatch index="1265" IMGT="926" refAllele="G" extrapolated="False" base="T" />
+                  <Mismatch index="1292" IMGT="941" refAllele="C" extrapolated="False" base="G" />
+                  <Mismatch index="1293" IMGT="942" refAllele="G" extrapolated="False" base="T" />
+                  <Mismatch index="1543" IMGT="1130" refAllele="T" extrapolated="False" base="." />
+                  <Mismatch index="2684" IMGT="2233" refAllele="T" extrapolated="False" base="G" />
+                  <Mismatch index="2686" IMGT="2235" refAllele="A" extrapolated="False" base="C" />
+                  <Mismatch index="2716" IMGT="2265" refAllele="C" extrapolated="False" base="T" />
+                  <Mismatch index="2771" IMGT="2320" refAllele="G" extrapolated="False" base="C" />
+                  <Mismatch index="2778" IMGT="2327" refAllele="C" extrapolated="False" base="T" />
+                  <Mismatch index="2790" IMGT="2339" refAllele="T" extrapolated="False" base="G" />
+                  <Mismatch index="2802" IMGT="2351" refAllele="A" extrapolated="False" base="G" />
+                  <Mismatch index="2809" IMGT="2358" refAllele="C" extrapolated="False" base="T" />
+                  <Mismatch index="2835" IMGT="2384" refAllele="C" extrapolated="False" base="T" />
+                  <Mismatch index="2974" IMGT="2523" refAllele="T" extrapolated="False" base="C" />
+                  <Mismatch index="2978" IMGT="2527" refAllele="A" extrapolated="False" base="T" />
+                  <Mismatch index="3060" IMGT="2609" refAllele="C" extrapolated="False" base="A" />
+                </MatchID>
+                <MatchID Phasing="2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,1,2,2,2,2,2,1,2,1" RefAllele="A*23:46" PriorityMM="10" NonPriorityMM="21" ExonMM="10" IntronMM="21">
+                  <Mismatch index="2421" IMGT="1972" refAllele="A" extrapolated="True" base="C" />
+                  <Mismatch index="858" IMGT="670" refAllele="C" extrapolated="True" base="T" />
+                  <Mismatch index="1008" IMGT="785" refAllele="A" extrapolated="False" base="C" />
+                  <Mismatch index="1194" IMGT="898" refAllele="T" extrapolated="False" base="G" />
+                  <Mismatch index="274" IMGT="166" refAllele="G" extrapolated="True" base="C" />
+                  <Mismatch index="596" IMGT="412" refAllele="C" extrapolated="False" base="G" />
+                  <Mismatch index="613" IMGT="429" refAllele="A" extrapolated="False" base="T" />
+                  <Mismatch index="615" IMGT="431" refAllele="A" extrapolated="False" base="G" />
+                  <Mismatch index="674" IMGT="490" refAllele="C" extrapolated="True" base="G" />
+                  <Mismatch index="689" IMGT="504" refAllele="C" extrapolated="True" base="G" />
+                  <Mismatch index="1193" IMGT="897" refAllele="G" extrapolated="False" base="T" />
+                  <Mismatch index="2632" IMGT="2181" refAllele="G" extrapolated="True" base="T" />
+                  <Mismatch index="2639" IMGT="2188" refAllele="C" extrapolated="True" base="T" />
+                  <Mismatch index="2684" IMGT="2233" refAllele="G" extrapolated="True" base="T" />
+                  <Mismatch index="2686" IMGT="2235" refAllele="C" extrapolated="True" base="A" />
+                  <Mismatch index="2716" IMGT="2265" refAllele="T" extrapolated="True" base="C" />
+                  <Mismatch index="2771" IMGT="2320" refAllele="C" extrapolated="True" base="G" />
+                  <Mismatch index="2778" IMGT="2327" refAllele="T" extrapolated="True" base="C" />
+                  <Mismatch index="2790" IMGT="2339" refAllele="G" extrapolated="True" base="T" />
+                  <Mismatch index="2802" IMGT="2351" refAllele="G" extrapolated="True" base="A" />
+                  <Mismatch index="2809" IMGT="2358" refAllele="T" extrapolated="True" base="C" />
+                  <Mismatch index="2835" IMGT="2384" refAllele="T" extrapolated="True" base="C" />
+                  <Mismatch index="2952" IMGT="2501" refAllele="C" extrapolated="True" base="T" />
+                  <Mismatch index="2974" IMGT="2523" refAllele="C" extrapolated="True" base="T" />
+                  <Mismatch index="2978" IMGT="2527" refAllele="T" extrapolated="True" base="A" />
+                  <Mismatch index="3057" IMGT="2606" refAllele="T" extrapolated="True" base="C" />
+                  <Mismatch index="3060" IMGT="2609" refAllele="A" extrapolated="True" base="C" />
+                  <Mismatch index="3066" IMGT="2615" refAllele="C" extrapolated="True" base="T" />
+                  <Mismatch index="3164" IMGT="2713" refAllele="T" extrapolated="True" base="C" />
+                  <Mismatch index="3196" IMGT="2745" refAllele="G" extrapolated="True" base="A" />
+                  <Mismatch index="3200" IMGT="2749" refAllele="G" extrapolated="True" base="A" />
+                </MatchID>
+              </MatchCombination>
+            </Matchset>
+          </Matching>
+          <TypingResult>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="9" NonPriorityMM="14" ExonMM="9" IntronMM="14" CWD="Common" PGroup="" GGroup="" Serology="A1">A*01:02</allele>
+                <allele PriorityMM="10" NonPriorityMM="21" ExonMM="10" IntronMM="21" CWD="No" PGroup="" GGroup="" Serology="A23">A*23:46</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="9" NonPriorityMM="14" ExonMM="9" IntronMM="14" CWD="Common" PGroup="" GGroup="" Serology="A1">A*01:02</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="10" NonPriorityMM="21" ExonMM="10" IntronMM="21" CWD="No" PGroup="" GGroup="" Serology="A23">A*23:46</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:02+A*23:46</GLString>
+          </TypingResult>
+          <TypingResultThreeFields>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:02+A*23:46</GLString>
+          </TypingResultThreeFields>
+          <TypingResultTwoFields>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:02+A*23:46</GLString>
+          </TypingResultTwoFields>
+          <TypingResultPGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:02+A*23:46</GLString>
+          </TypingResultPGroup>
+          <TypingResultGGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:02+A*23:46</GLString>
+          </TypingResultGGroup>
+          <TypingResultOptimized Resolutions="4-3-2-P">
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="9" ExonMM="9" CWD="Common" Serology="A1">A*01:02</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="10" ExonMM="10" CWD="No" Serology="A23">A*23:46</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>A*01:02+A*23:46</GLString>
+          </TypingResultOptimized>
+          <AnalysisSoftware>
+            <Software>NGSengine 2.14.0.14234</Software>
+            <Version>2.14.0.14234</Version>
+          </AnalysisSoftware>
+          <AnalysisSettings>
+            <AmpliconMethod>NGSgo</AmpliconMethod>
+            <AnalysisRegion>Amplicon</AnalysisRegion>
+            <IgnoreRegions>Default</IgnoreRegions>
+            <PhasingMethod MinimumReadDepth="20" AlleleRatioThreshold="20" NoiseThreshold="14">Classic</PhasingMethod>
+            <ReadTrimmer Applied="Yes">
+              <Settings RelativeThreshold="70" AbsoluteThreshold="20" WindowSize="10" />
+            </ReadTrimmer>
+            <ApplyCWDList>true</ApplyCWDList>
+          </AnalysisSettings>
+          <Edits />
+          <Warnings />
+          <ReviewList CurrentApprovalStatus="Not Reviewed" Level="Unknown" />
+          <PreferredAnalysisRegionsQualityMetrics>
+            <RegionQualityMetrics region="Amplicon" start="-300" end="3203" ampliconFraction="0.888" analysisCoveredFraction="0.888" analysisAmpliconFraction="1" qmFraction="0.888">
+              <InputData>
+                <ReadDepth minimum="424" maximum="1212" average="972" median="1010" sd="131.95" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="-0.2683">
+                <TotalNoiseLevel minimum="0" maximum="0.4778" average="0.0042" median="0.0023" sd="0.015" count="3417" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.068" average="0.0035" median="0.0023" sd="0.0047" count="3299" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.4778" average="0.0239" median="0.002" sd="0.0748" count="118" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.2095" maximum="0.4989" average="0.284" median="0.264" sd="0.0702" count="118" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="118" homozygousPosnsCount="3299" ignoredPosnsCount="0">
+                <Aligning indelsCount="344" isIllumina="True" />
+                <AnalysisReadDepth minimum="424" maximum="1212" average="972" median="1010" sd="131.95" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Core+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="1" qmFraction="1">
+              <InputData>
+                <ReadDepth minimum="734" maximum="1212" average="978" median="949" sd="107.158" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="-0.2679">
+                <TotalNoiseLevel minimum="0" maximum="0.4778" average="0.0062" median="0.0024" sd="0.0245" count="845" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.068" average="0.0045" median="0.0024" sd="0.0073" count="795" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.4778" average="0.0344" median="0.0033" sd="0.0926" count="50" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.2099" maximum="0.4958" average="0.2901" median="0.264" sd="0.0777" count="50" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="50" homozygousPosnsCount="795" ignoredPosnsCount="0">
+                <Aligning indelsCount="252" isIllumina="True" />
+                <AnalysisReadDepth minimum="734" maximum="1212" average="978" median="949" sd="107.158" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Exon+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="1" qmFraction="1">
+              <InputData>
+                <ReadDepth minimum="641" maximum="1212" average="994" median="1008" sd="105.04" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="-0.2679">
+                <TotalNoiseLevel minimum="0" maximum="0.4778" average="0.0051" median="0.0024" sd="0.019" count="1434" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.068" average="0.004" median="0.0024" sd="0.0061" count="1369" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.4778" average="0.0271" median="0.0029" sd="0.0821" count="65" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.2099" maximum="0.4958" average="0.2822" median="0.2614" sd="0.0698" count="65" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="65" homozygousPosnsCount="1369" ignoredPosnsCount="0">
+                <Aligning indelsCount="264" isIllumina="True" />
+                <AnalysisReadDepth minimum="641" maximum="1212" average="994" median="1008" sd="105.04" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+          </PreferredAnalysisRegionsQualityMetrics>
+          <TotalLocusQualityMetrics start="-300" end="3203">
+            <ReadLength minimum="19" maximum="151" average="138" median="150" sd="28.557" />
+            <Analysis>
+              <Aligning>
+                <InsertSizeDistributionAllReads minimum="35" maximum="3103" average="362" median="329" sd="-1" avgInsertSizeReadLengthRatio="2.64233565" />
+              </Aligning>
+            </Analysis>
+          </TotalLocusQualityMetrics>
+        </Locus>
+      </Loci>
+    </Sample>
+  </Samples>
+</ProjectXml>

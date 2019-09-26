@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectXml d1p1:noNamespaceSchemaLocation="https://www.gendx.com/NGSengine/XSD/20190613/TARR.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectName>2019-09-20 Placas 29 e 34 Rotina</ProjectName>
+  <User Name="Samuel1" DateTime="2019-09-25T15:00:00.7084188Z" Level="First reviewer" />
+  <ProjectFolder>C:\Corridas NGS\Projetos\2019-09-20 Placas 29 e 34 Rotina</ProjectFolder>
+  <DataFolders>
+    <Folder>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina</Folder>
+  </DataFolders>
+  <AnalysisSoftware>
+    <Software>NGSengine</Software>
+    <Version>2.14.0.14234</Version>
+  </AnalysisSoftware>
+  <LociCount Analyzed="373">373</LociCount>
+  <SampleCount Analyzed="112">112</SampleCount>
+  <Samples>
+    <Sample>
+      <Name>139348</Name>
+      <Mappability AcceptedReads="72108" UsedReads="81860" TotalReads="81860" PercentageUsed="88.1" />
+      <SequencingType>Illumina</SequencingType>
+      <Files>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\139348_S27_L001_R1_001.fastq.gz</File>
+        <File>\\LIGHSERVER05\Corridas NGS\2019-09-20 PLacas 29 e 34 Rotina\139348_S27_L001_R2_001.fastq.gz</File>
+      </Files>
+      <Loci>
+        <Locus>
+          <Name>HLA-DRB1</Name>
+          <SampleName>139348</SampleName>
+          <User Name="Samuel1" DateTime="2019-09-20T18:53:48.3092184Z" Level="First reviewer" />
+          <Mappability AcceptedReads="13226" UsedReads="13729" TotalReads="13729" PercentageUsed="96.3" />
+          <ReadLength Minimum="1" Maximum="151" Median="-1" Mean="139" />
+          <ReadDepth Minimum="321" Maximum="1413" Median="771" Mean="-1" />
+          <QuestionMarkPositions />
+          <PhasingRegions>2</PhasingRegions>
+          <NumberOfGenotypes>4</NumberOfGenotypes>
+          <AlleleDB>
+            <Gene>HLA-DRB1</Gene>
+            <Version>IMGT/HLA 3.36.0</Version>
+            <NrAlleles>0</NrAlleles>
+            <Length>18501</Length>
+            <Regions>
+              <Region begin="-599" end="-1" ID="UTR" />
+              <Region begin="1" end="100" ID="Exon 1" />
+              <Region begin="101" end="5372" ID="Intron 1" />
+              <Region begin="5373" end="5642" ID="Exon 2" />
+              <Region begin="5643" end="7871" ID="Intron 2" />
+              <Region begin="7872" end="8153" ID="Exon 3" />
+              <Region begin="8154" end="8854" ID="Intron 3" />
+              <Region begin="8855" end="8965" ID="Exon 4" />
+              <Region begin="8966" end="9452" ID="Intron 4" />
+              <Region begin="9453" end="9476" ID="Exon 5" />
+              <Region begin="9477" end="10297" ID="Intron 5" />
+              <Region begin="10298" end="10311" ID="Exon 6" />
+              <Region begin="10312" end="10633" ID="UTR" />
+            </Regions>
+            <PriorityRegions>
+              <Region begin="1" end="102" />
+              <Region begin="5371" end="5644" />
+              <Region begin="7870" end="8155" />
+              <Region begin="8853" end="8967" />
+              <Region begin="9451" end="9478" />
+              <Region begin="10296" end="10311" />
+            </PriorityRegions>
+          </AlleleDB>
+          <Haplotypes>
+            <Haplotype begin="5371" end="5386" ID="homozygous1">AGCACGTTTCTTGGAG</Haplotype>
+            <Haplotype begin="5387" end="5629" ID="heterozygous1.1">GAGGTTAAGTTTGAGTGTCATTTCTTCAACGGGACGGAGCGGG-TGCGGT---TGCTGGAAAGA--CGCGTCCATAACCAAGAGGAGTACGCGCGCTACGACAGCGACGTGGGGGAGTACCGGGCGGTGACGGAGCTGGGGCGGCCTGATGCCGAGTACTGGAACAGCCAGAAGGACCTCCTGGAG--CGGAGGCGTG-CCGCGGTGGACACC-TACTGCAGACACAACTACGGGGTTGGTGAGAGCTTCACA</Haplotype>
+            <Haplotype begin="5387" end="5629" ID="heterozygous1.2">TACTCTACGTCTGAGTGTCATTTCTTCAATGGGACGGAGCGGG-TGCGGT---TCCTGGACAGA--TACTTCTATAACCAAGAGGAGTACGTGCGCTTCGACAGCGACGTGGGGGAGTTCCGGGCGGTGACGGAGCTGGGGCGGCCTGATGAGGAGTACTGGAACAGCCAGAAGGACTTCCTGGAA--GACAGGCGGG-CCGCGGTGGACACC-TACTGCAGACACAACTACGGGGTTGGTGAGAGCTTCACG</Haplotype>
+            <Haplotype begin="5630" end="5644" ID="homozygous2">GTGCAGCGGCGAGGT</Haplotype>
+            <Haplotype begin="7870" end="7872" ID="homozygous3">AGT</Haplotype>
+            <Haplotype begin="7873" end="8131" ID="heterozygous2.1">TCAACCTAAGGTGACTGTGTATCCTTCAAAGACCCAGCCCCTGCAGCACCACAACCTCCTGGTCTGTTCTGTGAATGGTTTCTATCCAGGCAGCATTGAAGTCAGGTGGTTCCGGAACGGCCAGGAAGAGAAGACTGGGGTGGTGTCCACGGGCCTGATCCAGAATGGAGACTGGACCTTCCAGACCCTGGTGATGCTGGAAACAGTTCCTCAGAGTGGAGAGGTTTACACCTGCC-----------------------AAGTGGAGCACCCAAGTGTGATG</Haplotype>
+            <Haplotype begin="7873" end="8131" ID="heterozygous2.2">CCATCCTAAGGTGACTGTGTATCCTTCAAAGACCCAGCCCCTGCAGCACCACAACCTCCTGGTCTGTTCTGTGAGTGGTTTCTATCCAGGCAGCATTGAAGTCAGGTGGTTCCGGAATGGCCAGGAAGAGAAGACTGGGGTGGTGTCCACAGGCCTGATCCACAATGGAGACTGGACCTTCCAGACCCTGGTGATGCTGGAAACAGTTCCTCGGAGTGGAGAGGTTTACACCTGCC-----------------------AAGTGGAGCACCCAAGCGTGACA</Haplotype>
+            <Haplotype begin="8132" end="8155" ID="homozygous4">AGCCCTCTCACAGTGGAATGGAGT</Haplotype>
+            <Haplotype begin="8853" end="8858" ID="homozygous5">AGGAGC</Haplotype>
+          </Haplotypes>
+          <AnnotatedAlleles>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: DRB1*10:01:01:01" Match="DRB1*10:01:01:01" ExonMismatches="0" IntronMismatches="0">AGCACGTTTCTTGGAGGAGGTTAAGTTTGAGTGTCATTTCTTCAACGGGACGGAGCGGGTGCGGTTGCTGGAAAGACGCGTCCATAACCAAGAGGAGTACGCGCGCTACGACAGCGACGTGGGGGAGTACCGGGCGGTGACGGAGCTGGGGCGGCCTGATGCCGAGTACTGGAACAGCCAGAAGGACCTCCTGGAGCGGAGGCGTGCCGCGGTGGACACCTACTGCAGACACAACTACGGGGTTGGTGAGAGCTTCACAGTGCAGCGGCGAGGT</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..274" Key="source" Gene="DRB1" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;274" Key="gene" Gene="DRB1" />
+                <Feature location="&lt;3..&gt;272" Key="CDS" Gene="DRB1" Codon_start="3" Product="MHC class II DR beta chain" Allele="DRB1*10:01:01:01" Translation="RFLEEVKFECHFFNGTERVRLLERRVHNQEEYARYDSDVGEYRAVTELGRPDAEYWNSQKDLLERRRAAVDTYCRHNYGVGESFTVQRR" />
+                <Feature location="&lt;1..2" Number="1" Key="intron" Gene="DRB1" Allele="DRB1*10:01:01:01" />
+                <Feature location="3..272" Number="2" Key="exon" Gene="DRB1" Allele="DRB1*10:01:01:01" />
+                <Feature location="273..&gt;274" Number="2" Key="intron" Gene="DRB1" Allele="DRB1*10:01:01:01" />
+              </Features>
+            </AnnotatedAllele>
+            <AnnotatedAllele>
+              <AlleleSequence Description="Allele: DRB1*11:01:02" Match="DRB1*11:01:02" ExonMismatches="0" IntronMismatches="0">AGCACGTTTCTTGGAGTACTCTACGTCTGAGTGTCATTTCTTCAATGGGACGGAGCGGGTGCGGTTCCTGGACAGATACTTCTATAACCAAGAGGAGTACGTGCGCTTCGACAGCGACGTGGGGGAGTTCCGGGCGGTGACGGAGCTGGGGCGGCCTGATGAGGAGTACTGGAACAGCCAGAAGGACTTCCTGGAAGACAGGCGGGCCGCGGTGGACACCTACTGCAGACACAACTACGGGGTTGGTGAGAGCTTCACGGTGCAGCGGCGAGGT</AlleleSequence>
+              <Extended>false</Extended>
+              <Mismatches>0</Mismatches>
+              <Features>
+                <Feature location="1..274" Key="source" Gene="DRB1" Organism="Homo sapiens" Moltype="genomic DNA" />
+                <Feature location="&lt;1..&gt;274" Key="gene" Gene="DRB1" />
+                <Feature location="&lt;3..&gt;272" Key="CDS" Gene="DRB1" Codon_start="3" Product="MHC class II DR beta chain" Allele="DRB1*11:01:02" Translation="RFLEYSTSECHFFNGTERVRFLDRYFYNQEEYVRFDSDVGEFRAVTELGRPDEEYWNSQKDFLEDRRAAVDTYCRHNYGVGESFTVQRR" />
+                <Feature location="&lt;1..2" Number="1" Key="intron" Gene="DRB1" Allele="DRB1*11:01:02" />
+                <Feature location="3..272" Number="2" Key="exon" Gene="DRB1" Allele="DRB1*11:01:02" />
+                <Feature location="273..&gt;274" Number="2" Key="intron" Gene="DRB1" Allele="DRB1*11:01:02" />
+              </Features>
+            </AnnotatedAllele>
+          </AnnotatedAlleles>
+          <Matching>
+            <Matches>
+              <Match ID="DRB1*10:01:01:01" phasing="1,1">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.1</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous2.1</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                  <HaplotypeID>homozygous5</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+              <Match ID="DRB1*11:01:02" phasing="2,2">
+                <HaplotypeCombination>
+                  <HaplotypeID>homozygous1</HaplotypeID>
+                  <HaplotypeID>heterozygous1.2</HaplotypeID>
+                  <HaplotypeID>homozygous2</HaplotypeID>
+                  <HaplotypeID>homozygous3</HaplotypeID>
+                  <HaplotypeID>heterozygous2.2</HaplotypeID>
+                  <HaplotypeID>homozygous4</HaplotypeID>
+                  <HaplotypeID>homozygous5</HaplotypeID>
+                </HaplotypeCombination>
+              </Match>
+            </Matches>
+            <Matchset ID="1">
+              <MatchCombination PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0">
+                <MatchID Phasing="1,1" RefAllele="DRB1*10:01:01:01" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+                <MatchID Phasing="2,2" RefAllele="DRB1*11:01:02" PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" />
+              </MatchCombination>
+            </Matchset>
+          </Matching>
+          <TypingResult>
+            <GenoTypeList Count="4">
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DRB1*10:01P" GGroup="DRB1*10:01:01G" Serology="DR10">DRB1*10:01:01:01</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DRB1*11:01P" GGroup="DRB1*11:01:02G" Serology="DR11">DRB1*11:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DRB1*10:01P" GGroup="DRB1*10:01:01G" Serology="DR10">DRB1*10:01:01:02</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DRB1*11:01P" GGroup="DRB1*11:01:02G" Serology="DR11">DRB1*11:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DRB1*10:01P" GGroup="DRB1*10:01:01G" Serology="DR10">DRB1*10:01:01:03</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DRB1*11:01P" GGroup="DRB1*11:01:02G" Serology="DR11">DRB1*11:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DRB1*10:01P" GGroup="DRB1*10:01:01G" Serology="DR10">DRB1*10:01:12</allele>
+                <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DRB1*11:01P" GGroup="DRB1*11:01:02G" Serology="DR11">DRB1*11:01:02</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DRB1*10:01P" GGroup="DRB1*10:01:01G" Serology="DR10">DRB1*10:01:01:01</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DRB1*10:01P" GGroup="DRB1*10:01:01G" Serology="DR10">DRB1*10:01:01:02</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DRB1*10:01P" GGroup="DRB1*10:01:01G" Serology="DR10">DRB1*10:01:01:03</allele>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="No" PGroup="DRB1*10:01P" GGroup="DRB1*10:01:01G" Serology="DR10">DRB1*10:01:12</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" NonPriorityMM="0" ExonMM="0" IntronMM="0" CWD="Common" PGroup="DRB1*11:01P" GGroup="DRB1*11:01:02G" Serology="DR11">DRB1*11:01:02</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <NMDPCodes TableDate="06/27/19" Nomenclature="nc3">
+              <allele_1 Name="DRB1*10:01" />
+              <allele_2 Name="DRB1*11:01" />
+            </NMDPCodes>
+            <GLString>DRB1*10:01:01:01/DRB1*10:01:01:02/DRB1*10:01:01:03/DRB1*10:01:12+DRB1*11:01:02</GLString>
+          </TypingResult>
+          <TypingResultThreeFields>
+            <GenoTypeList Count="2">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01:02</allele>
+              </Genotype>
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DR10">DRB1*10:01:12</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01:02</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01:01</allele>
+                  <allele PriorityMM="0" ExonMM="0" CWD="No" Serology="DR10">DRB1*10:01:12</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01:02</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DRB1*10:01:01/DRB1*10:01:12+DRB1*11:01:02</GLString>
+          </TypingResultThreeFields>
+          <TypingResultTwoFields>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DRB1*10:01+DRB1*11:01</GLString>
+          </TypingResultTwoFields>
+          <TypingResultPGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01P</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01P</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01P</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01P</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DRB1*10:01P+DRB1*11:01P</GLString>
+          </TypingResultPGroup>
+          <TypingResultGGroup>
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01:01G</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01:02G</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01:01G</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01:02G</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DRB1*10:01:01G+DRB1*11:01:02G</GLString>
+          </TypingResultGGroup>
+          <TypingResultOptimized Resolutions="4-3-2-P">
+            <GenoTypeList Count="1">
+              <Genotype>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01</allele>
+                <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01:02</allele>
+              </Genotype>
+            </GenoTypeList>
+            <GenotypeRanking>
+              <Genotypes>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR10">DRB1*10:01</allele>
+                </Alleles>
+                <Alleles>
+                  <allele PriorityMM="0" ExonMM="0" CWD="Common" Serology="DR11">DRB1*11:01:02</allele>
+                </Alleles>
+              </Genotypes>
+            </GenotypeRanking>
+            <GLString>DRB1*10:01+DRB1*11:01:02</GLString>
+          </TypingResultOptimized>
+          <AnalysisSoftware>
+            <Software>NGSengine 2.14.0.14234</Software>
+            <Version>2.14.0.14234</Version>
+          </AnalysisSoftware>
+          <AnalysisSettings>
+            <AmpliconMethod>NGSgo</AmpliconMethod>
+            <AnalysisRegion>ExonOnly</AnalysisRegion>
+            <IgnoreRegions>Default</IgnoreRegions>
+            <PhasingMethod MinimumReadDepth="20" AlleleRatioThreshold="20" NoiseThreshold="14">Classic</PhasingMethod>
+            <ReadTrimmer Applied="Yes">
+              <Settings RelativeThreshold="70" AbsoluteThreshold="20" WindowSize="10" />
+            </ReadTrimmer>
+            <ApplyCWDList>true</ApplyCWDList>
+          </AnalysisSettings>
+          <Edits />
+          <Warnings />
+          <ReviewList CurrentApprovalStatus="Approved" Level="Second reviewer">
+            <Review Action="Approve">
+              <User Name="Alessandro2" DateTime="2019-09-24T18:21:27.9654037Z" Level="Second reviewer" />
+              <Comment />
+            </Review>
+            <Review Action="Approve">
+              <User Name="MariaEduarda1" DateTime="2019-09-23T12:00:37.9085957Z" Level="First reviewer" />
+              <Comment />
+            </Review>
+          </ReviewList>
+          <PreferredAnalysisRegionsQualityMetrics>
+            <RegionQualityMetrics region="Amplicon" start="-599" end="10633" ampliconFraction="0.2656" analysisCoveredFraction="0.2656" analysisAmpliconFraction="0.122" qmFraction="0.0324">
+              <InputData>
+                <ReadDepth minimum="321" maximum="1413" average="774" median="771" sd="324.774" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.405">
+                <TotalNoiseLevel minimum="0" maximum="0.0137" average="0.0026" median="0.0022" sd="0.0022" count="599" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0137" average="0.0027" median="0.0023" sd="0.0023" count="564" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0066" average="0.0016" median="0.0014" sd="0.0015" count="35" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.4187" maximum="0.4995" average="0.4797" median="0.4898" sd="0.0228" count="35" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="35" homozygousPosnsCount="564" ignoredPosnsCount="4314">
+                <Aligning indelsCount="1320" isIllumina="True" />
+                <AnalysisReadDepth minimum="611" maximum="1380" average="1056" median="1090" sd="197.731" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Core+" start="-2147483648" end="-2147483648" ampliconFraction="1" analysisCoveredFraction="1" analysisAmpliconFraction="1" qmFraction="1">
+              <InputData>
+                <ReadDepth minimum="611" maximum="1041" average="880" median="908" sd="119.614" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.4112">
+                <TotalNoiseLevel minimum="0" maximum="0.0137" average="0.0029" median="0.0023" sd="0.0025" count="284" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0137" average="0.003" median="0.0025" sd="0.0025" count="259" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0066" average="0.0019" median="0.0014" sd="0.0016" count="25" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.4249" maximum="0.4995" average="0.4899" median="0.4942" sd="0.0145" count="25" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="25" homozygousPosnsCount="259" ignoredPosnsCount="0">
+                <Aligning indelsCount="10" isIllumina="True" />
+                <AnalysisReadDepth minimum="611" maximum="1041" average="880" median="908" sd="119.614" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+            <RegionQualityMetrics region="Exon+" start="-2147483648" end="-2147483648" ampliconFraction="0.7014" analysisCoveredFraction="0.7014" analysisAmpliconFraction="1" qmFraction="0.7014">
+              <InputData>
+                <ReadDepth minimum="611" maximum="1380" average="1056" median="1090" sd="197.731" />
+                <ReadCoverage forward="1" reverse="1">1</ReadCoverage>
+              </InputData>
+              <Noise minimumHeterozygousVsMaxTotalNoise="0.405">
+                <TotalNoiseLevel minimum="0" maximum="0.0137" average="0.0026" median="0.0022" sd="0.0022" count="599" />
+                <NoiseLevelAtHomozygotes minimum="0" maximum="0.0137" average="0.0027" median="0.0023" sd="0.0023" count="564" />
+                <NoiseLevelAtHeterozygotes minimum="0" maximum="0.0066" average="0.0016" median="0.0014" sd="0.0015" count="35" />
+                <SecondBaseStatisticsAtHeterozygotes minimum="0.4187" maximum="0.4995" average="0.4797" median="0.4898" sd="0.0228" count="35" />
+              </Noise>
+              <Analysis heterozygousPosnsCount="35" homozygousPosnsCount="564" ignoredPosnsCount="0">
+                <Aligning indelsCount="33" isIllumina="True" />
+                <AnalysisReadDepth minimum="611" maximum="1380" average="1056" median="1090" sd="197.731" />
+                <AnalysisReadCoverage forward="1" reverse="1">1</AnalysisReadCoverage>
+              </Analysis>
+            </RegionQualityMetrics>
+          </PreferredAnalysisRegionsQualityMetrics>
+          <TotalLocusQualityMetrics start="-599" end="10633">
+            <ReadLength minimum="19" maximum="151" average="142" median="150" sd="24.481" />
+            <Analysis>
+              <Aligning>
+                <InsertSizeDistributionAllReads minimum="35" maximum="4923" average="400" median="322" sd="-1" avgInsertSizeReadLengthRatio="2.877698" />
+              </Aligning>
+            </Analysis>
+          </TotalLocusQualityMetrics>
+        </Locus>
+      </Loci>
+    </Sample>
+  </Samples>
+</ProjectXml>
