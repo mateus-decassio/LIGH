@@ -27,8 +27,8 @@ for i in archives:
     tree = ET.parse(file)
     root = tree.getroot()
 
-    n = root.xpath("./Samples/Sample/Name")
-    name = n[0].text
+    s = root.xpath("./Samples/Sample/Name")
+    sample = s[0].text
 
     p = root.xpath("./Samples/Sample/Loci/Locus/PhasingRegions")
     phasing = p[0].text
@@ -39,6 +39,6 @@ for i in archives:
     file.close()
 
     if (int(phasing) > 1):
-        os.rename(path+"/"+i, undefined_phase+"/"+name+under+locus+extension)
+        os.rename(path+"/"+i, undefined_phase+"/"+sample+under+locus+extension)
     else:
-        os.rename(path+"/"+i, path+"/"+locus+"/"+name+extension)
+        os.rename(path+"/"+i, path+"/"+locus+"/"+sample+extension)
