@@ -67,7 +67,7 @@ for i in archives:
             else:
                 os.rename(archive, path+"/"+locus+"/"+sample+extension)
         else:
-            os.rename(archive, undefined_format+"/"+i+extension)
+            os.rename(archive, undefined_format+"/"+i)
 
     else:
         os.rename(archive, undefined_format+"/"+i)
