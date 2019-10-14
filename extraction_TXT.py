@@ -14,7 +14,7 @@ for dir in directories:
     archives = [f for f in os.listdir(path)]
     for i in archives:
         archive = path+"/"+i
-        r_file = open(archive, "r")
+        r_file = open(archive, 'r')
         tree = ET.parse(r_file)
         root = tree.getroot()
 

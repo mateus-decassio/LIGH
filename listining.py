@@ -9,10 +9,11 @@ directories = ['HLA-A', 'HLA-B', 'HLA-C', 'HLA-DRB1',
 for dir in directories:
     path = work_path+"/"+dir
 
+    file = work_path+"/"+dir+".txt"
+    w_file = open(file, 'w')
+
     #lista todos os arquivos daquele locus para a extração dos dados
     archives = [f for f in os.listdir(path)]
     for i in archives:
         archive = path+"/"+i
-        r_file = open(archive, "r")
-        tree = ET.parse(r_file)
-        root = tree.getroot()
+        w_file = open(archive, "r")
