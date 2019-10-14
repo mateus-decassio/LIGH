@@ -11,11 +11,11 @@ root = tree.getroot()
 
 s = root.xpath("./Samples/Sample/Name")
 sample = s[0].text
-print(sample)
+print("AMOSTRA = ", sample)
 
 l = root.xpath("./Samples/Sample/Loci/Locus/Name")
 locus = l[0].text
-print(locus)
+print("LOCUS = ", locus)
 
 
 regions = root.find("./Samples/Sample/Loci/Locus/AlleleDB/Regions")
@@ -26,25 +26,25 @@ for region in regions:
     ID = region.get('ID')
     begin = region.get('begin')
     end = region.get('end')
-    #print(ID, begin, end)
+    print("ID, BEGIN, END = ", ID, begin, end)
 
 
 haplotypes = root.find("./Samples/Sample/Loci/Locus/Haplotypes")
 haplotypes = [f for f in haplotypes.iter('Haplotype')]
 counter_haplotypes = len(haplotypes)
-#print(counter_haplotypes)
+print("COUNTER_HAPLOTYPES = ", counter_haplotypes)
 for haplotype in haplotypes:
         ID = haplotype.get('ID')
         begin = haplotype.get('begin')
         end = haplotype.get('end')
         sequence = haplotype.text
-        #print(ID, begin, end, sequence)
+        print("ID, BEGIN, END = ", ID, begin, end, sequence)
 
 
 matches = root.find("./Samples/Sample/Loci/Locus/Matching/Matches")
 matches = [f for f in matches.iter('Match')]
 counter_matches = len(matches)
-print("matches encontrados = ", counter_matches)
+print("qtde MATCHES ENCONTRADOS = ", counter_matches)
 for match in matches:
         ID = match.get('ID')
         print(ID)
