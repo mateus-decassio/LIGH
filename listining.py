@@ -9,11 +9,13 @@ directories = ['HLA-A', 'HLA-B', 'HLA-C', 'HLA-DRB1',
 for dir in directories:
     path = work_path+"/"+dir
 
-    file = work_path+"/"+dir+".txt"
+    file = path+".txt"
     w_file = open(file, 'w')
 
     #lista todos os arquivos daquele locus para a extração dos dados
     archives = [f for f in os.listdir(path)]
     for i in archives:
-        archive = path+"/"+i
-        w_file = open(archive, "r")
+        if (i.endswith('.txt')):
+            w_file.write(path+"/"+i+"|\n")
+
+    w_file.close()
