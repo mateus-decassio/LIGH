@@ -14,7 +14,7 @@ for dir in directories:
 
     #lista todos os arquivos daquele locus para a extração dos dados
     archives = [f for f in os.listdir(path)]
-    size = len (archives)
+    size = len(archives)
     w_file.write(str(size//2)+"|\n")
     for i in archives:
         if (i.endswith('.txt')):
