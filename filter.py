@@ -71,8 +71,15 @@ for i in archives:
             l = root.xpath("./Name")
             locus = l[0].text
 
+            st = root.xpath("./ReviewList")
+            status = st[0].attrib.get('CurrentApprovalStatus')
+
             if (int(phasing) > 2):
                 os.rename(archive, undefined_phase+"/"+sample+under+locus+extension)
+            elif (status == "Not Reviewed"):
+                os.rename(archive, not_reviewed+"/"+sample+under+locus+extension)
+            elif (status == "Rejected"):
+                os.rename(archive, rejected+"/"+sample+under+locus+extension)
             else:
                 os.rename(archive, path+"/"+locus+"/"+sample+extension)
         else:
