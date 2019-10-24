@@ -3,11 +3,12 @@ import os
 import sys
 
 path = sys.argv[2]
-directories = ['undefined_phase', 'undefined_format', 'not_approved', 'HLA-A', 'HLA-B', 'HLA-C',
+directories = ['undefined_phase', 'undefined_format', 'not_reviewed', 'rejected', 'HLA-A', 'HLA-B', 'HLA-C',
                'HLA-DRB1', 'HLA-DQA1', 'HLA-DQB1', 'HLA-DPA1', 'HLA-DPB1']
 undefined_phase = path+"/undefined_phase"
 undefined_format = path+"/undefined_format"
-undefined_format = path+"/not_approved"
+not_reviewed = path+"/not_reviewed"
+rejected = path+"/rejected"
 extension = ".xml"
 under = "_"
 
@@ -42,15 +43,15 @@ for i in archives:
             l = root.xpath("./Samples/Sample/Loci/Locus/Name")
             locus = l[0].text
 
-            #falta arrumar para pegar só os aprovados
-            #st = root.xpath("./Samples/Sample/Loci/Locus/ReviewList")
-            #status = st.get('CurrentApprovalStatus')
+            st = root.xpath("./Samples/Sample/Loci/Locus/ReviewList")
+            status = st[0].attrib.get('CurrentApprovalStatus')
 
             if (int(phasing) > 2):
                 os.rename(archive, undefined_phase+"/"+sample+under+locus+extension)
-
-            elif (st != "Approved"):
-                os.rename(archive, not_approved+"/"+sample+under+locus+extension)
+            elif (status == "Not Reviewed"):
+                os.rename(archive, not_reviewed+"/"+sample+under+locus+extension)
+            elif (status == "Rejected"):
+                os.rename(archive, rejected+"/"+sample+under+locus+extension)
             else:
                 os.rename(archive, path+"/"+locus+"/"+sample+extension)
         else:
