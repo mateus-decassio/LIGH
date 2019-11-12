@@ -20,20 +20,19 @@ for i in archives:
     if (root.tag == "ProjectXml"):
         s = root.xpath("./Samples/Sample/Name")
         sample = s[0].text
-        #print(sample)
 
         p = root.xpath("./Samples/Sample/Loci/Locus/PhasingRegions")
         phasing = p[0].text
-        #print(phasing)
 
-        l = root.xpath("./Samples/Sample/Loci/Locus/Name")
-        locus = l[0].text
-        #print(locus)
+        regions = root.find("./Samples/Sample/Loci/Locus/AlleleDB/Regions")
+        regions = [f for f in regions.iter('Region')]
 
-        #falta arrumar para pegar só os aprovados
-
-        st = root.xpath("./Samples/Sample/Loci/Locus/ReviewList")
-        status = st[0].attrib.get('CurrentApprovalStatus')
-        print(status)
+        for region in regions:
+            ID = region.get('ID')
+            if (ID == "Intron 3"):
+                begin = region.get('begin')
+                end = region.get('end')
+                #print("SAMPLE =", sample, "PHASE = ",phasing, "ID, BEGIN, END = ", ID, begin, end)
+                print("PHASE = ",phasing, "ID, BEGIN, END = ", ID, begin, end)
 
     file.close()
