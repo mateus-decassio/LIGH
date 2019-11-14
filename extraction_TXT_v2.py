@@ -4,7 +4,7 @@ import sys
 
 work_path = sys.argv[2]
 #directories = ['HLA-A', 'HLA-B', 'HLA-C', 'HLA-DRB1',
-#               'HLA-DQA1', 'HLA-DQB1', 'HLA-DPA1', 'HLA-DPB1']
+#               'HLA-DQA1', 'HLA-DQB1', 'HLA-DPB1']
 
 directories = ['HLA-DPB1']
 
@@ -20,8 +20,8 @@ for dir in directories:
     w_file = open(file, 'w')
 
     number_of_files = len(archives);
-    print('NUMERO DE ARQUIVOS = ', number_of_files)
-    #w_file.write(str(number_of_files)+"/\n")
+    #print('NUMERO DE ARQUIVOS = ', number_of_files)
+    w_file.write(str(number_of_files)+"/\n")
 
     #pega a sequência de regiões
     i = archives[0]
@@ -33,14 +33,14 @@ for dir in directories:
     regions = root.find("./Samples/Sample/Loci/Locus/AlleleDB/Regions")
     regions = [f for f in regions.iter('Region')]
     counter_regions = len(regions);
-    print("CONTADOR DE REGIOES = ", counter_regions)
-    #w_file.write(str(counter_regions)+"/\n")
+    #print("CONTADOR DE REGIOES = ", counter_regions)
+    w_file.write(str(counter_regions)+"/\n")
     for region in regions:
         ID = region.get('ID')
         begin = region.get('begin')
         end = region.get('end')
-        print("ID, BEGIN, END = ", ID, begin, end)
-        #w_file.write(ID+","+begin+","+end+"/\n")
+        #print("ID, BEGIN, END = ", ID, begin, end)
+        w_file.write(ID+","+begin+","+end+"/\n")
 
     r_file.close()
 
@@ -56,46 +56,77 @@ for dir in directories:
 
         p = root.xpath("./Samples/Sample/Loci/Locus/PhasingRegions")
         phasing = p[0].text
+
+        haplotypes = root.find("./Samples/Sample/Loci/Locus/Haplotypes")
+        haplotypes = [f for f in haplotypes.iter('Haplotype')]
+
+        for haplotype in haplotypes:
+            sequence = haplotype.text
+            sequence.replace(" ", "")
+            sequence.replace("\n", "")
+
+        matches = root.find("./Samples/Sample/Loci/Locus/Matching/Matches")
+        matches = [f for f in matches.iter('Match')]
+        counter_matches = len(matches)
+        #print('')
+        #print(counter_matches)
+        w_file.write("\n"+str(counter_matches)+"/\n")
+
         if (int(phasing) ==  1):
-            #print("AMOSTRA = ", sample)
-            #w_file.write(">"+sample+" ")
-
-            haplotypes = root.find("./Samples/Sample/Loci/Locus/Haplotypes")
-            haplotypes = [f for f in haplotypes.iter('Haplotype')]
-            counter_haplotypes = len(haplotypes)
-            #print("COUNTER_HAPLOTYPES = ", counter_haplotypes)
-            #w_file.write(str(counter_haplotypes)+"/\n")
-            for haplotype in haplotypes:
-                ID = haplotype.get('ID')
-                begin = haplotype.get('begin')
-                end = haplotype.get('end')
-                sequence = haplotype.text
-                sequence.replace(" ", "")
-                #print("ID, BEGIN, END = ", ID, begin, end, sequence)
-                #w_file.write(ID+","+begin+","+end+","+sequence+"/\n")
-
-
-            matches = root.find("./Samples/Sample/Loci/Locus/Matching/Matches")
-            matches = [f for f in matches.iter('Match')]
-            counter_matches = len(matches)
-            #print("qtde MATCHES ENCONTRADOS = ", counter_matches)
-            #w_file.write(str(counter_matches)+"/\n")
             for match in matches:
-                ID = match.get('ID')
-                #print(ID)
-                #w_file.write(ID+"/\n")
+                sequence = ""
+                match_ID = match.get('ID')
+
                 combinations = match.find("./HaplotypeCombination")
                 combinations = [f for f in combinations.iter('HaplotypeID')]
                 counter_combinations = len(combinations)
-                #print("combinações para esse match = ", counter_combinations)
-                #w_file.write(str(counter_combinations)+"/\n")
+
+                parameter = str(counter_combinations)
+
                 for combination in combinations:
                     haplo = combination.text
-                    #print(haplo)
-                    #w_file.write(haplo+"/\n")
+                    for haplotype in haplotypes:
+                        ID = haplotype.get('ID')
+                        if (ID == haplo):
+                            begin = haplotype.get('begin')
+                            end = haplotype.get('end')
+                            parameter = parameter+','+str(begin)+'~'+str(end)
 
-        #else: #if (int(phasing) ==  2):
-            #print("PHASE1")
+                            sequence = sequence+haplotype.text
+                fasta = '>'+sample+' '+match_ID+'\n'+sequence+"\n"
+                parameter = parameter+"/\n"
+
+                w_file.write(parameter)
+                w_file.write(fasta)
+
+        else: #if (int(phasing) ==  2):
+            for match in matches:
+                sequence = ""
+                match_ID = match.get('ID')
+
+                combinations = match.find("./HaplotypeCombination")
+                combinations = [f for f in combinations.iter('HaplotypeID')]
+
+                parameter = str(3)
+
+                counter = 0
+                for combination in combinations:
+                    haplo = combination.text
+                    if (counter < 3):
+                        for haplotype in haplotypes:
+                            ID = haplotype.get('ID')
+                            if (ID == haplo):
+                                begin = haplotype.get('begin')
+                                end = haplotype.get('end')
+                                parameter = parameter+','+str(begin)+'~'+str(end)
+
+                                sequence = sequence+haplotype.text
+                                counter += 1
+                fasta = '>'+sample+' '+match_ID+'\n'+sequence+"\n"
+                parameter = parameter+"/\n"
+
+                w_file.write(parameter)
+                w_file.write(fasta)
 
 
         r_file.close()
