@@ -24,15 +24,13 @@ for i in archives:
         p = root.xpath("./Samples/Sample/Loci/Locus/PhasingRegions")
         phasing = p[0].text
 
-        regions = root.find("./Samples/Sample/Loci/Locus/AlleleDB/Regions")
-        regions = [f for f in regions.iter('Region')]
+        haplotypes = root.find("./Samples/Sample/Loci/Locus/Haplotypes")
+        haplotypes = [f for f in haplotypes.iter('Haplotype')]
 
-        for region in regions:
-            ID = region.get('ID')
-            if (ID == "UTR"):
-                begin = region.get('begin')
-                end = region.get('end')
-                #print("SAMPLE =", sample, "PHASE = ",phasing, "ID, BEGIN, END = ", ID, begin, end)
+        for haplotype in haplotypes:
+            ID = haplotype.get('ID')
+            if (ID=="homozygous1"):
+                begin = haplotype.get('begin')
+                end = haplotype.get('end')
                 print("PHASE = ",phasing, "ID, BEGIN, END = ", ID, begin, end)
-
     file.close()
