@@ -14,33 +14,8 @@ for dir in directories:
     archives = [f for f in os.listdir(path)]
 
     #cria o arquivo que vai receber todas as sequências
-    file = work_path+"/"+dir+".txt"
+    file = work_path+"/"+dir+".fasta"
     w_file = open(file, 'w')
-
-    number_of_files = len(archives);
-    #print('NUMERO DE ARQUIVOS = ', number_of_files)
-    w_file.write(str(number_of_files)+"/\n")
-
-    #pega a sequência de regiões
-    i = archives[0]
-    archive = path+"/"+i
-    r_file = open(archive, 'r')
-    tree = ET.parse(r_file)
-    root = tree.getroot()
-
-    regions = root.find("./Samples/Sample/Loci/Locus/AlleleDB/Regions")
-    regions = [f for f in regions.iter('Region')]
-    counter_regions = len(regions);
-    #print("CONTADOR DE REGIOES = ", counter_regions)
-    w_file.write(str(counter_regions)+"/\n")
-    for region in regions:
-        ID = region.get('ID')
-        begin = region.get('begin')
-        end = region.get('end')
-        #print("ID, BEGIN, END = ", ID, begin, end)
-        w_file.write(ID+","+begin+","+end+"/\n")
-
-    r_file.close()
 
     for i in archives:
         archive = path+"/"+i
@@ -50,7 +25,6 @@ for dir in directories:
 
         s = root.xpath("./Samples/Sample/Name")
         sample = s[0].text
-
 
         p = root.xpath("./Samples/Sample/Loci/Locus/PhasingRegions")
         phasing = p[0].text
@@ -65,10 +39,6 @@ for dir in directories:
 
         matches = root.find("./Samples/Sample/Loci/Locus/Matching/Matches")
         matches = [f for f in matches.iter('Match')]
-        counter_matches = len(matches)
-        #print('')
-        #print(counter_matches)
-        w_file.write("\n"+str(counter_matches)+"/\n")
 
         if (int(phasing) ==  1):
             for match in matches:
@@ -77,25 +47,16 @@ for dir in directories:
 
                 combinations = match.find("./HaplotypeCombination")
                 combinations = [f for f in combinations.iter('HaplotypeID')]
-                counter_combinations = len(combinations)
-
-                parameter = str(counter_combinations)
 
                 for combination in combinations:
                     haplo = combination.text
                     for haplotype in haplotypes:
                         ID = haplotype.get('ID')
                         if (ID == haplo):
-                            begin = haplotype.get('begin')
-                            end = haplotype.get('end')
-                            parameter = parameter+','+str(begin)+'~'+str(end)
-
                             sequence = sequence+haplotype.text
                 fasta = '>'+sample+' '+match_ID+'\n'+sequence+"\n"
-                parameter = parameter+"/\n"
 
-                w_file.write(parameter)
-                w_file.write(fasta)
+                w_file.write(fasta+'\n')
 
         else: #if (int(phasing) ==  2):
             for match in matches:
@@ -105,8 +66,6 @@ for dir in directories:
                 combinations = match.find("./HaplotypeCombination")
                 combinations = [f for f in combinations.iter('HaplotypeID')]
 
-                parameter = str(3)
-
                 counter = 0
                 for combination in combinations:
                     haplo = combination.text
@@ -114,17 +73,11 @@ for dir in directories:
                         for haplotype in haplotypes:
                             ID = haplotype.get('ID')
                             if (ID == haplo):
-                                begin = haplotype.get('begin')
-                                end = haplotype.get('end')
-                                parameter = parameter+','+str(begin)+'~'+str(end)
-
                                 sequence = sequence+haplotype.text
                                 counter += 1
                 fasta = '>'+sample+' '+match_ID+'\n'+sequence+"\n"
-                parameter = parameter+"/\n"
 
-                w_file.write(parameter)
-                w_file.write(fasta)
+                w_file.write(fasta+'\n')
 
 
         r_file.close()
