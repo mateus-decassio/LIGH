@@ -19,11 +19,17 @@ int main (int argc, char *argv[])
 	int opt;
   char *locus, *archive  = NULL;
 
+  des *description;
+  sample *samples;
 
-/* =============== TRATAMENTO DE LINHA DE COMANDO =============== */
+
+
+
+
+/* ====================== TRATAMENTO DE LINHA DE COMANDO ====================== */
   if ( argc < 5 )
     usage(argv[0]);
-
+  //l:d: - o uso do : significa que l recebe um parâmetro adicional, assim como o d
   while ( (opt = getopt (argc, argv, "l:d:")) != -1 )
   {
     switch (opt)
@@ -48,12 +54,12 @@ int main (int argc, char *argv[])
         usage(argv[0]);
     }
   }
-/* ================ FIM DO TRATAMENTO DE LINHA DE COMANDO ========= */
+/* ====================== FIM DO TRATAMENTO DE LINHA DE COMANDO ====================== */
   printf("LOCUS = %s\n", locus);
   printf("PATH TO FILE = %s\n", archive);
 
 
-  read_file(archive);
+  read_file(archive, description, samples);
 
 /*
   analysis();

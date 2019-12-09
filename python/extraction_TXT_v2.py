@@ -1,3 +1,5 @@
+#USO: python3 extraction_TXT_v2.py -d /mnt/hgfs/SHARED
+
 import lxml.etree as ET
 import os
 import sys
@@ -30,7 +32,7 @@ for dir in directories:
 
     regions = root.find("./Samples/Sample/Loci/Locus/AlleleDB/Regions")
     regions = [f for f in regions.iter('Region')]
-    counter_regions = len(regions);
+    counter_regions = len(regions)
     #print("CONTADOR DE REGIOES = ", counter_regions)
     w_file.write(str(counter_regions)+"/\n")
     for region in regions:
@@ -68,7 +70,7 @@ for dir in directories:
         counter_matches = len(matches)
         #print('')
         #print(counter_matches)
-        w_file.write("\n"+str(counter_matches)+"/\n")
+        w_file.write(str(counter_matches)+"/\n")
 
         if (int(phasing) ==  1):
             for match in matches:
@@ -91,10 +93,10 @@ for dir in directories:
                             parameter = parameter+','+str(begin)+'~'+str(end)
 
                             sequence = sequence+haplotype.text
-                fasta = '>'+sample+' '+match_ID+'\n'+sequence+"\n"
                 parameter = parameter+"/\n"
-
                 w_file.write(parameter)
+                
+                fasta = sample+'/\n'+match_ID+'/\n'+sequence+'\n'
                 w_file.write(fasta)
 
         else: #if (int(phasing) ==  2):
@@ -120,10 +122,10 @@ for dir in directories:
 
                                 sequence = sequence+haplotype.text
                                 counter += 1
-                fasta = '>'+sample+' '+match_ID+'\n'+sequence+"\n"
                 parameter = parameter+"/\n"
-
                 w_file.write(parameter)
+                
+                fasta = sample+'/\n'+match_ID+'/\n'+sequence+'\n'
                 w_file.write(fasta)
 
 
