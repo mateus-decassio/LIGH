@@ -4,11 +4,52 @@
 #include "data_structs.h"
 #include "functions.h"
 
+void insert_description(des *description, unsigned int pos, char *id, int begin, int end)
+{
+  unsigned int size = (unsigned int)strlen(id);
+  description[pos].id = (char *) malloc (size * sizeof(char));
+  
+  strncpy(description[pos].id, id, size);
+  description[pos].begin = begin;
+  description[pos].end = end;
+
+  printf("ID = %s, begin = %d, end = %d\n",description[pos].id, description[pos].begin, description[pos].end);
+};
+
+void insert_sample(des *description, unsigned int pos, char *id, int begin, int end)
+{
+  unsigned int size = (unsigned int)strlen(id);
+  description[pos].id = (char *) malloc (size * sizeof(char));
+  
+  strncpy(description[pos].id, id, size);
+  description[pos].begin = begin;
+  description[pos].end = end;
+
+  printf("ID = %s, begin = %d, end = %d\n",description[pos].id, description[pos].begin, description[pos].end);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void read_file(char *file_path, des *description, sample *samples)
 {
   FILE *file;
-  int total_of_samples, number_of_regions, counter, begin, end, homozygous, regions, i, j;
+  int begin, end, homozygous, regions, i, j;
+  unsigned int counter, total_of_samples, number_of_regions;
   char linha[5000], sequence[5000], id[50], allele[50];
   char *token;
 
@@ -19,6 +60,7 @@ void read_file(char *file_path, des *description, sample *samples)
     exit (-1);
   }
   
+  //-----------------------------------------------------------------
   //pega o total de arquivos encontrados para fazer a análise
   fgets (linha, sizeof(linha), file);
 	token = strtok (linha, "/");
@@ -29,8 +71,9 @@ void read_file(char *file_path, des *description, sample *samples)
   samples = (sample *) malloc (total_of_samples * sizeof(sample));
   if (!samples)
     fprintf(stderr, "ERRO AO ALOCAR O VETOR DE AMOSTRAS");
+  //-----------------------------------------------------------------
 
-  
+  //-----------------------------------------------------------------
   //pega o total de regiões para a leitura
   fgets (linha, sizeof(linha), file);
   token = strtok (linha, "/");
@@ -41,8 +84,9 @@ void read_file(char *file_path, des *description, sample *samples)
   description = (des *) malloc (number_of_regions * sizeof(des));
   if (!description)
     fprintf(stderr, "ERRO AO ALOCAR O VETOR DE DESCRIÇÃO");
+  //-----------------------------------------------------------------
 
-  //pega as regiões
+  //leitura das regiões
   for (counter = 0; counter < number_of_regions; ++counter)
   {
     fgets (linha, sizeof(linha), file);
@@ -54,11 +98,13 @@ void read_file(char *file_path, des *description, sample *samples)
 
     token = strtok (NULL, ",");
     sscanf (token, "%d", &end);
+    //printf("ID = %s, begin = %d, end = %d\n",id, begin, end);
 
-    printf("ID = %s, begin = %d, end = %d\n",id, begin, end);
+    //inserção no vetor de descrição
+    insert_description(description, counter, id, begin, end);
   }
 
-  //pega as sequências
+  //leitura das sequências
   for (counter = 0; counter < total_of_samples; ++counter)
   {
     fgets (linha, sizeof(linha), file);

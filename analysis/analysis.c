@@ -19,8 +19,8 @@ int main (int argc, char *argv[])
 	int opt;
   char *locus, *archive  = NULL;
 
-  des *description;
-  sample *samples;
+  des *description = NULL;
+  sample *samples = NULL;
 
 
 
