@@ -98,7 +98,6 @@ void read_file(char *file_path, des *description, sample *samples)
 
     token = strtok (NULL, ",");
     sscanf (token, "%d", &end);
-    //printf("ID = %s, begin = %d, end = %d\n",id, begin, end);
 
     //inserção no vetor de descrição
     insert_description(description, counter, id, begin, end);
@@ -110,7 +109,7 @@ void read_file(char *file_path, des *description, sample *samples)
     fgets (linha, sizeof(linha), file);
     token = strtok (linha, "/");
     sscanf (token, "%d", &homozygous);
-    printf("homzigoto? [1 = SIM][2 = NÃO]: %d\n", homozygous);
+    printf("homozigoto? [1 = SIM][2 = NÃO]: %d\n", homozygous);
 
     for (i = 0; i < homozygous; ++i)
     {
