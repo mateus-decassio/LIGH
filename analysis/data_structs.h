@@ -18,15 +18,18 @@ typedef struct
 
 typedef struct
 {
-    char *id;           //guarda o identificador da amostra
-    
-    divisions *div1;    //[VETOR]: guarda as regiões divisórias da sequência do alelo
-    char *allele1;      //gaurda o nome do alelo 1
-    char *sequence_a1;  //guarda a sequência do alelo 1
+    divisions *regions; //[VETOR]: guarda as regiões divisórias da sequência do alelo
+    unsigned int size;  //guarda o tamanho das divisões para essa sequência
+    char *name;         //gaurda o nome do alelo 1
+    char *sequence;     //guarda a sequência do alelo 1
+} alleles;
 
-    divisions *div2;    //[VETOR]: guarda as regiões divisórias da sequência do alelo
-    char *allele2;      //gaurda o nome do alelo 2
-    char *sequence_a2;  //guarda a sequência do alelo 2
+
+typedef struct
+{
+    char *id;           //guarda o identificador da amostra
+    alleles *allele;    //guarda o vetor de alelos que essa amostra possui. Esse valor só pode ser
+                        //1 (homozigoto) ou 2 (heterozigoto)
 } sample;
 
 
