@@ -21,14 +21,14 @@ void insert_description(des *description, unsigned int pos, char *id, int begin,
 void allocate_alleles(sample *samples, unsigned int pos, unsigned int size)
 {
    samples[pos].allele = (alleles *) malloc (size * sizeof(alleles));
-}; //TESTAR
+}; //FINALIZADO
 
 
 void allocate_region(sample *samples, unsigned int pos, unsigned int al, unsigned int size)
 {
   samples[pos].allele[al].regions = (divisions *) malloc (size * sizeof(divisions));
   samples[pos].allele[al].size = size;
-}; //TESTAR
+}; //FINALIZADO
 
 
 void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned int posic, int begin, int end)
@@ -37,7 +37,7 @@ void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned 
   samples[pos].allele[al].regions[posic].end = end;
 
   printf("BEGIN = %d, END = %d\n",samples[pos].allele[al].regions[posic].begin, samples[pos].allele[al].regions[posic].end);
-}; //TESTAR
+}; //FINALIZADO
 
 void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id, char *name, char *sequence)
 {
@@ -57,8 +57,9 @@ void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id,
   size = (unsigned int)strlen(sequence);
   samples[pos].allele[al].sequence = (char *) malloc (size * sizeof(char));
   strncpy(samples[pos].allele[al].sequence, sequence, size);
+  samples[pos].allele[al].sequence[size] = '\0';
   printf("SEQUÊNCIA =  %s\n", samples[pos].allele[al].sequence);
-}; //TESTAR
+}; //FINALIZADO
 
 /* ================================================================================================ */
 
@@ -172,7 +173,7 @@ void read_file(char *file_path, des *description, sample *samples)
     }
   }
 
-}; //FINALIZAR
+}; //FINALIZADO
 
 
 /*
