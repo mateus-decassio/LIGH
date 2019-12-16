@@ -1,7 +1,9 @@
 #ifndef __FUNCTIONS__
 #define __FUNCTIONS__
 
-void read_file(char *file_path, des *description, sample *samples);
+/* ======================= FUNÇÕES/PROCEDIMENTOS UTILIZADAS PARA TRATAR A LEITURA ======================= */
+
+void read_file(global *parameters, char *file_path, des *description, sample *samples);
 
 void insert_description(des *description, unsigned int pos, char *id, int begin, int end);
 
@@ -13,6 +15,14 @@ void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned 
 
 void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id, char *name, char *sequence);
 
+/* ====================================================================================================== */
+
+
+
+/* ======================= FUNÇÕES/PROCEDIMENTOS UTILIZADAS PARA TRATAR A ANÁLISE ======================= */
+
+
+/* ====================================================================================================== */
 
 
 #endif

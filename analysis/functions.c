@@ -1,34 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include "data_structs.h"
 #include "functions.h"
 
-/* =========================== FUNÇÕES UTILIZADAS PARA TRATAR A LEITURA =========================== */
+/* ======================= FUNÇÕES/PROCEDIMENTOS UTILIZADAS PARA TRATAR A LEITURA ======================= */
 
 void insert_description(des *description, unsigned int pos, char *id, int begin, int end)
 {
   unsigned int size = (unsigned int)strlen(id);
-  description[pos].id = (char *) malloc (size * sizeof(char));
+  description[pos].id = (char *) malloc (size+1 * sizeof(char));
   
   strncpy(description[pos].id, id, size);
   description[pos].begin = begin;
   description[pos].end = end;
 
   printf("ID = %s, begin = %d, end = %d\n",description[pos].id, description[pos].begin, description[pos].end);
-}; //FINALIZADO
+}; //
 
 void allocate_alleles(sample *samples, unsigned int pos, unsigned int size)
 {
    samples[pos].allele = (alleles *) malloc (size * sizeof(alleles));
-}; //FINALIZADO
+   if (size == 1)
+      samples[pos].homozygous = true;
+    else
+      samples[pos].homozygous = false;
+}; //
 
 
 void allocate_region(sample *samples, unsigned int pos, unsigned int al, unsigned int size)
 {
   samples[pos].allele[al].regions = (divisions *) malloc (size * sizeof(divisions));
   samples[pos].allele[al].size = size;
-}; //FINALIZADO
+}; //
 
 
 void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned int posic, int begin, int end)
@@ -37,39 +42,44 @@ void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned 
   samples[pos].allele[al].regions[posic].end = end;
 
   printf("BEGIN = %d, END = %d\n",samples[pos].allele[al].regions[posic].begin, samples[pos].allele[al].regions[posic].end);
-}; //FINALIZADO
+}; //
 
 void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id, char *name, char *sequence)
 {
   unsigned int size;
   
   size = (unsigned int)strlen(id);
-  samples[pos].id = (char *) malloc (size * sizeof(char));
+  samples[pos].id = (char *) malloc (size+1 * sizeof(char));
   strncpy(samples[pos].id, id, size);
   printf("ID =  %s\n", samples[pos].id);
 
   size = (unsigned int)strlen(name);
-  samples[pos].allele[al].name = (char *) malloc (size * sizeof(char));
+  samples[pos].allele[al].name = (char *) malloc (size+1 * sizeof(char));
   strncpy(samples[pos].allele[al].name, name, size);
   printf("NOME DO ALELO =  %s\n", samples[pos].allele[al].name);
 
+  //obs: strlen retorna o tamanho da string sem o caractere nulo no final
 
   size = (unsigned int)strlen(sequence);
-  samples[pos].allele[al].sequence = (char *) malloc (size * sizeof(char));
+  samples[pos].allele[al].sequence = (char *) malloc (size+1 * sizeof(char));
   strncpy(samples[pos].allele[al].sequence, sequence, size);
   samples[pos].allele[al].sequence[size] = '\0';
   printf("SEQUÊNCIA =  %s\n", samples[pos].allele[al].sequence);
-}; //FINALIZADO
 
-/* ================================================================================================ */
+}; //
 
-void read_file(char *file_path, des *description, sample *samples)
+/* ====================================================================================================== */
+
+void read_file(global *parameters, char *file_path, des *description, sample *samples)
 {
   FILE *file;
   int begin, end;
   unsigned int counter, total_of_samples, number_of_regions, homozygous, i, j, region;
   char linha[9000], sequence[9000], id[100], allele[100];
   char *token;
+
+  sample *s;
+  des *d;
 
   file = fopen(file_path, "r");
   if (file == NULL)
@@ -84,6 +94,7 @@ void read_file(char *file_path, des *description, sample *samples)
 	token = strtok (linha, "/");
 	sscanf (token, "%d", &total_of_samples);
   printf("TOTAL OF SAMPLES = %d\n", total_of_samples);
+  parameters->total_of_samples = total_of_samples;
 
   //aloca o vetor de amostras para receber os dados
   samples = (sample *) malloc (total_of_samples * sizeof(sample));
@@ -97,6 +108,7 @@ void read_file(char *file_path, des *description, sample *samples)
   token = strtok (linha, "/");
   sscanf (token, "%d", &number_of_regions);
   //printf("(number)REGIONS = %s\n",token);
+  parameters->number_of_regions = number_of_regions;
 
   //aloca o vetor de descrição para receber os dados
   description = (des *) malloc (number_of_regions * sizeof(des));
@@ -173,7 +185,7 @@ void read_file(char *file_path, des *description, sample *samples)
     }
   }
 
-}; //FINALIZADO
+}; //
 
 
 /*

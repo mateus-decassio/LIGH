@@ -30,8 +30,15 @@ typedef struct
     char *id;           //guarda o identificador da amostra
     alleles *allele;    //guarda o vetor de alelos que essa amostra possui. Esse valor só pode ser
                         //1 (homozigoto) ou 2 (heterozigoto)
+    bool homozygous;
 } sample;
 
+
+typedef struct
+{
+    unsigned int number_of_regions;
+    unsigned int total_of_samples;
+} global;
 
 
 

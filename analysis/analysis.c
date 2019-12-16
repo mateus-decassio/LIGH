@@ -4,6 +4,7 @@
 #include <string.h>
 #include <getopt.h>
 #include <unistd.h>
+#include <stdbool.h>
 #include "data_structs.h"
 #include "functions.h"
 
@@ -19,8 +20,10 @@ int main (int argc, char *argv[])
 	int opt;
   char *locus, *archive  = NULL;
 
+  //ARRUMAR ISSO AQUI
   des *description = NULL;
   sample *samples = NULL;
+  global *parameters = (global *) malloc (sizeof(global));
 
 
 
@@ -59,7 +62,17 @@ int main (int argc, char *argv[])
   printf("PATH TO FILE = %s\n", archive);
 
 
-  read_file(archive, description, samples);
+  read_file(parameters, archive, description, samples);
+  
+  
+  printf("\n\n\n\n");
+  printf("TOTAL OF SAMPLES = %d\n", parameters->total_of_samples);
+  //printf("ID = %s\n", samples[0].id);
+
+  if (samples == NULL)
+    printf ("NULL\n");
+  else
+    printf("%p", &samples);
 
 /*
   analysis();
