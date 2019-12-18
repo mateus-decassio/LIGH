@@ -5,7 +5,115 @@
 #include "data_structs.h"
 #include "functions.h"
 
-/* ======================= FUNÇÕES/PROCEDIMENTOS UTILIZADAS PARA TRATAR A LEITURA ======================= */
+/* ======================= FUNÇÕES/PROCEDIMENTOS PARA ALOCAÇÃO / DESALOCAÇÃO ======================= */
+
+des* allocate_desc(unsigned int size)
+{
+  des *description = (des *) malloc (size * sizeof(des));
+    if (!description)
+  {
+    fprintf(stderr, "ERRO AO ALOCAR O VETOR DE DESCRIÇÃO!");
+    return NULL;
+  }
+  return (description);
+}; //FINALIZADO
+
+
+sample* allocate_samp(unsigned int size)
+{
+  sample *samples = (sample *) malloc (size * sizeof(sample));
+  if (!samples)
+  {
+    fprintf(stderr, "ERRO AO ALOCAR O VETOR DE AMOSTRAS!");
+    return NULL;
+  }
+  return (samples);
+}; //FINALIZADO
+
+
+void allocate_alleles(sample *samples, unsigned int pos, unsigned int size)
+{
+   samples[pos].allele = (alleles *) malloc (size * sizeof(alleles));
+   if (size == 1)
+      samples[pos].homozygous = true;
+    else
+      samples[pos].homozygous = false;
+}; //FINALIZADO
+
+
+void allocate_region(sample *samples, unsigned int pos, unsigned int al, unsigned int size)
+{
+  samples[pos].allele[al].regions = (divisions *) malloc (size * sizeof(divisions));
+  samples[pos].allele[al].size = size;
+}; //FINALIZADO
+
+/* ================================================================================================= */
+
+
+
+/* ====================== FUNÇÕES/PROCEDIMENTOS PARA IMPRESSÃO DOS RESULTADOS ====================== */
+
+void impressao_d(des *description, unsigned int size)
+{
+  unsigned int counter;
+
+  for (counter = 0; counter < size; ++counter)
+  {
+    printf("ID = %s, begin = %d, end = %d\n",description[counter].id, description[counter].begin, description[counter].end);
+  }
+}; //FINALIZADO
+
+
+void impressao_s(sample *samples, unsigned int size)
+{
+  unsigned int counter, i;
+
+  for (counter = 0; counter < size; ++counter)
+  {
+     printf("ID da amostra = %s\n\n", samples[counter].id);
+
+     if (samples[counter].homozygous == true)
+     {
+      printf("O INDIVÍDUO É HOMOZIGOTO.\n");
+      printf("ID do alelo: %s\n", samples[counter].allele[0].name);
+      printf("Esse alelo é divido em %d regiões.\n", samples[counter].allele[0].size);
+
+      for (i = 0; i < samples[counter].allele[0].size; ++i)
+      {
+        printf("BEGIN = %d, END = %d\n",samples[counter].allele[0].regions[i].begin, samples[counter].allele[0].regions[i].end);
+      }
+      printf("SEQUÊNCIA do alelo: %s\n", samples[counter].allele[0].sequence);
+     }
+     else
+     {
+      printf("O INDIVÍDUO É HETEROZIGOTO.\n");
+      printf("ID do alelo 1: %s\n", samples[counter].allele[0].name);
+      printf("Esse alelo é divido em %d regiões.\n", samples[counter].allele[0].size);
+
+      for (i = 0; i < samples[counter].allele[0].size; ++i)
+      {
+        printf("BEGIN = %d, END = %d\n",samples[counter].allele[0].regions[i].begin, samples[counter].allele[0].regions[i].end);
+      }
+      printf("SEQUÊNCIA do alelo1: %s\n\n", samples[counter].allele[0].sequence);
+
+      printf("ID do alelo 2: %s\n", samples[counter].allele[1].name);
+      printf("Esse alelo é divido em %d regiões.\n", samples[counter].allele[1].size);
+
+      for (i = 0; i < samples[counter].allele[1].size; ++i)
+      {
+        printf("BEGIN = %d, END = %d\n",samples[counter].allele[1].regions[i].begin, samples[counter].allele[1].regions[i].end);
+      }
+      printf("SEQUÊNCIA do alelo2: %s\n", samples[counter].allele[1].sequence);
+     }
+     printf("\n\n\n");
+  }
+}; //FINALIZADO
+
+/* ================================================================================================= */
+
+
+
+/* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A LEITURA ========================== */
 
 void insert_description(des *description, unsigned int pos, char *id, int begin, int end)
 {
@@ -16,24 +124,8 @@ void insert_description(des *description, unsigned int pos, char *id, int begin,
   description[pos].begin = begin;
   description[pos].end = end;
 
-  printf("ID = %s, begin = %d, end = %d\n",description[pos].id, description[pos].begin, description[pos].end);
-}; //
-
-void allocate_alleles(sample *samples, unsigned int pos, unsigned int size)
-{
-   samples[pos].allele = (alleles *) malloc (size * sizeof(alleles));
-   if (size == 1)
-      samples[pos].homozygous = true;
-    else
-      samples[pos].homozygous = false;
-}; //
-
-
-void allocate_region(sample *samples, unsigned int pos, unsigned int al, unsigned int size)
-{
-  samples[pos].allele[al].regions = (divisions *) malloc (size * sizeof(divisions));
-  samples[pos].allele[al].size = size;
-}; //
+  //printf("ID = %s, begin = %d, end = %d\n",description[pos].id, description[pos].begin, description[pos].end);
+}; //FINALIZADO
 
 
 void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned int posic, int begin, int end)
@@ -41,8 +133,9 @@ void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned 
   samples[pos].allele[al].regions[posic].begin = begin;
   samples[pos].allele[al].regions[posic].end = end;
 
-  printf("BEGIN = %d, END = %d\n",samples[pos].allele[al].regions[posic].begin, samples[pos].allele[al].regions[posic].end);
-}; //
+  //printf("BEGIN = %d, END = %d\n",samples[pos].allele[al].regions[posic].begin, samples[pos].allele[al].regions[posic].end);
+}; //FINALIZADO
+
 
 void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id, char *name, char *sequence)
 {
@@ -51,12 +144,12 @@ void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id,
   size = (unsigned int)strlen(id);
   samples[pos].id = (char *) malloc (size+1 * sizeof(char));
   strncpy(samples[pos].id, id, size);
-  printf("ID =  %s\n", samples[pos].id);
+  //printf("ID =  %s\n", samples[pos].id);
 
   size = (unsigned int)strlen(name);
   samples[pos].allele[al].name = (char *) malloc (size+1 * sizeof(char));
   strncpy(samples[pos].allele[al].name, name, size);
-  printf("NOME DO ALELO =  %s\n", samples[pos].allele[al].name);
+  //printf("NOME DO ALELO =  %s\n", samples[pos].allele[al].name);
 
   //obs: strlen retorna o tamanho da string sem o caractere nulo no final
 
@@ -64,22 +157,18 @@ void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id,
   samples[pos].allele[al].sequence = (char *) malloc (size+1 * sizeof(char));
   strncpy(samples[pos].allele[al].sequence, sequence, size);
   samples[pos].allele[al].sequence[size] = '\0';
-  printf("SEQUÊNCIA =  %s\n", samples[pos].allele[al].sequence);
+  //printf("SEQUÊNCIA =  %s\n", samples[pos].allele[al].sequence);
 
-}; //
+}; //FINALIZADO
 
-/* ====================================================================================================== */
 
-void read_file(global *parameters, char *file_path, des *description, sample *samples)
+void read_parameters(global *parameters, char *file_path)
 {
   FILE *file;
-  int begin, end;
-  unsigned int counter, total_of_samples, number_of_regions, homozygous, i, j, region;
-  char linha[9000], sequence[9000], id[100], allele[100];
+  unsigned int total_of_samples, number_of_regions;
+  char linha[9000];
   char *token;
 
-  sample *s;
-  des *d;
 
   file = fopen(file_path, "r");
   if (file == NULL)
@@ -93,13 +182,8 @@ void read_file(global *parameters, char *file_path, des *description, sample *sa
   fgets (linha, sizeof(linha), file);
 	token = strtok (linha, "/");
 	sscanf (token, "%d", &total_of_samples);
-  printf("TOTAL OF SAMPLES = %d\n", total_of_samples);
+  //printf("TOTAL OF SAMPLES = %d\n", total_of_samples);
   parameters->total_of_samples = total_of_samples;
-
-  //aloca o vetor de amostras para receber os dados
-  samples = (sample *) malloc (total_of_samples * sizeof(sample));
-  if (!samples)
-    fprintf(stderr, "ERRO AO ALOCAR O VETOR DE AMOSTRAS");
   //-----------------------------------------------------------------
 
   //-----------------------------------------------------------------
@@ -109,11 +193,39 @@ void read_file(global *parameters, char *file_path, des *description, sample *sa
   sscanf (token, "%d", &number_of_regions);
   //printf("(number)REGIONS = %s\n",token);
   parameters->number_of_regions = number_of_regions;
+  //-----------------------------------------------------------------
 
-  //aloca o vetor de descrição para receber os dados
-  description = (des *) malloc (number_of_regions * sizeof(des));
-  if (!description)
-    fprintf(stderr, "ERRO AO ALOCAR O VETOR DE DESCRIÇÃO");
+  fclose(file);
+}; //FINALIZADO
+
+
+void read_file(char *file_path, des *description, sample *samples)
+{
+  FILE *file;
+  int begin, end;
+  unsigned int counter, total_of_samples, number_of_regions, homozygous, i, j, region;
+  char linha[9000], sequence[9000], id[100], allele[100];
+  char *token;
+
+  file = fopen(file_path, "r");
+  if (file == NULL)
+  {
+    fprintf(stderr, "Erro ao abrir o arquivo.\n");
+    exit (-1);
+  }
+  
+  //-----------------------------------------------------------------
+  //pega o total de arquivos encontrados para fazer a análise
+  fgets (linha, sizeof(linha), file);
+	token = strtok (linha, "/");
+	sscanf (token, "%d", &total_of_samples);
+  //-----------------------------------------------------------------
+
+  //-----------------------------------------------------------------
+  //pega o total de regiões para a leitura
+  fgets (linha, sizeof(linha), file);
+  token = strtok (linha, "/");
+  sscanf (token, "%d", &number_of_regions);
   //-----------------------------------------------------------------
 
   //leitura das regiões
@@ -184,18 +296,30 @@ void read_file(global *parameters, char *file_path, des *description, sample *sa
       insert_allele(samples, counter, i, id, allele, sequence);
     }
   }
+  fclose(file);
+}; // FINALIZADO
 
-}; //
+/* ================================================================================================= */
 
 
-/*
+
+/* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
+
 void analysis()
 {
 
 }; //FAZER
 
+
+/* ================================================================================================= */
+
+
+
+/* ======================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR OS RESULTADOS ======================== */
+
 void results()
 {
 
 }; //FAZER
-*/
+
+/* ================================================================================================= */

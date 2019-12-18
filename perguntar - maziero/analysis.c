@@ -62,27 +62,19 @@ int main (int argc, char *argv[])
   printf("PATH TO FILE = %s\n", archive);
 
 
-  read_parameters(parameters, archive);
-
-  description = allocate_desc(parameters->number_of_regions);
-  samples = allocate_samp(parameters->total_of_samples);
+  read_file(parameters, archive, description, samples);
   
-  if (samples && description)
-  {
-    read_file(archive, description, samples);
-  }
-  else
-  {
-    fprintf(stderr, "Impossível realizar a leitura do arquivo. Houve um problema na alocação da estrutura de dados!");
-    exit (-1);
-  }
-
-  printf("\n\n");
+  
+  printf("\n\n\n\n");
   printf("TOTAL OF SAMPLES = %d\n", parameters->total_of_samples);
-  printf("NUMBER OF REGIONS (description)= %d\n\n", parameters->number_of_regions);
-  
-  impressao_d(description, parameters->number_of_regions);
-  impressao_s(samples, parameters->total_of_samples);
+  //printf("ID = %s\n", samples[0].id);
+
+  if (samples == NULL)
+    printf ("NULL\n");
+  else
+    printf("ANTES = %p\n", &samples);
+
+  printf("ID = %s\n", samples[0].id);
 
 /*
   analysis();
