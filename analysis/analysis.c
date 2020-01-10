@@ -20,11 +20,9 @@ int main (int argc, char *argv[])
 	int opt;
   char *locus, *archive  = NULL;
 
-  //ARRUMAR ISSO AQUI
   des *description;
   sample *samples;
   global *parameters = (global *) malloc (sizeof(global));
-
 
 
 
@@ -58,6 +56,8 @@ int main (int argc, char *argv[])
     }
   }
 /* ====================== FIM DO TRATAMENTO DE LINHA DE COMANDO ====================== */
+  
+  
   printf("LOCUS = %s\n", locus);
   printf("PATH TO FILE = %s\n", archive);
 
