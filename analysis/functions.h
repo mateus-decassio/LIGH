@@ -33,7 +33,7 @@ void read_file(char *file_path, des *description, sample *samples);
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
-void analysis();
+void analysis(global *parameters, des *description);
 
 
 /* ================================================================================================= */

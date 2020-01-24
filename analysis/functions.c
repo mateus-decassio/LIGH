@@ -305,9 +305,19 @@ void read_file(char *file_path, des *description, sample *samples)
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
 
-void analysis()
+void analysis(global *parameters, des *description)
 {
-
+  int i, intron;
+  
+  intron = 0;
+  for (i = 0; i < parameters->number_of_regions; ++i)
+  {
+    if (!strcmp(description[i].id, "Intron"))
+    {
+      intron ++;
+      printf("esse é o intron %d que começa no %d e termina no %d\n", intron, description[i].begin, description[i].end);
+    }
+  }
 }; //FAZER
 
 

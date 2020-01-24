@@ -84,8 +84,11 @@ int main (int argc, char *argv[])
   impressao_d(description, parameters->number_of_regions);
   impressao_s(samples, parameters->total_of_samples);
 
+
+
+  analysis(parameters, description);
 /*
-  analysis();
+  
   results();
 */
 return 0;

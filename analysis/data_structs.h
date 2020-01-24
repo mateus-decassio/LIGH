@@ -20,8 +20,8 @@ typedef struct
 {
     divisions *regions; //[VETOR]: guarda as regiões divisórias da sequência do alelo
     unsigned int size;  //guarda o tamanho das divisões para essa sequência
-    char *name;         //gaurda o nome do alelo 1
-    char *sequence;     //guarda a sequência do alelo 1
+    char *name;         //guarda o nome do alelo
+    char *sequence;     //guarda a sequência do alelo
 } alleles;
 
 
