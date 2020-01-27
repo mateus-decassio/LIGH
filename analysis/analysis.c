@@ -86,7 +86,7 @@ int main (int argc, char *argv[])
 
 
 
-  analysis(parameters, description);
+  analysis(parameters, description, samples);
 /*
   
   results();

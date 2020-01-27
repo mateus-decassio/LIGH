@@ -304,18 +304,45 @@ void read_file(char *file_path, des *description, sample *samples)
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
-
-void analysis(global *parameters, des *description)
+int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions)
 {
-  int i, intron;
+  int i;
+  for (i = 0; i < size; ++i)
+  {
+    if ((i_begin >= regions[i].begin) && (i_end <= regions[i].end))
+      return 1; //VERDADEIRO
+  }
+  return 0; //FALSO
+}
+
+
+
+
+void analysis(global *parameters, des *description, sample *samples)
+{
+  int i, j, intron_counter, i_begin, i_end;
   
-  intron = 0;
+  intron_counter = 0;
   for (i = 0; i < parameters->number_of_regions; ++i)
   {
     if (!strcmp(description[i].id, "Intron"))
     {
-      intron ++;
-      printf("esse é o intron %d que começa no %d e termina no %d\n", intron, description[i].begin, description[i].end);
+      intron_counter ++;
+      i_begin = description[i].begin;
+      i_end = description[i].end;
+      //printf("esse é o intron %d que começa no %d e termina no %d\n", intron, e_begin, i_end);
+
+      for (j = 0; j < parameters->total_of_samples; ++j)
+      {
+        //VERIFICAR O ERRO AQUI! NÃO É EM SAMPLES, E SIM A ALLELES!!!!
+        if (verify_region(i_begin, i_end, samples[j].size, samples[j].regions))
+        {
+          //extrair o intron
+          //inserir na lista de introns encontrados
+        }
+      }
+      
+      //ajustar a calda da lista para sempre apontar para o final de cada intron (ex: 1,2,3,4...)
     }
   }
 }; //FAZER

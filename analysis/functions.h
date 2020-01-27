@@ -33,7 +33,9 @@ void read_file(char *file_path, des *description, sample *samples);
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
-void analysis(global *parameters, des *description);
+int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions);
+
+void analysis(global *parameters, des *description, sample *samples);
 
 
 /* ================================================================================================= */
