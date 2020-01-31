@@ -5,6 +5,7 @@
 #include "data_structs.h"
 #include "functions.h"
 
+
 /* ======================= FUNÇÕES/PROCEDIMENTOS PARA ALOCAÇÃO / DESALOCAÇÃO ======================= */
 
 des* allocate_desc(unsigned int size)
@@ -304,23 +305,44 @@ void read_file(char *file_path, des *description, sample *samples)
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
+int calculate_offset(int a, int b)
+{
+  return abs(b-a);
+}; //TESTAR
+
+
+char *extrac_intron(char *source, int begin, int offset)
+{
+  #pragma GCC diagnostic ignored "-Wsign-conversion"
+  
+  //alocar o espaço para receber o vetor
+  char *ret = (char *) malloc ((offset + 1) * sizeof(char));
+
+  strncpy(ret, source+begin, offset);
+  ret[offset] = '\0';
+
+  return ret;
+}; //TESTAR
+
+
+
 int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions)
 {
-  int i;
+  unsigned int i;
   for (i = 0; i < size; ++i)
   {
     if ((i_begin >= regions[i].begin) && (i_end <= regions[i].end))
       return 1; //VERDADEIRO
   }
   return 0; //FALSO
-}
-
-
+}; //TESTAR
 
 
 void analysis(global *parameters, des *description, sample *samples)
 {
-  int i, j, intron_counter, i_begin, i_end;
+  unsigned int i, j, intron_counter;
+  int i_begin, i_end, r_begin, offset;
+  char *sequence;
   
   intron_counter = 0;
   for (i = 0; i < parameters->number_of_regions; ++i)
@@ -334,11 +356,31 @@ void analysis(global *parameters, des *description, sample *samples)
 
       for (j = 0; j < parameters->total_of_samples; ++j)
       {
-        //VERIFICAR O ERRO AQUI! NÃO É EM SAMPLES, E SIM A ALLELES!!!!
-        if (verify_region(i_begin, i_end, samples[j].size, samples[j].regions))
+        if (verify_region(i_begin, i_end, samples[j].allele[0].size, samples[j].allele[0].regions))
         {
           //extrair o intron
+          r_begin = calculate_offset(samples[j].allele[0].regions[0].begin, i_begin);
+          offset = calculate_offset(samples[j].allele[0].regions[0].begin, i_end);
+          offset = abs(offset - r_begin);
+
+          sequence = extrac_intron(samples[j].allele[0].sequence, r_begin, offset);
+
           //inserir na lista de introns encontrados
+        }
+
+        if (samples[j].homozygous == false)
+        {
+          if (verify_region(i_begin, i_end, samples[j].allele[1].size, samples[j].allele[1].regions))
+        {
+          //extrair o intron
+          r_begin = calculate_offset(samples[j].allele[1].regions[0].begin, i_begin);
+          offset = calculate_offset(samples[j].allele[1].regions[0].begin, i_end);
+          offset = abs(offset - r_begin);
+
+          sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
+          
+          //inserir na lista de introns encontrados
+        }
         }
       }
       
@@ -353,10 +395,10 @@ void analysis(global *parameters, des *description, sample *samples)
 
 
 /* ======================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR OS RESULTADOS ======================== */
-
+/*
 void results()
 {
 
 }; //FAZER
-
+*/
 /* ================================================================================================= */

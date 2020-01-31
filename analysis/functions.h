@@ -33,6 +33,10 @@ void read_file(char *file_path, des *description, sample *samples);
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
+int calculate_offset(int a, int b);
+
+char *extrac_intron(char *source, int begin, int offset);
+
 int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions);
 
 void analysis(global *parameters, des *description, sample *samples);
@@ -42,7 +46,7 @@ void analysis(global *parameters, des *description, sample *samples);
 
 
 /* ======================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR OS RESULTADOS ======================== */
-void results();
+//void results();
 
 /* ================================================================================================= */
 
