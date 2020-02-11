@@ -305,20 +305,20 @@ void read_file(char *file_path, des *description, sample *samples)
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
-int calculate_offset(int a, int b)
+int calculate_sub(int a, int b)
 {
   return abs(b-a);
 }; //TESTAR
 
 
-char *extrac_intron(char *source, int begin, int offset)
+char *extrac_intron(char *source, int stride, int offset)
 {
   #pragma GCC diagnostic ignored "-Wsign-conversion"
   
   //alocar o espaço para receber o vetor
   char *ret = (char *) malloc ((offset + 1) * sizeof(char));
 
-  strncpy(ret, source+begin, offset);
+  strncpy(ret, source+stride, offset);
   ret[offset] = '\0';
 
   return ret;
@@ -341,7 +341,7 @@ int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions)
 void analysis(global *parameters, des *description, sample *samples)
 {
   unsigned int i, j, intron_counter;
-  int i_begin, i_end, r_begin, offset;
+  int i_begin, i_end, r_begin, r_end, offset;
   char *sequence;
   
   intron_counter = 0;
@@ -359,12 +359,12 @@ void analysis(global *parameters, des *description, sample *samples)
         if (verify_region(i_begin, i_end, samples[j].allele[0].size, samples[j].allele[0].regions))
         {
           //extrair o intron
-          r_begin = calculate_offset(samples[j].allele[0].regions[0].begin, i_begin);
-          offset = calculate_offset(samples[j].allele[0].regions[0].begin, i_end);
-          offset = abs(offset - r_begin);
+          r_begin = calculate_sub(samples[j].allele[0].regions[0].begin, i_begin); //calcula o stride (quantos caracteres devem ser ignorados) para começar a cópia
+          r_end = calculate_sub(samples[j].allele[0].regions[0].begin, i_end);
+          offset = calculate_sub(r_begin, r_end) + 1; //contém o valor de caracteres que devem ser copiados para dentro do destino
 
           sequence = extrac_intron(samples[j].allele[0].sequence, r_begin, offset);
-
+          printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
           //inserir na lista de introns encontrados
         }
 
@@ -373,13 +373,14 @@ void analysis(global *parameters, des *description, sample *samples)
           if (verify_region(i_begin, i_end, samples[j].allele[1].size, samples[j].allele[1].regions))
         {
           //extrair o intron
-          r_begin = calculate_offset(samples[j].allele[1].regions[0].begin, i_begin);
-          offset = calculate_offset(samples[j].allele[1].regions[0].begin, i_end);
-          offset = abs(offset - r_begin);
+          r_begin = calculate_sub(samples[j].allele[1].regions[0].begin, i_begin);
+          offset = calculate_sub(samples[j].allele[1].regions[0].begin, i_end);
+          offset = calculate_sub(r_begin, r_end) + 1;
 
           sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
           
           //inserir na lista de introns encontrados
+          printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
         }
         }
       }

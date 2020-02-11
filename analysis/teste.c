@@ -26,11 +26,12 @@ printf("destination = %c", destination[5]);
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    char src[] = "----AAAAAAAAAAA";
-    char dest[5] = { 0 }; // 4 chars + terminator *
+int main()
+{
+    char src[] = "----AAAAb";
+    char dest[6] = { 0 }; // 4 chars + terminator *
 
-    strncpy(dest, src+4, 4);
+    strncpy(dest, src+4, 5);
     
     printf("dest: %s\n", dest);
 

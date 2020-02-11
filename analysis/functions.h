@@ -33,9 +33,9 @@ void read_file(char *file_path, des *description, sample *samples);
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
-int calculate_offset(int a, int b);
+int calculate_sub(int a, int b);
 
-char *extrac_intron(char *source, int begin, int offset);
+char *extrac_intron(char *source, int stride, int offset);
 
 int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions);
 
