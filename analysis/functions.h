@@ -39,7 +39,15 @@ char *extrac_intron(char *source, int stride, int offset);
 
 int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions);
 
-void analysis(global *parameters, des *description, sample *samples);
+void analysis(global *parameters, des *description, sample *samples, i_list *L);
+
+/* ================================================================================================= */
+
+
+/* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR AS LISTAS ========================== */
+void initialize_list(i_list *L);
+
+node *createNode(char *sequence, short int id);
 
 
 /* ================================================================================================= */

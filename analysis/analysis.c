@@ -23,6 +23,7 @@ int main (int argc, char *argv[])
   des *description;
   sample *samples;
   global *parameters = (global *) malloc (sizeof(global));
+  i_list *intron_list = (i_list *) malloc (sizeof(i_list));
 
 
 
@@ -85,8 +86,8 @@ int main (int argc, char *argv[])
   impressao_s(samples, parameters->total_of_samples);
 
 
-
-  analysis(parameters, description, samples);
+  initialize_list(intron_list);
+  analysis(parameters, description, samples, intron_list);
 /*
   
   results();

@@ -338,7 +338,7 @@ int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions)
 }; //TESTAR
 
 
-void analysis(global *parameters, des *description, sample *samples)
+void analysis(global *parameters, des *description, sample *samples, i_list *L)
 {
   unsigned int i, j, intron_counter;
   int i_begin, i_end, r_begin, r_end, offset;
@@ -365,6 +365,8 @@ void analysis(global *parameters, des *description, sample *samples)
 
           sequence = extrac_intron(samples[j].allele[0].sequence, r_begin, offset);
           printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
+          
+          
           //inserir na lista de introns encontrados
         }
 
@@ -378,9 +380,11 @@ void analysis(global *parameters, des *description, sample *samples)
           offset = calculate_sub(r_begin, r_end) + 1;
 
           sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
+          printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
+          
           
           //inserir na lista de introns encontrados
-          printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
+          
         }
         }
       }
@@ -391,6 +395,40 @@ void analysis(global *parameters, des *description, sample *samples)
 }; //FAZER
 
 
+/* ================================================================================================= */
+
+
+
+/* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR AS LISTAS ========================== */
+void initialize_list(i_list *L)
+{
+  L->size = 0;
+  L->head = NULL;
+	L->tail = NULL;
+  L->point = NULL; 
+}; //TESTAR
+
+
+node *createNode(char *sequence, short int id)
+{ 
+	int size;
+
+  node *new = (node *) malloc (sizeof(node));
+	if (new == NULL)
+  {
+		printf("NÃO FOI POSSÍVEL ALOCAR O NOVO NÓ! ERRO NA FUNÇÃO createNode OU ESPAÇO INSIFICIENTE.\n");
+		exit (0);
+	}
+	new->next = NULL;
+  new->id = id;
+  
+  size = (unsigned int)strlen(sequence);
+  new->sequence = (char *) malloc (size+1 * sizeof(char));
+  strncpy(new->sequence, sequence, size);
+  new->sequence[size] = '\0';
+  
+	return (new);
+}; //TESTAR
 /* ================================================================================================= */
 
 
