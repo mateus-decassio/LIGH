@@ -45,11 +45,21 @@ void analysis(global *parameters, des *description, sample *samples, i_list *L);
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR AS LISTAS ========================== */
-void initialize_list(i_list *L);
+void initialize_i_list(i_list *L);
 
-node *createNode(char *sequence, short int id);
+void initialize_al_list(al_list *L);
 
+i_node *create_i_Node(char *sequence, short int id);
 
+al_node *create_al_Node(char *allele);
+
+void insert_intron(i_list *L, char *sequence, char *allele, short int id, bool homozygous);
+
+void insert_allele_in_node(al_list *L, char *allele, bool homozygous);
+
+i_node *search_intron(i_list *L, char *sequence, short int id);
+
+al_node *search_allele(al_list *L, char *allele);
 /* ================================================================================================= */
 
 

@@ -308,7 +308,7 @@ void read_file(char *file_path, des *description, sample *samples)
 int calculate_sub(int a, int b)
 {
   return abs(b-a);
-}; //TESTAR
+}; //FINALIZADO
 
 
 char *extrac_intron(char *source, int stride, int offset)
@@ -322,7 +322,7 @@ char *extrac_intron(char *source, int stride, int offset)
   ret[offset] = '\0';
 
   return ret;
-}; //TESTAR
+}; //FINALIZADO
 
 
 
@@ -335,7 +335,7 @@ int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions)
       return 1; //VERDADEIRO
   }
   return 0; //FALSO
-}; //TESTAR
+}; //FINALIZADO, mas pode ocorrer algum erro. prestar atenção
 
 
 void analysis(global *parameters, des *description, sample *samples, i_list *L)
@@ -354,6 +354,9 @@ void analysis(global *parameters, des *description, sample *samples, i_list *L)
       i_end = description[i].end;
       //printf("esse é o intron %d que começa no %d e termina no %d\n", intron, e_begin, i_end);
 
+      //ajustar o point para apontar sempre para o último nó de um intron (1,2,3,4...)
+      L->point = L->tail;
+
       for (j = 0; j < parameters->total_of_samples; ++j)
       {
         if (verify_region(i_begin, i_end, samples[j].allele[0].size, samples[j].allele[0].regions))
@@ -368,6 +371,8 @@ void analysis(global *parameters, des *description, sample *samples, i_list *L)
           
           
           //inserir na lista de introns encontrados
+          insert_intron(L, sequence, samples[j].allele[0].name, (short int)intron_counter, samples[j].homozygous);
+
         }
 
         if (samples[j].homozygous == false)
@@ -382,14 +387,12 @@ void analysis(global *parameters, des *description, sample *samples, i_list *L)
           sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
           printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
           
-          
           //inserir na lista de introns encontrados
-          
+          insert_intron(L, sequence, samples[j].allele[1].name, (short int)intron_counter, samples[j].homozygous);
+
         }
         }
       }
-      
-      //ajustar a calda da lista para sempre apontar para o final de cada intron (ex: 1,2,3,4...)
     }
   }
 }; //FAZER
@@ -400,7 +403,7 @@ void analysis(global *parameters, des *description, sample *samples, i_list *L)
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR AS LISTAS ========================== */
-void initialize_list(i_list *L)
+void initialize_i_list(i_list *L)
 {
   L->size = 0;
   L->head = NULL;
@@ -409,26 +412,172 @@ void initialize_list(i_list *L)
 }; //TESTAR
 
 
-node *createNode(char *sequence, short int id)
+void initialize_al_list(al_list *L)
+{
+  L->size = 0;
+  L->head = NULL;
+	L->tail = NULL; 
+}; //TESTAR
+
+
+i_node *create_i_Node(char *sequence, short int id)
 { 
 	int size;
 
-  node *new = (node *) malloc (sizeof(node));
-	if (new == NULL)
+  i_node *new = (i_node *) malloc (sizeof(i_node));
+	if (!new)
   {
-		printf("NÃO FOI POSSÍVEL ALOCAR O NOVO NÓ! ERRO NA FUNÇÃO createNode OU ESPAÇO INSIFICIENTE.\n");
+		printf("NÃO FOI POSSÍVEL ALOCAR O NOVO NÓ! ERRO NA FUNÇÃO create_i_Node OU ESPAÇO INSIFICIENTE.\n");
 		exit (0);
 	}
 	new->next = NULL;
   new->id = id;
+
+  new->list = (al_list *) malloc (sizeof(al_list));
+  initialize_al_list(new->list);
   
   size = (unsigned int)strlen(sequence);
   new->sequence = (char *) malloc (size+1 * sizeof(char));
   strncpy(new->sequence, sequence, size);
   new->sequence[size] = '\0';
   
-	return (new);
+	return new;
 }; //TESTAR
+
+al_node *create_al_Node(char *allele)
+{ 
+	int size;
+
+  al_node *new = (al_node *) malloc (sizeof(al_node));
+	if (!new)
+  {
+		printf("NÃO FOI POSSÍVEL ALOCAR O NOVO NÓ! ERRO NA FUNÇÃO create_al_Node OU ESPAÇO INSIFICIENTE.\n");
+		exit (0);
+	}
+	new->next = NULL;
+
+  
+  size = (unsigned int)strlen(allele);
+  new->allele = (char *) malloc (size+1 * sizeof(char));
+  strncpy(new->allele, allele, size);
+  new->allele[size] = '\0';
+
+  new->counter++;
+  
+	return new;
+}; //TESTAR
+
+
+void insert_intron(i_list *L, char *sequence, char *allele, short int id, bool homozygous)
+{
+  i_node *auxiliar = NULL;
+
+	if (!L->head)
+  {
+    i_node *new = create_i_Node(sequence, id);
+		L->head = new;
+    L->tail = new;
+    L->point = new;
+
+    insert_allele_in_node(new->list, allele, homozygous);
+    L->size++;
+	}
+  else
+  {
+    //buscar se nó ja existe
+    auxiliar = search_intron(L, sequence, id);
+
+    //se o nó não existe, criar um novo nó e inserir o intron naquele nó
+    if (!auxiliar)
+    {
+      i_node *new = create_i_Node(sequence, id);
+      L->tail->next = new;
+      L->tail = new;
+      L->size++;
+
+      insert_allele_in_node(new->list, allele, homozygous);
+    }
+    //se o nó existe, apenas inserir o nome do alelo na lista do i_node apontado pelo auxiliar
+    else
+    {
+      insert_allele_in_node(auxiliar->list, allele, homozygous);
+    }
+	}
+}; //TESTAR
+
+void insert_allele_in_node(al_list *L, char *allele, bool homozygous)
+{
+  al_node *auxiliar = NULL;
+
+	if (!L->head)
+  {
+    al_node *new = create_al_Node(allele);
+		L->head = new;
+    L->tail = new;
+    L->size++;
+
+    if (homozygous == true)
+      new->counter++;
+	}
+  else
+  {
+    //buscar se nó ja existe
+    auxiliar = search_allele(L, allele);
+
+    //se o nó não existe, criar um novo nó e inserir o alelo naquele nó
+    if (!auxiliar)
+    {
+      al_node *new = create_al_Node(allele);
+      L->tail->next = new;
+      L->tail = new;
+
+      if (homozygous == true)
+        new->counter++;
+    }
+    //se o nó existe, apenas incremendar o contador daquele alelo
+    else
+    {
+      auxiliar->counter += homozygous == true ?  2 :  1;
+      //                                        SIM  NÃO
+    }
+	}
+}; //TESTAR
+
+i_node *search_intron(i_list *L, char *sequence, short int id)
+{
+  i_node *auxiliar;
+
+  auxiliar = L->point;
+  while (auxiliar)
+  {
+    if (auxiliar->id == id)
+    {
+      if (!strcmp(auxiliar->sequence, sequence)) //se as sequências forem iguais
+      {
+        return auxiliar;
+      }
+    }
+    auxiliar = auxiliar->next;
+  }
+  return auxiliar;
+}; //TESTAR
+
+al_node *search_allele(al_list *L, char *allele)
+{
+  al_node *auxiliar;
+
+  auxiliar = L->head;
+  while (auxiliar)
+  {
+    if (!strcmp(auxiliar->allele, allele)) //se existir esse alelo na lista, retorna o ponteiro para ele
+    {
+      return auxiliar;
+    }
+    auxiliar = auxiliar->next;
+  } 
+  return auxiliar;
+}; //TESTAR
+
 /* ================================================================================================= */
 
 

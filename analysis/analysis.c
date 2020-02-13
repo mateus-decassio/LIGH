@@ -82,12 +82,15 @@ int main (int argc, char *argv[])
   printf("TOTAL OF SAMPLES = %d\n", parameters->total_of_samples);
   printf("NUMBER OF REGIONS (description)= %d\n\n", parameters->number_of_regions);
   
-  impressao_d(description, parameters->number_of_regions);
-  impressao_s(samples, parameters->total_of_samples);
+  //impressao_d(description, parameters->number_of_regions);
+  //impressao_s(samples, parameters->total_of_samples);
 
 
-  initialize_list(intron_list);
+  initialize_i_list(intron_list);
   analysis(parameters, description, samples, intron_list);
+
+  impressao_r(intron_list);
+
 /*
   
   results();
