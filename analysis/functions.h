@@ -64,8 +64,9 @@ al_node *search_allele(al_list *L, char *allele);
 
 
 /* ======================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR OS RESULTADOS ======================== */
-//void results();
+void impressao_r(i_list *L);
 
+void results(char *locus, char *path, i_list *L);
 /* ================================================================================================= */
 
 

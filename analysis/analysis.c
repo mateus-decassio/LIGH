@@ -1,4 +1,6 @@
-//./analysis -l HLA-A -d /mnt/hgfs/SHARED/TESTE.txt
+// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/TESTE.txt
+// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/TESTE.txt -r /mnt/hgfs/SHARED
+// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,7 +20,7 @@ static void usage(char *progname)
 int main (int argc, char *argv[])
 {
 	int opt;
-  char *locus, *archive  = NULL;
+  char *locus, *archive, *path  = NULL;
 
   des *description;
   sample *samples;
@@ -29,10 +31,10 @@ int main (int argc, char *argv[])
 
 
 /* ====================== TRATAMENTO DE LINHA DE COMANDO ====================== */
-  if ( argc < 5 )
+  if ( argc < 7 )
     usage(argv[0]);
   //l:d: - o uso do : significa que l recebe um parâmetro adicional, assim como o d
-  while ( (opt = getopt (argc, argv, "l:d:")) != -1 )
+  while ( (opt = getopt (argc, argv, "l:d:r:")) != -1 )
   {
     switch (opt)
     {
@@ -42,6 +44,10 @@ int main (int argc, char *argv[])
 
       case 'd':
         archive = optarg;
+        break;
+
+      case 'r':
+        path = optarg;
         break;
 
       case ':':
@@ -80,20 +86,17 @@ int main (int argc, char *argv[])
 
   printf("\n\n");
   printf("TOTAL OF SAMPLES = %d\n", parameters->total_of_samples);
-  printf("NUMBER OF REGIONS (description)= %d\n\n", parameters->number_of_regions);
+  printf("\nNUMBER OF REGIONS (description) = %d\n", parameters->number_of_regions);
   
-  //impressao_d(description, parameters->number_of_regions);
+  impressao_d(description, parameters->number_of_regions);
   //impressao_s(samples, parameters->total_of_samples);
 
-
+  //ANÁLISE
   initialize_i_list(intron_list);
   analysis(parameters, description, samples, intron_list);
 
-  impressao_r(intron_list);
-
-/*
-  
-  results();
-*/
+  //IMPRESSÃO DO RESULTADO
+  //impressao_r(intron_list);
+  results(locus, path, intron_list);
 return 0;
 }

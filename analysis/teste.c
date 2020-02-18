@@ -28,11 +28,24 @@ printf("destination = %c", destination[5]);
 
 int main()
 {
-    char src[] = "----AAAAb";
-    char dest[6] = { 0 }; // 4 chars + terminator *
+    //char src[] = "----AAAAb";
+    //char dest[6] = { 0 }; // 4 chars + terminator *
 
-    strncpy(dest, src+4, 5);
+    //strncpy(dest, src+4, 5);
     
-    printf("dest: %s\n", dest);
+    //printf("dest: %s\n", dest);
+
+    char src[] = "AAAAaAAAA";
+    char dest[] = "aaaaAaaaa";
+
+    int value = strcmp(src, dest);
+    if (value == 0)
+        printf("strings são iguais\n");
+
+    FILE *archive;
+    archive = fopen ("/home/mateus/Área de Trabalho/PROJETOS/1.txt", "w");
+
+    if (!archive)
+        printf("NÃO DEU");
 
 }

@@ -5,6 +5,8 @@
 #include "data_structs.h"
 #include "functions.h"
 
+#define BUFFERSIZE 512
+
 
 /* ======================= FUNÇÕES/PROCEDIMENTOS PARA ALOCAÇÃO / DESALOCAÇÃO ======================= */
 
@@ -305,6 +307,7 @@ void read_file(char *file_path, des *description, sample *samples)
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A ANÁLISE ========================== */
+
 int calculate_sub(int a, int b)
 {
   return abs(b-a);
@@ -323,7 +326,6 @@ char *extrac_intron(char *source, int stride, int offset)
 
   return ret;
 }; //FINALIZADO
-
 
 
 int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions)
@@ -367,7 +369,7 @@ void analysis(global *parameters, des *description, sample *samples, i_list *L)
           offset = calculate_sub(r_begin, r_end) + 1; //contém o valor de caracteres que devem ser copiados para dentro do destino
 
           sequence = extrac_intron(samples[j].allele[0].sequence, r_begin, offset);
-          printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
+          //printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
           
           
           //inserir na lista de introns encontrados
@@ -385,7 +387,7 @@ void analysis(global *parameters, des *description, sample *samples, i_list *L)
           offset = calculate_sub(r_begin, r_end) + 1;
 
           sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
-          printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
+          //printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
           
           //inserir na lista de introns encontrados
           insert_intron(L, sequence, samples[j].allele[1].name, (short int)intron_counter, samples[j].homozygous);
@@ -397,19 +399,19 @@ void analysis(global *parameters, des *description, sample *samples, i_list *L)
   }
 }; //FAZER
 
-
 /* ================================================================================================= */
 
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR AS LISTAS ========================== */
+
 void initialize_i_list(i_list *L)
 {
   L->size = 0;
   L->head = NULL;
 	L->tail = NULL;
   L->point = NULL; 
-}; //TESTAR
+}; //FINALIZADO
 
 
 void initialize_al_list(al_list *L)
@@ -417,7 +419,7 @@ void initialize_al_list(al_list *L)
   L->size = 0;
   L->head = NULL;
 	L->tail = NULL; 
-}; //TESTAR
+}; //FINALIZADO
 
 
 i_node *create_i_Node(char *sequence, short int id)
@@ -442,7 +444,8 @@ i_node *create_i_Node(char *sequence, short int id)
   new->sequence[size] = '\0';
   
 	return new;
-}; //TESTAR
+}; //FINALIZADO
+
 
 al_node *create_al_Node(char *allele)
 { 
@@ -465,7 +468,7 @@ al_node *create_al_Node(char *allele)
   new->counter++;
   
 	return new;
-}; //TESTAR
+}; //FINALIZADO
 
 
 void insert_intron(i_list *L, char *sequence, char *allele, short int id, bool homozygous)
@@ -503,7 +506,8 @@ void insert_intron(i_list *L, char *sequence, char *allele, short int id, bool h
       insert_allele_in_node(auxiliar->list, allele, homozygous);
     }
 	}
-}; //TESTAR
+}; //FINALIZADO
+
 
 void insert_allele_in_node(al_list *L, char *allele, bool homozygous)
 {
@@ -541,7 +545,8 @@ void insert_allele_in_node(al_list *L, char *allele, bool homozygous)
       //                                        SIM  NÃO
     }
 	}
-}; //TESTAR
+}; //FINALIZADO
+
 
 i_node *search_intron(i_list *L, char *sequence, short int id)
 {
@@ -560,7 +565,8 @@ i_node *search_intron(i_list *L, char *sequence, short int id)
     auxiliar = auxiliar->next;
   }
   return auxiliar;
-}; //TESTAR
+}; //FINALIZADO
+
 
 al_node *search_allele(al_list *L, char *allele)
 {
@@ -576,17 +582,110 @@ al_node *search_allele(al_list *L, char *allele)
     auxiliar = auxiliar->next;
   } 
   return auxiliar;
-}; //TESTAR
+}; //FINALIZADO
 
 /* ================================================================================================= */
 
 
 
 /* ======================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR OS RESULTADOS ======================== */
-/*
-void results()
-{
 
-}; //FAZER
-*/
+void impressao_r(i_list *L)
+{
+  i_node *auxiliar_i = NULL;
+  al_node *auxiliar_al = NULL;
+
+  auxiliar_i = L->head;
+  while (auxiliar_i)
+  {
+    printf("INTRON = %d \nCOMPRIMENTO = %lu \nSEQUENCIA = %s\n", auxiliar_i->id, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+    printf("LISTA DE ALELOS E FREQUÊNCIA:\n");
+    
+    auxiliar_al = auxiliar_i->list->head;
+    while (auxiliar_al)
+    {
+      printf("ALELO: %s\n     FREQUÊNCIA: %d\n", auxiliar_al->allele, auxiliar_al->counter);
+
+      auxiliar_al = auxiliar_al->next;
+    }
+    printf("\n\n");
+    auxiliar_i = auxiliar_i->next;
+
+  }
+}; //FINALIZADO
+
+
+void results(char *locus, char *path, i_list *L)
+{
+  i_node *auxiliar_i = NULL;
+  al_node *auxiliar_al = NULL;
+  char id[10];
+  char count[10];
+  char filename[BUFFERSIZE];
+  char results[BUFFERSIZE];
+  char folder[BUFFERSIZE];
+  char txt[BUFFERSIZE];
+  char intron[BUFFERSIZE];
+  int counter = 0;
+  FILE *archive;
+
+  snprintf(results, 10, "%s", "/RESULTS/");
+  snprintf(txt, 5, "%s", ".txt");
+
+  strcat(path, results);
+  strcat(path, locus);
+
+  printf("\nSAVING LOCATION = %s\n", path);
+
+
+  auxiliar_i = L->head;
+  while (auxiliar_i)
+  {
+    counter++;
+
+    snprintf(folder, strlen(path)+1, "%s", path);
+    
+    snprintf(intron, 8, "%s", "intron0");
+    snprintf(id, 10, "%d", (int)auxiliar_i->id);
+    strcat(intron, id);
+
+
+    strcat(folder, "/");
+    strcat(folder, intron);
+    strcat(folder, "/");
+    
+    snprintf(filename, strlen(folder)+1, "%s", folder);
+
+    snprintf(count, 10, "%d", counter);
+
+    strcat(filename, count);
+    strcat(filename, txt);
+    
+    archive = fopen(filename, "w");
+    if (!archive)
+    {
+      printf("NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO!\n");
+      exit(-1);
+    }
+    //printf("FILENAME = %s, tamanho = %lu\n", filename, strlen(filename));
+    //printf("INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+    //printf("LISTA DE ALELOS|FREQUÊNCIA:\n");
+    
+    fprintf(archive, "INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+    fprintf(archive, "LISTA DE ALELOS|FREQUÊNCIA:\n");
+    
+    auxiliar_al = auxiliar_i->list->head;
+    while (auxiliar_al)
+    {
+      //printf("%s|%d\n", auxiliar_al->allele, auxiliar_al->counter);
+      fprintf(archive, "%s|%d\n", auxiliar_al->allele, auxiliar_al->counter);
+
+      auxiliar_al = auxiliar_al->next;
+    }
+    fclose(archive);
+
+    auxiliar_i = auxiliar_i->next;
+  }
+}; //FINALIZADO
+
 /* ================================================================================================= */
