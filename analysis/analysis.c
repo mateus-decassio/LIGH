@@ -26,6 +26,7 @@ int main (int argc, char *argv[])
   sample *samples;
   global *parameters = (global *) malloc (sizeof(global));
   i_list *intron_list = (i_list *) malloc (sizeof(i_list));
+  al_list *allele_list = (al_list *) malloc (sizeof(al_list));
 
 
 
@@ -84,19 +85,35 @@ int main (int argc, char *argv[])
     exit (-1);
   }
 
-  printf("\n\n");
   printf("TOTAL OF SAMPLES = %d\n", parameters->total_of_samples);
+  printf("\n\n");
   printf("\nNUMBER OF REGIONS (description) = %d\n", parameters->number_of_regions);
+
   
+  //IMPRESSÃO DO CABEÇALHO E DA LISTA DE AMOSTRAS ENCONTRADAS
   impressao_d(description, parameters->number_of_regions);
   //impressao_s(samples, parameters->total_of_samples);
 
+
+
   //ANÁLISE
   initialize_i_list(intron_list);
-  analysis(parameters, description, samples, intron_list);
+  analysis_freq_intron(parameters, description, samples, intron_list);
+  analysis_freq_allele(parameters, description, samples, allele_list);
+
+  printf("\n\nNUMBER OF INTRONS FOUNDED (all locus included) = %d\n", intron_list->size);
+
+
+
 
   //IMPRESSÃO DO RESULTADO
   //impressao_r(intron_list);
-  results(locus, path, intron_list);
+  //results_many_files(locus, path, intron_list);
+  results_one_file(locus, path, intron_list);
+  results_statistics(parameters, description, samples, locus, path, allele_list);
+  
+
+
+  //criar as funções de desalocagem!!!
 return 0;
 }

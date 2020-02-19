@@ -340,7 +340,7 @@ int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions)
 }; //FINALIZADO, mas pode ocorrer algum erro. prestar atenção
 
 
-void analysis(global *parameters, des *description, sample *samples, i_list *L)
+void analysis_freq_intron(global *parameters, des *description, sample *samples, i_list *L)
 {
   unsigned int i, j, intron_counter;
   int i_begin, i_end, r_begin, r_end, offset;
@@ -397,7 +397,21 @@ void analysis(global *parameters, des *description, sample *samples, i_list *L)
       }
     }
   }
-}; //FAZER
+}; //FINALIZADO
+
+
+void analysis_freq_allele(global *parameters, des *description, sample *samples, al_list *L)
+{
+  unsigned int i;
+  
+  for (i = 0; i < parameters->total_of_samples; ++i)
+  {
+    insert_allele_in_node(L, samples[i].allele[0].name, samples[i].homozygous);
+
+    if (samples[i].homozygous == false)
+      insert_allele_in_node(L, samples[i].allele[1].name, samples[i].homozygous);
+  }
+}; //FAZERRRRRRRRRRRRRRR
 
 /* ================================================================================================= */
 
@@ -615,12 +629,13 @@ void impressao_r(i_list *L)
 }; //FINALIZADO
 
 
-void results(char *locus, char *path, i_list *L)
+void results_many_files(char *locus, char *p, i_list *L)
 {
   i_node *auxiliar_i = NULL;
   al_node *auxiliar_al = NULL;
   char id[10];
   char count[10];
+  char path[BUFFERSIZE];
   char filename[BUFFERSIZE];
   char results[BUFFERSIZE];
   char folder[BUFFERSIZE];
@@ -628,6 +643,8 @@ void results(char *locus, char *path, i_list *L)
   char intron[BUFFERSIZE];
   int counter = 0;
   FILE *archive;
+
+  snprintf(path, strlen(p)+1, "%s", p);
 
   snprintf(results, 10, "%s", "/RESULTS/");
   snprintf(txt, 5, "%s", ".txt");
@@ -664,21 +681,21 @@ void results(char *locus, char *path, i_list *L)
     archive = fopen(filename, "w");
     if (!archive)
     {
-      printf("NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO!\n");
+      fprintf(stderr, "NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO! (introns.txt na função results_many_files)\n");
       exit(-1);
     }
     //printf("FILENAME = %s, tamanho = %lu\n", filename, strlen(filename));
     //printf("INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
     //printf("LISTA DE ALELOS|FREQUÊNCIA:\n");
     
-    fprintf(archive, "INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+    fprintf(archive, "INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu\nSEQUENCIA = %s\n\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
     fprintf(archive, "LISTA DE ALELOS|FREQUÊNCIA:\n");
     
     auxiliar_al = auxiliar_i->list->head;
     while (auxiliar_al)
     {
-      //printf("%s|%d\n", auxiliar_al->allele, auxiliar_al->counter);
-      fprintf(archive, "%s|%d\n", auxiliar_al->allele, auxiliar_al->counter);
+      //printf("%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
+      fprintf(archive, "%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
 
       auxiliar_al = auxiliar_al->next;
     }
@@ -686,6 +703,194 @@ void results(char *locus, char *path, i_list *L)
 
     auxiliar_i = auxiliar_i->next;
   }
-}; //FINALIZADO
+}; //VOLTAR AQUI
+
+
+void results_one_file(char *locus, char *p, i_list *L)
+{
+  i_node *auxiliar_i = NULL;
+  al_node *auxiliar_al = NULL;
+  char id[10];
+  char path[BUFFERSIZE];
+  char filename[BUFFERSIZE];
+  char results[BUFFERSIZE];
+  char folder[BUFFERSIZE];
+  char txt[BUFFERSIZE];
+  char intron[BUFFERSIZE];
+  int counter = 0;
+  int id_temp = 0;
+  FILE *archive;
+
+  snprintf(path, strlen(p)+1, "%s", p);
+
+  snprintf(results, 10, "%s", "/RESULTS/");
+  snprintf(txt, 5, "%s", ".txt");
+
+  strcat(path, results);
+  strcat(path, locus);
+
+  printf("\nSAVING LOCATION = %s\n", path);
+
+
+  auxiliar_i = L->head;
+  while (auxiliar_i)
+  {
+    if (id_temp != auxiliar_i->id)
+    {
+      //fechar o arquivo anterior
+      if (id_temp)
+        fclose(archive);
+
+
+      id_temp = auxiliar_i->id;
+      snprintf(folder, strlen(path)+1, "%s", path);
+    
+      snprintf(intron, 8, "%s", "intron0");
+      snprintf(id, 10, "%d", (int)auxiliar_i->id);
+      strcat(intron, id);
+
+
+      strcat(folder, "/");
+      strcat(folder, intron);
+    
+      snprintf(filename, strlen(folder)+1, "%s", folder);
+
+      strcat(filename, txt);
+
+      //abrir um novo arquivo
+      archive = fopen(filename, "w");
+
+      if (!archive)
+      {
+        fprintf(stderr, "NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO! (intron0X, na função results_one_file)\n");
+        exit(-1);
+      }
+    }
+    else
+    {
+      counter++;
+      //printf("FILENAME = %s, tamanho = %lu\n", filename, strlen(filename));
+      //printf("INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+      //printf("LISTA DE ALELOS|FREQUÊNCIA:\n");
+    
+      fprintf(archive, "INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+      fprintf(archive, "LISTA DE ALELOS      |      CONTAGEM      |      FREQUÊNCIA(arrumar)      |\n");
+    
+      auxiliar_al = auxiliar_i->list->head;
+      while (auxiliar_al)
+      {
+        //printf("%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
+        fprintf(archive, "%*s | %*d %*s  %*d %*s\n", -20, auxiliar_al->allele, 11, auxiliar_al->counter, 8,"|", 11, -1, 8,"|");
+
+        auxiliar_al = auxiliar_al->next;
+      }
+    fprintf(archive, "\n\n--------------------------------------------------------------------------------------------\n\n\n");
+    auxiliar_i = auxiliar_i->next;
+    }
+  }
+  fclose(archive);
+}; //VOLTAR AQUI
+
+
+void results_statistics(global *parameters, des *description, sample *samples, char *locus, char *p, al_list *L)
+{
+  al_node *auxiliar_al = NULL;
+  char path[BUFFERSIZE];
+  char filename[BUFFERSIZE];
+  char results[BUFFERSIZE];
+  char txt[BUFFERSIZE];
+  unsigned int i, j, intron_counter;
+  int i_begin, i_end;
+  FILE *archive;
+
+  snprintf(path, strlen(p)+1, "%s", p);
+  
+  snprintf(results, 10, "%s", "/RESULTS/");
+  snprintf(txt, 5, "%s", ".txt");
+
+  strcat(path, results);
+  strcat(path, locus);
+  strcat(path, "/");
+
+
+  //IMPRESSÃO DAS ESTATÍSTICAS 
+  snprintf(filename, strlen(path)+1, "%s", path);
+
+  strcat(filename, "statistics");
+  strcat(filename, txt);
+
+
+  archive = fopen(filename, "w");
+  if (!archive)
+  {
+    fprintf(stderr, "NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO! (statistics.txt na função results_statistics)\n");
+    exit(-1);
+  }
+  //printf("FILENAME[1] = %s, tamanho = %lu\n", filename, strlen(filename));
+  //printf("INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+  //printf("LISTA DE ALELOS|FREQUÊNCIA:\n");    
+    
+  fprintf(archive, "ESTATÍSTICA PARA O LOCUS %s \n\n", locus);
+  fprintf(archive, "LISTA DE ALELOS      |      CONTAGEM      |      FREQUÊNCIA(arrumar)\n");
+
+  auxiliar_al = L->head;
+  while (auxiliar_al)
+  {
+    //printf("%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
+    fprintf(archive, "%*s | %*d %*s %*d\n", -20, auxiliar_al->allele, 11, auxiliar_al->counter, 8,"|", 11, -1);
+
+    auxiliar_al = auxiliar_al->next;
+  }
+  fclose(archive);
+
+
+  //IMPRESSÃO DE ALELOS NÃO USADOS
+  snprintf(filename, strlen(path)+1, "%s", path);
+  strcat(filename, "rejected");
+  strcat(filename, txt);
+
+  archive = fopen(filename, "w");
+  if (!archive)
+  {
+    fprintf(stderr, "NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO! (rejected.txt na função results_statistics)\n");
+    exit(-1);
+  }
+
+  //printf("FILENAME[2] = %s, tamanho = %lu\n", filename, strlen(filename));
+  fprintf(archive, "LEVANTAMENTO DE ALELOS NÃO UTILIZADOS PARA O LOCUS %s\n\n", locus);
+
+  intron_counter = 0;
+  for (i = 0; i < parameters->number_of_regions; ++i)
+  {
+    if (!strcmp(description[i].id, "Intron"))
+    {
+      intron_counter ++;
+      i_begin = description[i].begin;
+      i_end = description[i].end;
+      
+      fprintf(archive, "++++++++++++++++++++++ INTRON %u ++++++++++++++++++++++\n\n", intron_counter);
+      fprintf(archive, "LISTA DE ALELOS      |            AMOSTRA            |\n");
+
+
+      for (j = 0; j < parameters->total_of_samples; ++j)
+      {
+        if (!verify_region(i_begin, i_end, samples[j].allele[0].size, samples[j].allele[0].regions))
+        {
+          fprintf(archive, "%*s | %*s %*s\n", -20, samples[j].allele[0].name, 22, samples[j].id, 8,"|");
+        }
+
+        if (samples[j].homozygous == false)
+        {
+          if (!verify_region(i_begin, i_end, samples[j].allele[1].size, samples[j].allele[1].regions))
+          {
+            fprintf(archive, "%*s | %*s %*s\n", -20, samples[j].allele[1].name, 22, samples[j].id, 8,"|");
+          }
+        }
+      }
+    fprintf(archive, "\n\n\n\n");
+    }
+  }
+  fclose(archive);
+}; //VOLTAR AQUI
 
 /* ================================================================================================= */

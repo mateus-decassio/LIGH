@@ -39,7 +39,9 @@ char *extrac_intron(char *source, int stride, int offset);
 
 int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions);
 
-void analysis(global *parameters, des *description, sample *samples, i_list *L);
+void analysis_freq_intron(global *parameters, des *description, sample *samples, i_list *L);
+
+void analysis_freq_allele(global *parameters, des *description, sample *samples, al_list *L);
 
 /* ================================================================================================= */
 
@@ -66,7 +68,11 @@ al_node *search_allele(al_list *L, char *allele);
 /* ======================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR OS RESULTADOS ======================== */
 void impressao_r(i_list *L);
 
-void results(char *locus, char *path, i_list *L);
+void results_many_files(char *locus, char *path, i_list *L);
+
+void results_one_file(char *locus, char *path, i_list *L);
+
+void results_statistics(global *parameters, des *description, sample *samples, char *locus, char *path, al_list *L);
 /* ================================================================================================= */
 
 

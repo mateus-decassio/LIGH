@@ -23,7 +23,7 @@ typedef struct
     char *sequence;         //guarda a sequência do alelo
     divisions *regions;     //[VETOR]: guarda as regiões divisórias da sequência do alelo
     
-} alleles;
+} __attribute__((packed, aligned(1))) alleles;
 
 
 typedef struct
@@ -32,7 +32,7 @@ typedef struct
     char *id;               //guarda o identificador da amostra
     alleles *allele;        //guarda o vetor de alelos que essa amostra possui. Esse valor só pode ser
                             //1 (homozigoto) ou 2 (heterozigoto)
-} sample;
+} __attribute__((packed, aligned(1))) sample;
 
 
 typedef struct
@@ -49,14 +49,14 @@ typedef struct al_node
     int counter;            //guarda o contador de vezes que aquele alelo aparece
 	struct al_node *next;   //ponteiro para o próximo elemento da lista
     char *allele;           //guarda o nome do alelo no nó
-} al_node;
+} __attribute__((packed, aligned(1))) al_node;
 
 typedef struct al_list
 {
     int size;
     struct al_node *head;
     struct al_node *tail;
-} al_list;
+} __attribute__((packed, aligned(1))) al_list;
 
 //-------------------------------------------------------------------------------------------------
 
@@ -66,7 +66,7 @@ typedef struct i_node
     struct i_node *next;    //ponteiro para o próximo elemento da lista
     char *sequence;         //guarda a sequência recortada do íntron da sequência maior
     al_list *list;          //lista de alelos encontrados para aquela sequência naquele nó 
-} i_node;
+} __attribute__((packed, aligned(1))) i_node;
 
 
 typedef struct i_list
@@ -75,6 +75,6 @@ typedef struct i_list
 	struct i_node *head;      //cabeça da lista
 	struct i_node *tail;      //cauda da lista
     struct i_node *point;     //ponteiro apontando para a cauda parcial (a busca por diferentes regiões de íntrons (1,2,3,...) para comparar o resultado é feita a partir dele)
-} i_list;
+} __attribute__((packed, aligned(1))) i_list;
 
 #endif
