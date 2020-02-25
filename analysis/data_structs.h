@@ -39,6 +39,7 @@ typedef struct
 {
     unsigned int number_of_regions;
     unsigned int total_of_samples;
+    unsigned int total_of_alleles;
 } global;
 
 
@@ -49,6 +50,7 @@ typedef struct al_node
     int counter;            //guarda o contador de vezes que aquele alelo aparece
 	struct al_node *next;   //ponteiro para o próximo elemento da lista
     char *allele;           //guarda o nome do alelo no nó
+    int *alleles_used;      //vetor que guarda a quantidade de alelos que foram utilizados para cada intron do locus da amostra
 } __attribute__((packed, aligned(1))) al_node;
 
 typedef struct al_list

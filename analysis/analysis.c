@@ -19,7 +19,7 @@ static void usage(char *progname)
 
 int main (int argc, char *argv[])
 {
-	int opt;
+	int opt, intron_counter;
   char *locus, *archive, *path  = NULL;
 
   des *description;
@@ -86,6 +86,7 @@ int main (int argc, char *argv[])
   }
 
   printf("TOTAL OF SAMPLES = %d\n", parameters->total_of_samples);
+  printf("TOTAL OF ALLELES = %d\n", parameters->total_of_alleles);
   printf("\n\n");
   printf("\nNUMBER OF REGIONS (description) = %d\n", parameters->number_of_regions);
 
@@ -98,22 +99,28 @@ int main (int argc, char *argv[])
 
   //ANÁLISE
   initialize_i_list(intron_list);
-  analysis_freq_intron(parameters, description, samples, intron_list);
-  analysis_freq_allele(parameters, description, samples, allele_list);
+  intron_counter = analysis_freq_intron(parameters, description, samples, intron_list);
+  printf("\nTHE LOCUS %s HAS %d INTRONS IN THE DNA SEQUENCE.\n", locus, intron_counter);
+  
+  analysis_freq_allele(parameters, description, samples, allele_list, intron_counter);
 
-  printf("\n\nNUMBER OF INTRONS FOUNDED (all locus included) = %d\n", intron_list->size);
+  printf("\nNUMBER OF INTRONS FOUNDED (all locus included) = %d\n", intron_list->size);
+
+  printf("\nSAVING LOCATION = %s/RESULTS/%s\n", path, locus);
 
 
 
 
   //IMPRESSÃO DO RESULTADO
   //impressao_r(intron_list);
-  //results_many_files(locus, path, intron_list);
+  results_many_files(locus, path, intron_list);
   results_one_file(locus, path, intron_list);
-  results_statistics(parameters, description, samples, locus, path, allele_list);
+  results_statistics(parameters, locus, path, allele_list);
+  results_rejected_list(parameters, description, samples, locus, path);
+  results_rejected_table(allele_list, intron_counter, locus, path);
   
 
 
-  //criar as funções de desalocagem!!!
+  //CRIAR FUNÇÕES DE DESALOCAGEM!!!!
 return 0;
 }

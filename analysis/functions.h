@@ -39,9 +39,11 @@ char *extrac_intron(char *source, int stride, int offset);
 
 int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions);
 
-void analysis_freq_intron(global *parameters, des *description, sample *samples, i_list *L);
+int analysis_freq_intron(global *parameters, des *description, sample *samples, i_list *L);
 
-void analysis_freq_allele(global *parameters, des *description, sample *samples, al_list *L);
+void analysis_freq_allele(global *parameters, des *description, sample *samples, al_list *L, int intron_counter);
+
+void decrement(al_node *node, int posic);
 
 /* ================================================================================================= */
 
@@ -50,6 +52,8 @@ void analysis_freq_allele(global *parameters, des *description, sample *samples,
 void initialize_i_list(i_list *L);
 
 void initialize_al_list(al_list *L);
+
+void initialize_vector_al_list(al_list *L, int intron_counter);
 
 i_node *create_i_Node(char *sequence, short int id);
 
@@ -72,7 +76,12 @@ void results_many_files(char *locus, char *path, i_list *L);
 
 void results_one_file(char *locus, char *path, i_list *L);
 
-void results_statistics(global *parameters, des *description, sample *samples, char *locus, char *path, al_list *L);
+void results_statistics(global *parameters, char *locus, char *path, al_list *L);
+
+void results_rejected_list(global *parameters, des *description, sample *samples, char *locus, char *p);
+
+void results_rejected_table(al_list *L, int intron_counter, char *locus, char *p);
+
 /* ================================================================================================= */
 
 
