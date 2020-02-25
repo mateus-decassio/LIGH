@@ -50,6 +50,81 @@ void allocate_region(sample *samples, unsigned int pos, unsigned int al, unsigne
   samples[pos].allele[al].size = size;
 }; //FINALIZADO
 
+
+void deallocate_desc(des *description)
+{
+  free(description);
+}; //TESTAR
+
+
+void deallocate_regions(divisions *regions)
+{
+  free(regions);
+}; //TESTAR
+
+
+void deallocate_alleles(alleles *allele)
+{
+  deallocate_regions(allele->regions);
+  free(allele);
+}; //TESTAR
+
+
+void deallocate_sample(sample *samples)
+{
+  deallocate_alleles(samples->allele);
+  free(samples);
+}; //TESTAR
+
+
+void deallocate_global(global *parameters)
+{
+  free(parameters);
+}; //TESTAR
+
+
+void deallocate_al_list(al_list *L)
+{
+  al_node *aux1, *aux2;
+	
+  aux1 = L->head;
+	while (aux1)
+  {
+		aux2 = aux1;
+		aux1 = aux1->next;
+
+		free (aux2);
+		aux2 = NULL;
+	}
+
+  L->size = 0;
+  free(L->head);
+  free(L->tail);
+}; //TESTAR
+
+
+void deallocate_i_list(i_list *L)
+{
+  i_node *aux1, *aux2;
+	
+  aux1 = L->head;
+	while (aux1)
+  {
+		aux2 = aux1;
+		aux1 = aux1->next;
+
+
+    deallocate_al_list(aux2->list);
+		free (aux2);
+		aux2 = NULL;
+	}
+
+  L->size = 0;
+  free(L->head);
+  free(L->tail);
+  free(L->point);
+}; //TESTAR
+
 /* ================================================================================================= */
 
 
@@ -998,7 +1073,7 @@ void results_rejected_list(global *parameters, des *description, sample *samples
 }; //FINALIZADO
 
 
-void results_rejected_table(al_list *L, int intron_counter, char *locus, char *p)
+void results_used_table(al_list *L, int intron_counter, char *locus, char *p)
 {
   al_node *auxiliar = NULL;
   char path[BUFFERSIZE];

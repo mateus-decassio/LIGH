@@ -9,6 +9,22 @@ sample* allocate_samp(unsigned int size);
 void allocate_alleles(sample *samples, unsigned int pos, unsigned int size);
 
 void allocate_region(sample *samples, unsigned int pos, unsigned int al, unsigned int size);
+
+void deallocate_desc(des *description);
+
+void deallocate_regions(divisions *regions);
+
+void deallocate_alleles(alleles *allele);
+
+void deallocate_sample(sample *samples);
+
+void deallocate_global(global *parameters);
+
+void deallocate_al_list(al_list *L);
+
+void deallocate_i_list(i_list *L);
+
+
 /* ================================================================================================= */
 
 
@@ -80,7 +96,7 @@ void results_statistics(global *parameters, char *locus, char *path, al_list *L)
 
 void results_rejected_list(global *parameters, des *description, sample *samples, char *locus, char *p);
 
-void results_rejected_table(al_list *L, int intron_counter, char *locus, char *p);
+void results_used_table(al_list *L, int intron_counter, char *locus, char *p);
 
 /* ================================================================================================= */
 

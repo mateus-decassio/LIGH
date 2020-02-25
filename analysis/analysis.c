@@ -1,6 +1,5 @@
-// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/TESTE.txt
-// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/TESTE.txt -r /mnt/hgfs/SHARED
 // ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED
+// valgrind --leak-check=full ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -52,11 +51,11 @@ int main (int argc, char *argv[])
         break;
 
       case ':':
-        printf("essa opção precisa de um valor!\n");
+        printf("Essa opção precisa de um valor!\n");
         break;
 
       case '?':
-        printf("opção desconhecida: %c\n", optopt);
+        printf("Opção desconhecida: %c\n", optopt);
         break;
 
       default:
@@ -68,7 +67,6 @@ int main (int argc, char *argv[])
   
   printf("LOCUS = %s\n", locus);
   printf("PATH TO FILE = %s\n", archive);
-
 
   read_parameters(parameters, archive);
 
@@ -100,12 +98,10 @@ int main (int argc, char *argv[])
   //ANÁLISE
   initialize_i_list(intron_list);
   intron_counter = analysis_freq_intron(parameters, description, samples, intron_list);
-  printf("\nTHE LOCUS %s HAS %d INTRONS IN THE DNA SEQUENCE.\n", locus, intron_counter);
-  
   analysis_freq_allele(parameters, description, samples, allele_list, intron_counter);
 
+  printf("\nTHE LOCUS %s HAS %d INTRONS IN THE DNA SEQUENCE.\n", locus, intron_counter);
   printf("\nNUMBER OF INTRONS FOUNDED (all locus included) = %d\n", intron_list->size);
-
   printf("\nSAVING LOCATION = %s/RESULTS/%s\n", path, locus);
 
 
@@ -117,10 +113,26 @@ int main (int argc, char *argv[])
   results_one_file(locus, path, intron_list);
   results_statistics(parameters, locus, path, allele_list);
   results_rejected_list(parameters, description, samples, locus, path);
-  results_rejected_table(allele_list, intron_counter, locus, path);
+  results_used_table(allele_list, intron_counter, locus, path);
   
 
 
-  //CRIAR FUNÇÕES DE DESALOCAGEM!!!!
+  //DESALOCAGEM
+  deallocate_desc(description);
+  printf("finalizou    deallocate_desc\n");
+
+  deallocate_sample(samples);
+  printf("finalizou    deallocate_sample\n");
+  
+  deallocate_global(parameters);
+  printf("finalizou    deallocate_global\n");
+
+  deallocate_i_list(intron_list);
+  printf("finalizou    deallocate_i_list\n");
+
+  deallocate_al_list(allele_list);
+  printf("finalizou    deallocate_al_list\n");
+
+
 return 0;
 }
