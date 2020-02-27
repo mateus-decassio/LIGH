@@ -64,6 +64,7 @@ for dir in directories:
             sequence = haplotype.text
             sequence.replace(" ", "")
             sequence.replace("\n", "")
+            sequence.replace("-", "")
 
         matches = root.find("./Samples/Sample/Loci/Locus/Matching/Matches")
         matches = [f for f in matches.iter('Match')]

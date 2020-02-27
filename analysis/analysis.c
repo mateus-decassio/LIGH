@@ -127,11 +127,11 @@ int main (int argc, char *argv[])
   deallocate_global(parameters);
   printf("finalizou    deallocate_global\n");
 
-  deallocate_i_list(intron_list);
-  printf("finalizou    deallocate_i_list\n");
+  //deallocate_i_list(intron_list);
+  //printf("finalizou    deallocate_i_list\n");
 
-  deallocate_al_list(allele_list);
-  printf("finalizou    deallocate_al_list\n");
+  //deallocate_al_list(allele_list);
+  //printf("finalizou    deallocate_al_list\n");
 
 
 return 0;
