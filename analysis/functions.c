@@ -218,7 +218,8 @@ void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned 
 void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id, char *name, char *sequence)
 {
   unsigned int size;
-  
+  samples[pos].valid = 0;
+
   size = (unsigned int)strlen(id);
   samples[pos].id = (char *) malloc (size+1 * sizeof(char));
   strncpy(samples[pos].id, id, size);
@@ -387,7 +388,10 @@ void read_file(char *file_path, des *description, sample *samples)
 
 int calculate_sub(int a, int b)
 {
-  return abs(b-a);
+  if ((a > 0 && b > 0) || (a < 0 && b < 0))
+    return abs(b-a) + 1;
+  else if ((a > 0 && b < 0) || (a < 0 && b > 0))
+    return abs(b-a);
 }; //FINALIZADO
 
 
@@ -396,9 +400,9 @@ char *extrac_intron(char *source, int stride, int offset)
   #pragma GCC diagnostic ignored "-Wsign-conversion"
   
   //alocar o espaço para receber o vetor
-  char *ret = (char *) malloc ((offset + 1) * sizeof(char));
+  char *ret = (char *) malloc (offset * sizeof(char));
 
-  strncpy(ret, source+stride, offset);
+  strncpy(ret, source+stride-1, offset-1);
   ret[offset] = '\0';
 
   return ret;
@@ -408,19 +412,42 @@ char *extrac_intron(char *source, int stride, int offset)
 int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions)
 {
   unsigned int i;
-  for (i = 0; i < size; ++i)
+  int begin, end;
+  bool contigous;
+  for (i = 0; i < size-1; ++i)
   {
-    if ((i_begin >= regions[i].begin) && (i_end <= regions[i].end))
-      return 1; //VERDADEIRO
+    begin = regions[i].end;
+    end = regions[i+1].begin;
+    //printf("begin = %d, end = %d\n", begin, end);
+    if (end == begin+1)
+    {
+      contigous = true;
+    }
+    else
+    {
+      contigous = false;
+      break;
+    }
   }
-  return 0; //FALSO
+
+  if (contigous == true)
+  {
+    if (i_begin >= regions[0].begin && i_end <= regions[size-1].end)
+      return 1; //VERDADEIRO, pertence ao intervalo
+    else
+      return 0; //FALSO, não pertence ao intervalo
+  }
+  else
+  {
+    return -1; //FALSO, o intervalo não é contíguo
+  }
 }; //FINALIZADO, mas pode ocorrer algum erro. Prestar atenção aqui!
 
 
 int analysis_freq_intron(global *parameters, des *description, sample *samples, i_list *L)
 {
   unsigned int i, j, intron_counter;
-  int i_begin, i_end, r_begin, r_end, offset;
+  int i_begin, i_end, r_begin, r_end, offset, verificator;
   char *sequence;
   
   intron_counter = 0;
@@ -438,15 +465,17 @@ int analysis_freq_intron(global *parameters, des *description, sample *samples, 
 
       for (j = 0; j < parameters->total_of_samples; ++j)
       {
-        if (verify_region(i_begin, i_end, samples[j].allele[0].size, samples[j].allele[0].regions))
+        verificator = verify_region(i_begin, i_end, samples[j].allele[0].size, samples[j].allele[0].regions);
+        if (verificator == 1)
         {
           //extrair o intron
           r_begin = calculate_sub(samples[j].allele[0].regions[0].begin, i_begin); //calcula o stride (quantos caracteres devem ser ignorados) para começar a cópia
           r_end = calculate_sub(samples[j].allele[0].regions[0].begin, i_end);
-          offset = calculate_sub(r_begin, r_end) + 1; //contém o valor de caracteres que devem ser copiados para dentro do destino
+          offset = calculate_sub(r_begin, r_end); //contém o valor de caracteres que devem ser copiados para dentro do destino
+          printf("ALELO1: INTRON %d r_begin = %d, r_end = %d, offset = %d\n", intron_counter, r_begin, r_end, offset);
 
           sequence = extrac_intron(samples[j].allele[0].sequence, r_begin, offset);
-          //printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
+          //printf("ALELO1: INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
           
           
           //inserir na lista de introns encontrados
@@ -456,20 +485,22 @@ int analysis_freq_intron(global *parameters, des *description, sample *samples, 
 
         if (samples[j].homozygous == false)
         {
-          if (verify_region(i_begin, i_end, samples[j].allele[1].size, samples[j].allele[1].regions))
-        {
-          //extrair o intron
-          r_begin = calculate_sub(samples[j].allele[1].regions[0].begin, i_begin);
-          offset = calculate_sub(samples[j].allele[1].regions[0].begin, i_end);
-          offset = calculate_sub(r_begin, r_end) + 1;
+          verificator = verify_region(i_begin, i_end, samples[j].allele[1].size, samples[j].allele[1].regions);
+          if (verificator == 1)
+          {
+            //extrair o intron
+            r_begin = calculate_sub(samples[j].allele[1].regions[0].begin, i_begin);
+            offset = calculate_sub(samples[j].allele[1].regions[0].begin, i_end);
+            offset = calculate_sub(r_begin, r_end);
+            printf("ALELO2: INTRON %d r_begin = %d, r_end = %d, offset = %d\n", intron_counter, r_begin, r_end, offset);
 
-          sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
-          //printf(" INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
-          
-          //inserir na lista de introns encontrados
-          insert_intron(L, sequence, samples[j].allele[1].name, (short int)intron_counter, samples[j].homozygous);
 
-        }
+            sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
+            //printf("ALELO2: INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
+            
+            //inserir na lista de introns encontrados
+            insert_intron(L, sequence, samples[j].allele[1].name, (short int)intron_counter, samples[j].homozygous);
+          }
         }
       }
     }
@@ -545,6 +576,63 @@ void decrement(al_node *node, int posic)
 {
   node->alleles_used[posic]--;
 }; //FINALIZADO
+
+
+void remove_samples(global *parameters, des *description, sample *samples, int counter)
+{
+  int i, j, k, i_begin, i_end, size, begin, end;
+  bool contigous;
+
+
+  //VERIFICAR SE É CONTÍGUO
+  fprintf(stderr, "LISTA DE AMOSTAS COM SEQUÊNCIAS NÃO CONTÍGUAS:\n\n");
+  for (j = 0; j < parameters->total_of_samples; ++j)
+  {
+    size = samples[j].allele[0].size;
+    for (k = 0; k < size-1; ++k)
+    {
+      begin = samples[j].allele[0].regions[k].end;
+      end = samples[j].allele[0].regions[k+1].begin;
+
+      if (end == begin+1)
+      {
+        contigous = true;
+      }
+      else
+      {
+        contigous = false;
+        break;
+      }
+    }
+
+    if (contigous == false)
+    {
+      samples[j].valid = 1;
+      fprintf(stderr, "%s\n", samples[j].id);
+      //imprimir na saída de erro
+    }
+  }
+
+  /*
+  //VERIFICAR SE PERTENCE AO INTERVALO TODAS AS AMOSTRAS
+  fprintf(stderr, "LISTA DE AMOSTAS COM SEQUÊNCIAS INCOMPLETAS PARA TODOS OS ÍNTRONS:\n");
+  for (i = 0; i < parameters->number_of_regions; ++i)
+  {
+    if (!strcmp(description[i].id, "Intron"))
+    {
+      i_begin = description[i].begin;
+      i_end = description[i].end;
+
+      for (j = 0; j < parameters->total_of_samples; ++j)
+      {
+        if (!samples[j].valid) //SE A AMOSTRA FOR VÁLIDA, pesquisar
+        {
+          
+        }
+      }
+  }
+  */
+} //TESTAR
 
 /* ================================================================================================= */
 
@@ -870,7 +958,7 @@ void results_one_file(char *locus, char *p, i_list *L)
   char folder[BUFFERSIZE];
   char txt[BUFFERSIZE];
   char intron[BUFFERSIZE];
-  int counter = 0;
+  int counter, conta_alelos = 0;
   int id_temp = 0;
   FILE *archive;
 
@@ -928,13 +1016,15 @@ void results_one_file(char *locus, char *p, i_list *L)
       fprintf(archive, "LISTA DE ALELOS      |      CONTAGEM      |\n");
     
       auxiliar_al = auxiliar_i->list->head;
+      conta_alelos = 0;
       while (auxiliar_al)
       {
         //printf("%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
         fprintf(archive, "%*s | %*d %*s\n", -20, auxiliar_al->allele, 11, auxiliar_al->counter, 8,"|");
-
+        conta_alelos += auxiliar_al->counter;
         auxiliar_al = auxiliar_al->next;
       }
+    fprintf(archive, "\n--- CONTAGEM FINAL = %d ---\n", conta_alelos);
     fprintf(archive, "\n\n--------------------------------------------------------------------------------------------\n\n\n");
     auxiliar_i = auxiliar_i->next;
     }

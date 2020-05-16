@@ -61,6 +61,9 @@ void analysis_freq_allele(global *parameters, des *description, sample *samples,
 
 void decrement(al_node *node, int posic);
 
+void remove_samples(global *parameters, des *description, sample *samples, int counter);
+
+
 /* ================================================================================================= */
 
 

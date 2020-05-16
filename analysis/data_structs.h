@@ -28,6 +28,7 @@ typedef struct
 
 typedef struct
 {
+    int valid;              //0-VÁLIDO   1-INVÁLIDO por sequência não contígua   2 - INVÁLIDO por não ter todos os íntrons
     bool homozygous;
     char *id;               //guarda o identificador da amostra
     alleles *allele;        //guarda o vetor de alelos que essa amostra possui. Esse valor só pode ser

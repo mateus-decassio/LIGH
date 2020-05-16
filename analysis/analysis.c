@@ -1,4 +1,4 @@
-// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED
+// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED 2> not_contigous[HLA-A].txt
 // valgrind --leak-check=full ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,8 +18,8 @@ static void usage(char *progname)
 
 int main (int argc, char *argv[])
 {
-	int opt, intron_counter;
-  char *locus, *archive, *path  = NULL;
+	int opt, intron_counter, int_counter;
+  char *locus, *archive, *path, *int_c  = NULL;
 
   des *description;
   sample *samples;
@@ -31,10 +31,10 @@ int main (int argc, char *argv[])
 
 
 /* ====================== TRATAMENTO DE LINHA DE COMANDO ====================== */
-  if ( argc < 7 )
+  if ( argc < 9 )
     usage(argv[0]);
   //l:d: - o uso do : significa que l recebe um parâmetro adicional, assim como o d
-  while ( (opt = getopt (argc, argv, "l:d:r:")) != -1 )
+  while ( (opt = getopt (argc, argv, "l:d:r:i:")) != -1 )
   {
     switch (opt)
     {
@@ -48,6 +48,10 @@ int main (int argc, char *argv[])
 
       case 'r':
         path = optarg;
+        break;
+
+      case 'i':
+        int_c = optarg;
         break;
 
       case ':':
@@ -82,6 +86,15 @@ int main (int argc, char *argv[])
     fprintf(stderr, "Impossível realizar a leitura do arquivo. Houve um problema na alocação da estrutura de dados!");
     exit (-1);
   }
+
+
+  //FAZER A EXCLUSÃO DAS AMOSTRAS AQUI
+  int_counter = atoi(int_c);
+  remove_samples(parameters, description, samples, int_counter);
+
+
+
+
 
   printf("TOTAL OF SAMPLES = %d\n", parameters->total_of_samples);
   printf("TOTAL OF ALLELES = %d\n", parameters->total_of_alleles);
@@ -119,13 +132,13 @@ int main (int argc, char *argv[])
 
   //DESALOCAGEM
   deallocate_desc(description);
-  printf("finalizou    deallocate_desc\n");
+  //printf("finalizou    deallocate_desc\n");
 
   deallocate_sample(samples);
-  printf("finalizou    deallocate_sample\n");
+  //printf("finalizou    deallocate_sample\n");
   
   deallocate_global(parameters);
-  printf("finalizou    deallocate_global\n");
+  //printf("finalizou    deallocate_global\n");
 
   //deallocate_i_list(intron_list);
   //printf("finalizou    deallocate_i_list\n");
