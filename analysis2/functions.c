@@ -15,7 +15,7 @@ sample* allocate_samp(unsigned int size)
   sample *samples = (sample *) malloc (size * sizeof(sample));
   if (!samples)
   {
-    fprintf(stderr, "ERRO AO ALOCAR O VETOR DE AMOSTRAS!");
+    fprintf(stderr, "ERRO AO ALOCAR O VETOR DE AMOSTRAS!\n");
     return NULL;
   }
   return (samples);
@@ -334,12 +334,13 @@ void analysis_freq_intron(global *parameters, sample *samples, ie_list *L)
   int r_begin, r_end, offset;
   char *sequence;
   
-  for (i = 0; i < parameters->N_REGIONS; ++i)
+  for (i = 6; i < 7; ++i)
   {
     L->point = L->tail;
 
     for (j = 0; j < parameters->total_of_samples; ++j)
     {
+        //printf("AMOSTRA = %s\n", samples[j].id);
         //extrair o intron
         r_begin = samples[j].allele[0].regions[i].begin;
         r_end = samples[j].allele[0].regions[i].end;
@@ -407,14 +408,14 @@ void analysis_freq_exon(global *parameters, sample *samples, ie_list *L)
 
         if (samples[j].homozygous == false)
         {
-          //extrair o intron
+          //extrair o exon
           if (i == 0)
           {
-            r_begin = samples[j].allele[0].regions[i].begin + abs(samples[j].pos_begining);
+            r_begin = samples[j].allele[1].regions[i].begin + abs(samples[j].pos_begining);
           }
           else
           { 
-            r_begin = samples[j].allele[0].regions[i].begin;
+            r_begin = samples[j].allele[1].regions[i].begin;
           }
           offset = samples[j].allele[1].regions[i].end;
           offset = calculate_sub(r_begin, r_end);
@@ -1010,6 +1011,7 @@ void results_one_file_i(char *locus, char *p, ie_list *L)
   }
   fclose(archive);
 }; //FINALIZADO
+
 
 void results_many_files_e(char *locus, char *p, ie_list *L)
 {

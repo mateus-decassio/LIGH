@@ -6,7 +6,6 @@ import sys
 
 work_path = sys.argv[2]
 key = sys.argv[4]
-MAX_EXONS = sys.argv[6]
 '''
 directories = ['HLA-A', 'HLA-B', 'HLA-C', 'HLA-DRB1',
                'HLA-DQA1', 'HLA-DQB1', 'HLA-DPB1']
@@ -16,7 +15,7 @@ directories = ['HLA-A', 'HLA-B', 'HLA-C', 'HLA-DRB1', 'HLA-DQB1']
 
 #para todos os locus
 for dir in directories:
-    if (dir == 'HLA-A`):
+    if (dir == 'HLA-A'):
         MAX_EXONS = 8
     elif (dir == 'HLA-B'):
         MAX_EXONS = 7
@@ -91,9 +90,6 @@ for dir in directories:
                         count_feat += 1
                 parameter = str(count_feat)+to_print+"/\n"
                 
-                if (key == 'exon'):
-                    parameter = parameter.replace('<', '')
-                    parameter = parameter.replace('>', '')
                 w_file.write(parameter)
                 
                 fasta = sample+'/\n'+match_ID+'/\n'+sequence+'\n'

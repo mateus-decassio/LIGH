@@ -136,11 +136,6 @@ int main (int argc, char *argv[])
   }
   
 
-
-
-
-
-
   deallocate_sample(samples);
   //printf("finalizou    deallocate_sample\n");
   
