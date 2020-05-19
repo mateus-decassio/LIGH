@@ -1,4 +1,5 @@
 // ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -k intron -r /mnt/hgfs/SHARED 2> not_contigous[HLA-A].txt
+// ./analysis -l HLA-A -d ~/LIGH/TESTE/HLA-A.txt -k intron -r ~/LIGH/TESTE
 // valgrind --leak-check=full ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED
 #include <stdio.h>
 #include <stdlib.h>
@@ -136,10 +137,10 @@ int main (int argc, char *argv[])
   }
   
 
-  deallocate_sample(samples);
+  //deallocate_sample(samples);
   //printf("finalizou    deallocate_sample\n");
   
-  deallocate_global(parameters);
+  //deallocate_global(parameters);
   //printf("finalizou    deallocate_global\n");
 
 

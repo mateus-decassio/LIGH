@@ -7,6 +7,7 @@
 
 #define BUFFERSIZE 512
 
+unsigned int counter_global = 0;
 
 /* ======================= FUNÇÕES/PROCEDIMENTOS PARA ALOCAÇÃO / DESALOCAÇÃO ======================= */
 
@@ -284,7 +285,7 @@ char *extrac_intron(char *source, int stride, int offset)
   #pragma GCC diagnostic ignored "-Wsign-conversion"
   
   //alocar o espaço para receber o vetor
-  char *ret = (char *) malloc (offset * sizeof(char));
+  char *ret = (char *) malloc (offset+1 * sizeof(char));
 
   strncpy(ret, source+stride-1, offset);
   ret[offset] = '\0';
@@ -334,10 +335,9 @@ void analysis_freq_intron(global *parameters, sample *samples, ie_list *L)
   int r_begin, r_end, offset;
   char *sequence;
   
-  for (i = 6; i < 7; ++i)
+  for (i = 0; i < parameters->N_REGIONS; ++i)
   {
     L->point = L->tail;
-
     for (j = 0; j < parameters->total_of_samples; ++j)
     {
         //printf("AMOSTRA = %s\n", samples[j].id);
@@ -358,7 +358,7 @@ void analysis_freq_intron(global *parameters, sample *samples, ie_list *L)
         {
           //extrair o intron
           r_begin = samples[j].allele[1].regions[i].begin;
-          offset = samples[j].allele[1].regions[i].end;
+          r_end = samples[j].allele[1].regions[i].end;
           offset = calculate_sub(r_begin, r_end);
           //printf("ALELO2: INTRON %d r_begin = %d, r_end = %d, offset = %d\n", i, r_begin, r_end, offset);
 
@@ -369,6 +369,7 @@ void analysis_freq_intron(global *parameters, sample *samples, ie_list *L)
           //inserir na lista de introns encontrados
           insert_intron(L, sequence, samples[j].allele[1].name, (short int)i+1, samples[j].homozygous);
         }
+        //printf("PARA O ÍNTRON %d, AMOSTRA %s OK!\n", i+1, samples[j].id);
       }
   }
 }; //FINALIZADO
@@ -383,7 +384,6 @@ void analysis_freq_exon(global *parameters, sample *samples, ie_list *L)
   for (i = 0; i < parameters->N_REGIONS; ++i)
   {
     L->point = L->tail;
-
     for (j = 0; j < parameters->total_of_samples; ++j)
     {
         //extrair o exon
@@ -417,7 +417,7 @@ void analysis_freq_exon(global *parameters, sample *samples, ie_list *L)
           { 
             r_begin = samples[j].allele[1].regions[i].begin;
           }
-          offset = samples[j].allele[1].regions[i].end;
+          r_end = samples[j].allele[1].regions[i].end;
           offset = calculate_sub(r_begin, r_end);
           //printf("ALELO2: EXON %d r_begin = %d, r_end = %d, offset = %d\n", i, r_begin, r_end, offset);
 
@@ -663,6 +663,7 @@ void insert_intron(ie_list *L, char *sequence, char *allele, short int id, bool 
 
     insert_allele_in_node(new->list, allele, homozygous);
     L->size++;
+    //printf("criou um novo nó %d\n", counter_global++);
 	}
   else
   {
@@ -676,6 +677,8 @@ void insert_intron(ie_list *L, char *sequence, char *allele, short int id, bool 
       L->tail->next = new;
       L->tail = new;
       L->size++;
+
+      //printf("criou um novo nó %d\n", counter_global++);
 
       insert_allele_in_node(new->list, allele, homozygous);
     }
