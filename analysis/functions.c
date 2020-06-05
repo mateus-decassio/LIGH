@@ -7,27 +7,16 @@
 
 #define BUFFERSIZE 512
 
+unsigned int counter_global = 0;
 
 /* ======================= FUNÇÕES/PROCEDIMENTOS PARA ALOCAÇÃO / DESALOCAÇÃO ======================= */
-
-des* allocate_desc(unsigned int size)
-{
-  des *description = (des *) malloc (size * sizeof(des));
-    if (!description)
-  {
-    fprintf(stderr, "ERRO AO ALOCAR O VETOR DE DESCRIÇÃO!");
-    return NULL;
-  }
-  return (description);
-}; //FINALIZADO
-
 
 sample* allocate_samp(unsigned int size)
 {
   sample *samples = (sample *) malloc (size * sizeof(sample));
   if (!samples)
   {
-    fprintf(stderr, "ERRO AO ALOCAR O VETOR DE AMOSTRAS!");
+    fprintf(stderr, "ERRO AO ALOCAR O VETOR DE AMOSTRAS!\n");
     return NULL;
   }
   return (samples);
@@ -49,12 +38,6 @@ void allocate_region(sample *samples, unsigned int pos, unsigned int al, unsigne
   samples[pos].allele[al].regions = (divisions *) malloc (size * sizeof(divisions));
   samples[pos].allele[al].size = size;
 }; //FINALIZADO
-
-
-void deallocate_desc(des *description)
-{
-  free(description);
-}; //TESTAR
 
 
 void deallocate_regions(divisions *regions)
@@ -103,9 +86,9 @@ void deallocate_al_list(al_list *L)
 }; //TESTAR
 
 
-void deallocate_i_list(i_list *L)
+void deallocate_ie_list(ie_list *L)
 {
-  i_node *aux1, *aux2;
+  ie_node *aux1, *aux2;
 	
   aux1 = L->head;
 	while (aux1)
@@ -129,82 +112,7 @@ void deallocate_i_list(i_list *L)
 
 
 
-/* ====================== FUNÇÕES/PROCEDIMENTOS PARA IMPRESSÃO DOS RESULTADOS ====================== */
-
-void impressao_d(des *description, unsigned int size)
-{
-  unsigned int counter;
-
-  for (counter = 0; counter < size; ++counter)
-  {
-    printf("ID = %s, begin = %d, end = %d\n",description[counter].id, description[counter].begin, description[counter].end);
-  }
-}; //FINALIZADO
-
-
-void impressao_s(sample *samples, unsigned int size)
-{
-  unsigned int counter, i;
-
-  for (counter = 0; counter < size; ++counter)
-  {
-     printf("ID da amostra = %s\n\n", samples[counter].id);
-
-     if (samples[counter].homozygous == true)
-     {
-      printf("O INDIVÍDUO É HOMOZIGOTO.\n");
-      printf("ID do alelo: %s\n", samples[counter].allele[0].name);
-      printf("Esse alelo é divido em %d regiões.\n", samples[counter].allele[0].size);
-
-      for (i = 0; i < samples[counter].allele[0].size; ++i)
-      {
-        printf("BEGIN = %d, END = %d\n",samples[counter].allele[0].regions[i].begin, samples[counter].allele[0].regions[i].end);
-      }
-      printf("SEQUÊNCIA do alelo: %s\n", samples[counter].allele[0].sequence);
-     }
-     else
-     {
-      printf("O INDIVÍDUO É HETEROZIGOTO.\n");
-      printf("ID do alelo 1: %s\n", samples[counter].allele[0].name);
-      printf("Esse alelo é divido em %d regiões.\n", samples[counter].allele[0].size);
-
-      for (i = 0; i < samples[counter].allele[0].size; ++i)
-      {
-        printf("BEGIN = %d, END = %d\n",samples[counter].allele[0].regions[i].begin, samples[counter].allele[0].regions[i].end);
-      }
-      printf("SEQUÊNCIA do alelo1: %s\n\n", samples[counter].allele[0].sequence);
-
-      printf("ID do alelo 2: %s\n", samples[counter].allele[1].name);
-      printf("Esse alelo é divido em %d regiões.\n", samples[counter].allele[1].size);
-
-      for (i = 0; i < samples[counter].allele[1].size; ++i)
-      {
-        printf("BEGIN = %d, END = %d\n",samples[counter].allele[1].regions[i].begin, samples[counter].allele[1].regions[i].end);
-      }
-      printf("SEQUÊNCIA do alelo2: %s\n", samples[counter].allele[1].sequence);
-     }
-     printf("\n\n\n");
-  }
-}; //FINALIZADO
-
-/* ================================================================================================= */
-
-
-
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR A LEITURA ========================== */
-
-void insert_description(des *description, unsigned int pos, char *id, int begin, int end)
-{
-  unsigned int size = (unsigned int)strlen(id);
-  description[pos].id = (char *) malloc (size+1 * sizeof(char));
-  
-  strncpy(description[pos].id, id, size);
-  description[pos].begin = begin;
-  description[pos].end = end;
-
-  //printf("ID = %s, begin = %d, end = %d\n",description[pos].id, description[pos].begin, description[pos].end);
-}; //FINALIZADO
-
 
 void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned int posic, int begin, int end)
 {
@@ -215,10 +123,11 @@ void insert_region(sample *samples, unsigned int pos, unsigned int al, unsigned 
 }; //FINALIZADO
 
 
-void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id, char *name, char *sequence)
+void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id, char *name, char *sequence, int begining)
 {
   unsigned int size;
   samples[pos].valid = 0;
+  samples[pos].pos_begining = begining;
 
   size = (unsigned int)strlen(id);
   samples[pos].id = (char *) malloc (size+1 * sizeof(char));
@@ -244,7 +153,7 @@ void insert_allele(sample *samples, unsigned int pos, unsigned int al, char *id,
 void read_parameters(global *parameters, char *file_path)
 {
   FILE *file;
-  unsigned int total_of_samples, number_of_regions;
+  unsigned int total_of_samples;
   char linha[9000];
   char *token;
 
@@ -260,6 +169,7 @@ void read_parameters(global *parameters, char *file_path)
   //pega o total de arquivos encontrados para fazer a análise
   fgets (linha, sizeof(linha), file);
 	token = strtok (linha, "/");
+  //printf("token = %s\n", token);
 	sscanf (token, "%d", &total_of_samples);
   //printf("TOTAL OF SAMPLES = %d\n", total_of_samples);
   parameters->total_of_samples = total_of_samples;
@@ -267,24 +177,15 @@ void read_parameters(global *parameters, char *file_path)
   parameters->total_of_alleles = (2 * total_of_samples);
   //-----------------------------------------------------------------
 
-  //-----------------------------------------------------------------
-  //pega o total de regiões para a leitura
-  fgets (linha, sizeof(linha), file);
-  token = strtok (linha, "/");
-  sscanf (token, "%d", &number_of_regions);
-  //printf("(number)REGIONS = %s\n",token);
-  parameters->number_of_regions = number_of_regions;
-  //-----------------------------------------------------------------
-
   fclose(file);
 }; //FINALIZADO
 
 
-void read_file(char *file_path, des *description, sample *samples)
+void read_file(char *file_path, sample *samples, global *parameters)
 {
   FILE *file;
-  int begin, end;
-  unsigned int counter, total_of_samples, number_of_regions, homozygous, i, j, region;
+  int begin, end, begining;
+  unsigned int counter, total_of_samples, homozygous, i, j, region;
   char linha[9000], sequence[9000], id[100], allele[100];
   char *token;
 
@@ -303,29 +204,6 @@ void read_file(char *file_path, des *description, sample *samples)
   //-----------------------------------------------------------------
 
   //-----------------------------------------------------------------
-  //pega o total de regiões para a leitura
-  fgets (linha, sizeof(linha), file);
-  token = strtok (linha, "/");
-  sscanf (token, "%d", &number_of_regions);
-  //-----------------------------------------------------------------
-
-  //leitura das regiões
-  for (counter = 0; counter < number_of_regions; ++counter)
-  {
-    fgets (linha, sizeof(linha), file);
-    token = strtok (linha, ",");
-    sscanf (token, "%s", id);
-
-    token = strtok (NULL, ",");
-    sscanf (token, "%d", &begin);
-
-    token = strtok (NULL, ",");
-    sscanf (token, "%d", &end);
-
-    //inserção no vetor de descrição
-    insert_description(description, counter, id, begin, end);
-  }
-
   //leitura das sequências
   for (counter = 0; counter < total_of_samples; ++counter)
   {
@@ -333,6 +211,12 @@ void read_file(char *file_path, des *description, sample *samples)
     token = strtok (linha, "/");
     sscanf (token, "%d", &homozygous);
     //printf("homozigoto? [1 = SIM][2 = NÃO]: %d\n", homozygous);
+
+
+    fgets (linha, sizeof(linha), file);
+    token = strtok (linha, ",");
+    sscanf (token, "%d", &begining);
+    
 
     //aloca a quantidades de alelos para aquela amostra
     allocate_alleles(samples, counter, homozygous);
@@ -342,6 +226,7 @@ void read_file(char *file_path, des *description, sample *samples)
       fgets (linha, sizeof(linha), file);
       token = strtok (linha, ",");
       sscanf (token, "%d", &region);
+      parameters->N_REGIONS = region;
       //printf("DIVIDIDO EM %d REGIÕES\n", region);
 
       //aloca a quantidade de regiões que a sequência do alelo i tem 
@@ -374,11 +259,11 @@ void read_file(char *file_path, des *description, sample *samples)
       sscanf (token, "%s", sequence);
       //printf("SEQUÊNCIA =  %s\n", sequence);
 
-      insert_allele(samples, counter, i, id, allele, sequence);
+      insert_allele(samples, counter, i, id, allele, sequence, begining);
     }
   }
   fclose(file);
-}; // FINALIZADO
+}; // TESTAR
 
 /* ================================================================================================= */
 
@@ -400,9 +285,9 @@ char *extrac_intron(char *source, int stride, int offset)
   #pragma GCC diagnostic ignored "-Wsign-conversion"
   
   //alocar o espaço para receber o vetor
-  char *ret = (char *) malloc (offset * sizeof(char));
+  char *ret = (char *) malloc (offset+1 * sizeof(char));
 
-  strncpy(ret, source+stride-1, offset-1);
+  strncpy(ret, source+stride-1, offset);
   ret[offset] = '\0';
 
   return ret;
@@ -444,72 +329,111 @@ int verify_region(int i_begin, int i_end, unsigned int size, divisions *regions)
 }; //FINALIZADO, mas pode ocorrer algum erro. Prestar atenção aqui!
 
 
-int analysis_freq_intron(global *parameters, des *description, sample *samples, i_list *L)
+void analysis_freq_intron(global *parameters, sample *samples, ie_list *L)
 {
-  unsigned int i, j, intron_counter;
-  int i_begin, i_end, r_begin, r_end, offset, verificator;
+  unsigned int i, j;
+  int r_begin, r_end, offset;
   char *sequence;
   
-  intron_counter = 0;
-  for (i = 0; i < parameters->number_of_regions; ++i)
+  for (i = 0; i < parameters->N_REGIONS; ++i)
   {
-    if (!strcmp(description[i].id, "Intron"))
+    L->point = L->tail;
+    for (j = 0; j < parameters->total_of_samples; ++j)
     {
-      intron_counter ++;
-      i_begin = description[i].begin;
-      i_end = description[i].end;
-      //printf("esse é o intron %d que começa no %d e termina no %d\n", intron, e_begin, i_end);
+        //printf("AMOSTRA = %s\n", samples[j].id);
+        //extrair o intron
+        r_begin = samples[j].allele[0].regions[i].begin;
+        r_end = samples[j].allele[0].regions[i].end;
+        offset = calculate_sub(r_begin, r_end); //contém o valor de caracteres que devem ser copiados para dentro do destino
+        //printf("ALELO1: INTRON %d r_begin = %d, r_end = %d, offset = %d\n", i, r_begin, r_end, offset);
 
-      //ajustar o point para apontar sempre para o último nó de um intron (1,2,3,4...)
-      L->point = L->tail;
-
-      for (j = 0; j < parameters->total_of_samples; ++j)
-      {
-        verificator = verify_region(i_begin, i_end, samples[j].allele[0].size, samples[j].allele[0].regions);
-        if (verificator == 1)
-        {
-          //extrair o intron
-          r_begin = calculate_sub(samples[j].allele[0].regions[0].begin, i_begin); //calcula o stride (quantos caracteres devem ser ignorados) para começar a cópia
-          r_end = calculate_sub(samples[j].allele[0].regions[0].begin, i_end);
-          offset = calculate_sub(r_begin, r_end); //contém o valor de caracteres que devem ser copiados para dentro do destino
-          printf("ALELO1: INTRON %d r_begin = %d, r_end = %d, offset = %d\n", intron_counter, r_begin, r_end, offset);
-
-          sequence = extrac_intron(samples[j].allele[0].sequence, r_begin, offset);
-          //printf("ALELO1: INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
+        sequence = extrac_intron(samples[j].allele[0].sequence, r_begin, offset);
+        //printf("ALELO1: INTRON = %d \nCOMPRIMENTO = %d \nSEQUENCIA = %s\n\n", i, strlen(sequence), sequence);
           
           
-          //inserir na lista de introns encontrados
-          insert_intron(L, sequence, samples[j].allele[0].name, (short int)intron_counter, samples[j].homozygous);
-
-        }
+        //inserir na lista de introns encontrados
+        insert_intron(L, sequence, samples[j].allele[0].name, (short int)i+1, samples[j].homozygous);
 
         if (samples[j].homozygous == false)
         {
-          verificator = verify_region(i_begin, i_end, samples[j].allele[1].size, samples[j].allele[1].regions);
-          if (verificator == 1)
-          {
-            //extrair o intron
-            r_begin = calculate_sub(samples[j].allele[1].regions[0].begin, i_begin);
-            offset = calculate_sub(samples[j].allele[1].regions[0].begin, i_end);
-            offset = calculate_sub(r_begin, r_end);
-            printf("ALELO2: INTRON %d r_begin = %d, r_end = %d, offset = %d\n", intron_counter, r_begin, r_end, offset);
+          //extrair o intron
+          r_begin = samples[j].allele[1].regions[i].begin;
+          r_end = samples[j].allele[1].regions[i].end;
+          offset = calculate_sub(r_begin, r_end);
+          //printf("ALELO2: INTRON %d r_begin = %d, r_end = %d, offset = %d\n", i, r_begin, r_end, offset);
 
 
-            sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
-            //printf("ALELO2: INTRON = %d \n COMPRIMENTO = %d \n SEQUENCIA = %s\n\n", intron_counter, strlen(sequence), sequence);
+          sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
+          //printf("ALELO2: INTRON = %d \nCOMPRIMENTO = %d \nSEQUENCIA = %s\n\n", i, strlen(sequence), sequence);
             
-            //inserir na lista de introns encontrados
-            insert_intron(L, sequence, samples[j].allele[1].name, (short int)intron_counter, samples[j].homozygous);
-          }
+          //inserir na lista de introns encontrados
+          insert_intron(L, sequence, samples[j].allele[1].name, (short int)i+1, samples[j].homozygous);
         }
+        //printf("PARA O ÍNTRON %d, AMOSTRA %s OK!\n", i+1, samples[j].id);
       }
-    }
   }
-  return intron_counter;
 }; //FINALIZADO
 
 
-void analysis_freq_allele(global *parameters, des *description, sample *samples, al_list *L, int intron_counter)
+void analysis_freq_exon(global *parameters, sample *samples, ie_list *L)
+{
+  unsigned int i, j;
+  int r_begin, r_end, offset;
+  char *sequence;
+  
+  for (i = 0; i < parameters->N_REGIONS; ++i)
+  {
+    L->point = L->tail;
+    for (j = 0; j < parameters->total_of_samples; ++j)
+    {
+        //extrair o exon
+        if (i == 0)
+        {
+          r_begin = samples[j].allele[0].regions[i].begin + abs(samples[j].pos_begining);
+        }
+        else
+        {
+          r_begin = samples[j].allele[0].regions[i].begin;
+        }
+        r_end = samples[j].allele[0].regions[i].end;
+        offset = calculate_sub(r_begin, r_end); //contém o valor de caracteres que devem ser copiados para dentro do destino
+        //printf("ALELO1: EXON %d r_begin = %d, r_end = %d, offset = %d\n", i, r_begin, r_end, offset);
+
+        sequence = extrac_intron(samples[j].allele[0].sequence, r_begin, offset);
+        //printf("ALELO1: EXON = %d \nCOMPRIMENTO = %d \nSEQUENCIA = %s\n\n", i, strlen(sequence), sequence);
+          
+          
+        //inserir na lista de introns encontrados
+        insert_intron(L, sequence, samples[j].allele[0].name, (short int)i+1, samples[j].homozygous);
+
+        if (samples[j].homozygous == false)
+        {
+          //extrair o exon
+          if (i == 0)
+          {
+            r_begin = samples[j].allele[1].regions[i].begin + abs(samples[j].pos_begining);
+          }
+          else
+          { 
+            r_begin = samples[j].allele[1].regions[i].begin;
+          }
+          r_end = samples[j].allele[1].regions[i].end;
+          offset = calculate_sub(r_begin, r_end);
+          //printf("ALELO2: EXON %d r_begin = %d, r_end = %d, offset = %d\n", i, r_begin, r_end, offset);
+
+
+          sequence = extrac_intron(samples[j].allele[1].sequence, r_begin, offset);
+          //printf("ALELO2: EXON = %d \nCOMPRIMENTO = %d \nSEQUENCIA = %s\n\n", i, strlen(sequence), sequence);
+            
+          //inserir na lista de introns encontrados
+          insert_intron(L, sequence, samples[j].allele[1].name, (short int)i+1, samples[j].homozygous);
+        }
+      }
+  }
+}; //FINALIZADO
+
+/*
+void analysis_freq_allele(global *parameters, sample *samples, al_list *L, int intron_counter, int N_REGIONS)
 {
   al_node *auxiliar = NULL;
   unsigned int i, j;
@@ -531,7 +455,7 @@ void analysis_freq_allele(global *parameters, des *description, sample *samples,
   
   //decrementar os vetores
   intron_tag = 0;
-  for (i = 0; i < parameters->number_of_regions; ++i)
+  for (i = 0; i < N_REGIONS; ++i)
   {
     if (!strcmp(description[i].id, "Intron"))
     {
@@ -578,7 +502,7 @@ void decrement(al_node *node, int posic)
 }; //FINALIZADO
 
 
-void remove_samples(global *parameters, des *description, sample *samples, int counter)
+void remove_samples(global *parameters, sample *samples, int counter)
 {
   int i, j, k, i_begin, i_end, size, begin, end;
   bool contigous;
@@ -613,7 +537,7 @@ void remove_samples(global *parameters, des *description, sample *samples, int c
     }
   }
 
-  /*
+  
   //VERIFICAR SE PERTENCE AO INTERVALO TODAS AS AMOSTRAS
   fprintf(stderr, "LISTA DE AMOSTAS COM SEQUÊNCIAS INCOMPLETAS PARA TODOS OS ÍNTRONS:\n");
   for (i = 0; i < parameters->number_of_regions; ++i)
@@ -631,16 +555,15 @@ void remove_samples(global *parameters, des *description, sample *samples, int c
         }
       }
   }
-  */
 } //TESTAR
-
+*/
 /* ================================================================================================= */
 
 
 
 /* ========================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR AS LISTAS ========================== */
 
-void initialize_i_list(i_list *L)
+void initialize_ie_list(ie_list *L)
 {
   L->size = 0;
   L->head = NULL;
@@ -678,14 +601,14 @@ void initialize_vector_al_list(al_list *L, int intron_counter)
 }; //TESTAR
 
 
-i_node *create_i_Node(char *sequence, short int id)
+ie_node *create_ie_Node(char *sequence, short int id)
 { 
 	int size;
 
-  i_node *new = (i_node *) malloc (sizeof(i_node));
+  ie_node *new = (ie_node *) malloc (sizeof(ie_node));
 	if (!new)
   {
-		printf("NÃO FOI POSSÍVEL ALOCAR O NOVO NÓ! ERRO NA FUNÇÃO create_i_Node OU ESPAÇO INSIFICIENTE.\n");
+		printf("NÃO FOI POSSÍVEL ALOCAR O NOVO NÓ! ERRO NA FUNÇÃO create_ie_Node OU ESPAÇO INSIFICIENTE.\n");
 		exit (0);
 	}
 	new->next = NULL;
@@ -727,19 +650,20 @@ al_node *create_al_Node(char *allele)
 }; //FINALIZADO
 
 
-void insert_intron(i_list *L, char *sequence, char *allele, short int id, bool homozygous)
+void insert_intron(ie_list *L, char *sequence, char *allele, short int id, bool homozygous)
 {
-  i_node *auxiliar = NULL;
+  ie_node *auxiliar = NULL;
 
 	if (!L->head)
   {
-    i_node *new = create_i_Node(sequence, id);
+    ie_node *new = create_ie_Node(sequence, id);
 		L->head = new;
     L->tail = new;
     L->point = new;
 
     insert_allele_in_node(new->list, allele, homozygous);
     L->size++;
+    //printf("criou um novo nó %d\n", counter_global++);
 	}
   else
   {
@@ -749,10 +673,12 @@ void insert_intron(i_list *L, char *sequence, char *allele, short int id, bool h
     //se o nó não existe, criar um novo nó e inserir o intron naquele nó
     if (!auxiliar)
     {
-      i_node *new = create_i_Node(sequence, id);
+      ie_node *new = create_ie_Node(sequence, id);
       L->tail->next = new;
       L->tail = new;
       L->size++;
+
+      //printf("criou um novo nó %d\n", counter_global++);
 
       insert_allele_in_node(new->list, allele, homozygous);
     }
@@ -804,9 +730,9 @@ void insert_allele_in_node(al_list *L, char *allele, bool homozygous)
 }; //FINALIZADO
 
 
-i_node *search_intron(i_list *L, char *sequence, short int id)
+ie_node *search_intron(ie_list *L, char *sequence, short int id)
 {
-  i_node *auxiliar;
+  ie_node *auxiliar;
 
   auxiliar = L->point;
   while (auxiliar)
@@ -846,15 +772,62 @@ al_node *search_allele(al_list *L, char *allele)
 
 /* ======================== FUNÇÕES/PROCEDIMENTOS PARA TRATAR OS RESULTADOS ======================== */
 
-void impressao_r(i_list *L)
+
+void impressao_s(sample *samples, unsigned int size)
 {
-  i_node *auxiliar_i = NULL;
+  unsigned int counter, i;
+
+  for (counter = 0; counter < size; ++counter)
+  {
+     printf("ID da amostra = %s\n\n", samples[counter].id);
+
+     if (samples[counter].homozygous == true)
+     {
+      printf("O INDIVÍDUO É HOMOZIGOTO.\n");
+      printf("ID do alelo: %s\n", samples[counter].allele[0].name);
+      printf("Esse alelo é divido em %d regiões.\n", samples[counter].allele[0].size);
+
+      for (i = 0; i < samples[counter].allele[0].size; ++i)
+      {
+        printf("BEGIN = %d, END = %d\n",samples[counter].allele[0].regions[i].begin, samples[counter].allele[0].regions[i].end);
+      }
+      printf("SEQUÊNCIA do alelo: %s\n", samples[counter].allele[0].sequence);
+     }
+     else
+     {
+      printf("O INDIVÍDUO É HETEROZIGOTO.\n");
+      printf("ID do alelo 1: %s\n", samples[counter].allele[0].name);
+      printf("Esse alelo é divido em %d regiões.\n", samples[counter].allele[0].size);
+
+      for (i = 0; i < samples[counter].allele[0].size; ++i)
+      {
+        printf("BEGIN = %d, END = %d\n",samples[counter].allele[0].regions[i].begin, samples[counter].allele[0].regions[i].end);
+      }
+      printf("SEQUÊNCIA do alelo1: %s\n\n", samples[counter].allele[0].sequence);
+
+      printf("ID do alelo 2: %s\n", samples[counter].allele[1].name);
+      printf("Esse alelo é divido em %d regiões.\n", samples[counter].allele[1].size);
+
+      for (i = 0; i < samples[counter].allele[1].size; ++i)
+      {
+        printf("BEGIN = %d, END = %d\n",samples[counter].allele[1].regions[i].begin, samples[counter].allele[1].regions[i].end);
+      }
+      printf("SEQUÊNCIA do alelo2: %s\n", samples[counter].allele[1].sequence);
+     }
+     printf("\n\n\n");
+  }
+}; //FINALIZADO
+
+
+void impressao_r(ie_list *L)
+{
+  ie_node *auxiliar_i = NULL;
   al_node *auxiliar_al = NULL;
 
   auxiliar_i = L->head;
   while (auxiliar_i)
   {
-    printf("INTRON = %d \nCOMPRIMENTO = %lu \nSEQUENCIA = %s\n", auxiliar_i->id, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+    printf("INTRON/EXON = %d \nCOMPRIMENTO = %lu \nSEQUENCIA = %s\n", auxiliar_i->id, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
     printf("LISTA DE ALELOS E FREQUÊNCIA:\n");
     
     auxiliar_al = auxiliar_i->list->head;
@@ -871,9 +844,9 @@ void impressao_r(i_list *L)
 }; //FINALIZADO
 
 
-void results_many_files(char *locus, char *p, i_list *L)
+void results_many_files_i(char *locus, char *p, ie_list *L)
 {
-  i_node *auxiliar_i = NULL;
+  ie_node *auxiliar_i = NULL;
   al_node *auxiliar_al = NULL;
   char id[10];
   char count[10];
@@ -883,7 +856,7 @@ void results_many_files(char *locus, char *p, i_list *L)
   char folder[BUFFERSIZE];
   char txt[BUFFERSIZE];
   char intron[BUFFERSIZE];
-  int counter = 0;
+  int counter, count_equal_alleles, count_diff_alleles = 0;
   FILE *archive;
 
   snprintf(path, strlen(p)+1, "%s", p);
@@ -917,7 +890,7 @@ void results_many_files(char *locus, char *p, i_list *L)
 
     strcat(filename, count);
     strcat(filename, txt);
-    
+
     archive = fopen(filename, "w");
     if (!archive)
     {
@@ -932,14 +905,20 @@ void results_many_files(char *locus, char *p, i_list *L)
     fprintf(archive, "LISTA DE ALELOS      |      CONTAGEM      |\n");
     
     auxiliar_al = auxiliar_i->list->head;
+    count_diff_alleles = 0;
+    count_equal_alleles = 0;
     while (auxiliar_al)
     {
       //printf("%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
       fprintf(archive, "%*s | %*d %*s\n", -20, auxiliar_al->allele, 11, auxiliar_al->counter, 8,"|");
       //fprintf(archive, "%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
+      count_diff_alleles += 1;
+      count_equal_alleles += auxiliar_al->counter;
 
       auxiliar_al = auxiliar_al->next;
     }
+    fprintf(archive, "\n--- CONTAGEM FINAL (alelos diferentes) = %d ---", count_diff_alleles);
+    fprintf(archive, "\n--- CONTAGEM FINAL (TODOS os alelos)= %d ---\n", count_equal_alleles);
     fclose(archive);
 
     auxiliar_i = auxiliar_i->next;
@@ -947,9 +926,9 @@ void results_many_files(char *locus, char *p, i_list *L)
 }; //FINALIZADO
 
 
-void results_one_file(char *locus, char *p, i_list *L)
+void results_one_file_i(char *locus, char *p, ie_list *L)
 {
-  i_node *auxiliar_i = NULL;
+  ie_node *auxiliar_i = NULL;
   al_node *auxiliar_al = NULL;
   char id[10];
   char path[BUFFERSIZE];
@@ -958,7 +937,7 @@ void results_one_file(char *locus, char *p, i_list *L)
   char folder[BUFFERSIZE];
   char txt[BUFFERSIZE];
   char intron[BUFFERSIZE];
-  int counter, conta_alelos = 0;
+  int counter, count_equal_alleles, count_diff_alleles = 0;
   int id_temp = 0;
   FILE *archive;
 
@@ -1004,6 +983,7 @@ void results_one_file(char *locus, char *p, i_list *L)
         fprintf(stderr, "NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO! (intron0X, na função results_one_file)\n");
         exit(-1);
       }
+      counter = 0;
     }
     else
     {
@@ -1016,15 +996,190 @@ void results_one_file(char *locus, char *p, i_list *L)
       fprintf(archive, "LISTA DE ALELOS      |      CONTAGEM      |\n");
     
       auxiliar_al = auxiliar_i->list->head;
-      conta_alelos = 0;
+      count_equal_alleles = 0;
+      count_diff_alleles = 0;
       while (auxiliar_al)
       {
         //printf("%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
         fprintf(archive, "%*s | %*d %*s\n", -20, auxiliar_al->allele, 11, auxiliar_al->counter, 8,"|");
-        conta_alelos += auxiliar_al->counter;
+        count_diff_alleles += 1;
+        count_equal_alleles += auxiliar_al->counter;
         auxiliar_al = auxiliar_al->next;
       }
-    fprintf(archive, "\n--- CONTAGEM FINAL = %d ---\n", conta_alelos);
+    fprintf(archive, "\n--- CONTAGEM FINAL (alelos diferentes) = %d ---", count_diff_alleles);
+    fprintf(archive, "\n--- CONTAGEM FINAL (TODOS os alelos)= %d ---\n", count_equal_alleles);
+    fprintf(archive, "\n\n--------------------------------------------------------------------------------------------\n\n\n");
+    auxiliar_i = auxiliar_i->next;
+    }
+  }
+  fclose(archive);
+}; //FINALIZADO
+
+
+void results_many_files_e(char *locus, char *p, ie_list *L)
+{
+  ie_node *auxiliar_i = NULL;
+  al_node *auxiliar_al = NULL;
+  char id[10];
+  char count[10];
+  char path[BUFFERSIZE];
+  char filename[BUFFERSIZE];
+  char results[BUFFERSIZE];
+  char folder[BUFFERSIZE];
+  char txt[BUFFERSIZE];
+  char intron[BUFFERSIZE];
+  int counter, count_equal_alleles, count_diff_alleles = 0;
+  FILE *archive;
+
+  snprintf(path, strlen(p)+1, "%s", p);
+
+  snprintf(results, 10, "%s", "/RESULTS/");
+  snprintf(txt, 5, "%s", ".txt");
+
+  strcat(path, results);
+  strcat(path, locus);
+
+
+  auxiliar_i = L->head;
+  while (auxiliar_i)
+  {
+    counter++;
+
+    snprintf(folder, strlen(path)+1, "%s", path);
+    
+    snprintf(intron, 8, "%s", "exon0");
+    snprintf(id, 10, "%d", (int)auxiliar_i->id);
+    strcat(intron, id);
+
+
+    strcat(folder, "/");
+    strcat(folder, intron);
+    strcat(folder, "/");
+    
+    snprintf(filename, strlen(folder)+1, "%s", folder);
+
+    snprintf(count, 10, "%d", counter);
+
+    strcat(filename, count);
+    strcat(filename, txt);
+
+    archive = fopen(filename, "w");
+    if (!archive)
+    {
+      fprintf(stderr, "NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO! (exons.txt na função results_many_files)\n");
+      exit(-1);
+    }
+    //printf("FILENAME = %s, tamanho = %lu\n", filename, strlen(filename));
+    //printf("INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+    //printf("LISTA DE ALELOS|FREQUÊNCIA:\n");
+    
+    fprintf(archive, "EXON = %d.%d \nCOMPRIMENTO(em pb) = %lu\nSEQUENCIA = %s\n\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+    fprintf(archive, "LISTA DE ALELOS      |      CONTAGEM      |\n");
+    
+    auxiliar_al = auxiliar_i->list->head;
+    count_diff_alleles = 0;
+    count_equal_alleles = 0;
+    while (auxiliar_al)
+    {
+      //printf("%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
+      fprintf(archive, "%*s | %*d %*s\n", -20, auxiliar_al->allele, 11, auxiliar_al->counter, 8,"|");
+      //fprintf(archive, "%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
+      count_diff_alleles += 1;
+      count_equal_alleles += auxiliar_al->counter;
+
+      auxiliar_al = auxiliar_al->next;
+    }
+    fprintf(archive, "\n--- CONTAGEM FINAL (alelos diferentes) = %d ---", count_diff_alleles);
+    fprintf(archive, "\n--- CONTAGEM FINAL (TODOS os alelos)= %d ---\n", count_equal_alleles);
+    fclose(archive);
+
+    auxiliar_i = auxiliar_i->next;
+  }
+}; //FINALIZADO
+
+
+void results_one_file_e(char *locus, char *p, ie_list *L)
+{
+  ie_node *auxiliar_i = NULL;
+  al_node *auxiliar_al = NULL;
+  char id[10];
+  char path[BUFFERSIZE];
+  char filename[BUFFERSIZE];
+  char results[BUFFERSIZE];
+  char folder[BUFFERSIZE];
+  char txt[BUFFERSIZE];
+  char intron[BUFFERSIZE];
+  int counter, count_equal_alleles, count_diff_alleles = 0;
+  int id_temp = 0;
+  FILE *archive;
+
+  snprintf(path, strlen(p)+1, "%s", p);
+
+  snprintf(results, 10, "%s", "/RESULTS/");
+  snprintf(txt, 5, "%s", ".txt");
+
+  strcat(path, results);
+  strcat(path, locus);
+
+
+  auxiliar_i = L->head;
+  while (auxiliar_i)
+  {
+    if (id_temp != auxiliar_i->id)
+    {
+      //fechar o arquivo anterior
+      if (id_temp)
+        fclose(archive);
+
+
+      id_temp = auxiliar_i->id;
+      snprintf(folder, strlen(path)+1, "%s", path);
+    
+      snprintf(intron, 8, "%s", "exon0");
+      snprintf(id, 10, "%d", (int)auxiliar_i->id);
+      strcat(intron, id);
+
+
+      strcat(folder, "/");
+      strcat(folder, intron);
+    
+      snprintf(filename, strlen(folder)+1, "%s", folder);
+
+      strcat(filename, txt);
+
+      //abrir um novo arquivo
+      archive = fopen(filename, "w");
+
+      if (!archive)
+      {
+        fprintf(stderr, "NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO! (intron0X, na função results_one_file)\n");
+        exit(-1);
+      }
+      counter = 0;
+    }
+    else
+    {
+      counter++;
+      //printf("FILENAME = %s, tamanho = %lu\n", filename, strlen(filename));
+      //printf("INTRON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+      //printf("LISTA DE ALELOS|FREQUÊNCIA:\n");
+    
+      fprintf(archive, "EXON = %d.%d \nCOMPRIMENTO(em pb) = %lu \nSEQUENCIA = %s\n\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+      fprintf(archive, "LISTA DE ALELOS      |      CONTAGEM      |\n");
+    
+      auxiliar_al = auxiliar_i->list->head;
+      count_equal_alleles = 0;
+      count_diff_alleles = 0;
+      while (auxiliar_al)
+      {
+        //printf("%s | %d\n", auxiliar_al->allele, auxiliar_al->counter);
+        fprintf(archive, "%*s | %*d %*s\n", -20, auxiliar_al->allele, 11, auxiliar_al->counter, 8,"|");
+        count_diff_alleles += 1;
+        count_equal_alleles += auxiliar_al->counter;
+        auxiliar_al = auxiliar_al->next;
+      }
+    fprintf(archive, "\n--- CONTAGEM FINAL (alelos diferentes) = %d ---", count_diff_alleles);
+    fprintf(archive, "\n--- CONTAGEM FINAL (TODOS os alelos)= %d ---\n", count_equal_alleles);
     fprintf(archive, "\n\n--------------------------------------------------------------------------------------------\n\n\n");
     auxiliar_i = auxiliar_i->next;
     }
@@ -1090,136 +1245,137 @@ void results_statistics(global *parameters, char *locus, char *p, al_list *L)
 }; //FINALIZADO
 
 
-void results_rejected_list(global *parameters, des *description, sample *samples, char *locus, char *p)
+void results_one_file_fastaI(char *locus, char *p, ie_list *L)
 {
+  ie_node *auxiliar_i = NULL;
+  char id[10];
   char path[BUFFERSIZE];
   char filename[BUFFERSIZE];
   char results[BUFFERSIZE];
+  char folder[BUFFERSIZE];
   char txt[BUFFERSIZE];
-  unsigned int i, j, intron_counter;
-  int i_begin, i_end;
+  char intron[BUFFERSIZE];
+  int counter, id_temp = 0;
   FILE *archive;
 
   snprintf(path, strlen(p)+1, "%s", p);
-  
+
   snprintf(results, 10, "%s", "/RESULTS/");
-  snprintf(txt, 5, "%s", ".txt");
+  snprintf(txt, 7, "%s", ".fasta");
 
   strcat(path, results);
   strcat(path, locus);
-  strcat(path, "/");
 
 
-  //IMPRESSÃO DE ALELOS NÃO USADOS
-  snprintf(filename, strlen(path)+1, "%s", path);
-  strcat(filename, "rejected_list");
-  strcat(filename, txt);
-
-  archive = fopen(filename, "w");
-  if (!archive)
+  auxiliar_i = L->head;
+  while (auxiliar_i)
   {
-    fprintf(stderr, "NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO! (rejected.txt na função results_statistics)\n");
-    exit(-1);
-  }
-
-  //printf("FILENAME[2] = %s, tamanho = %lu\n", filename, strlen(filename));
-  fprintf(archive, "(LISTA) - LEVANTAMENTO DE ALELOS NÃO UTILIZADOS PARA O LOCUS %s\n\n", locus);
-
-  intron_counter = 0;
-  for (i = 0; i < parameters->number_of_regions; ++i)
-  {
-    if (!strcmp(description[i].id, "Intron"))
+    if (id_temp != auxiliar_i->id)
     {
-      intron_counter ++;
-      i_begin = description[i].begin;
-      i_end = description[i].end;
-      
-      fprintf(archive, "++++++++++++++++++++++ INTRON %u ++++++++++++++++++++++\n\n", intron_counter);
-      fprintf(archive, "LISTA DE ALELOS      |            AMOSTRA            |\n");
+      //fechar o arquivo anterior
+      if (id_temp)
+        fclose(archive);
 
 
-      for (j = 0; j < parameters->total_of_samples; ++j)
+      id_temp = auxiliar_i->id;
+      snprintf(folder, strlen(path)+1, "%s", path);
+    
+      snprintf(intron, 12, "%s", "seq-intron0");
+      snprintf(id, 10, "%d", (int)auxiliar_i->id);
+      strcat(intron, id);
+
+
+      strcat(folder, "/");
+      strcat(folder, intron);
+    
+      snprintf(filename, strlen(folder)+1, "%s", folder);
+
+      strcat(filename, txt);
+
+      //abrir um novo arquivo
+      archive = fopen(filename, "w");
+
+      if (!archive)
       {
-        if (!verify_region(i_begin, i_end, samples[j].allele[0].size, samples[j].allele[0].regions))
-        {
-          fprintf(archive, "%*s | %*s %*s\n", -20, samples[j].allele[0].name, 22, samples[j].id, 8,"|");
-
-          if (samples[j].homozygous == true)
-            fprintf(archive, "%*s | %*s %*s\n", -20, samples[j].allele[0].name, 22, samples[j].id, 8,"|");
-        }
-
-        if (samples[j].homozygous == false)
-        {
-          if (!verify_region(i_begin, i_end, samples[j].allele[1].size, samples[j].allele[1].regions))
-          {
-            fprintf(archive, "%*s | %*s %*s\n", -20, samples[j].allele[1].name, 22, samples[j].id, 8,"|");
-          }
-        }
+        fprintf(stderr, "Erro na função results_one_file_fastaI\n");
+        exit(-1);
       }
-    fprintf(archive, "\n\n\n\n");
+      counter = 0;
+    }
+    else
+    {
+      counter++;    
+      fprintf(archive, ">INTRON %d.%d  %lu bp\n%s\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+      auxiliar_i = auxiliar_i->next;
     }
   }
   fclose(archive);
 }; //FINALIZADO
 
 
-void results_used_table(al_list *L, int intron_counter, char *locus, char *p)
+void results_one_file_fastaE(char *locus, char *p, ie_list *L)
 {
-  al_node *auxiliar = NULL;
+  ie_node *auxiliar_i = NULL;
+  char id[10];
   char path[BUFFERSIZE];
   char filename[BUFFERSIZE];
   char results[BUFFERSIZE];
+  char folder[BUFFERSIZE];
   char txt[BUFFERSIZE];
-  int i;
+  char intron[BUFFERSIZE];
+  int counter, id_temp = 0;
   FILE *archive;
 
   snprintf(path, strlen(p)+1, "%s", p);
-  
+
   snprintf(results, 10, "%s", "/RESULTS/");
-  snprintf(txt, 5, "%s", ".txt");
+  snprintf(txt, 7, "%s", ".fasta");
 
   strcat(path, results);
   strcat(path, locus);
-  strcat(path, "/");
 
 
-  //IMPRESSÃO DE ALELOS NÃO USADOS
-  snprintf(filename, strlen(path)+1, "%s", path);
-  strcat(filename, "used_table");
-  strcat(filename, txt);
-
-  archive = fopen(filename, "w");
-  if (!archive)
+  auxiliar_i = L->head;
+  while (auxiliar_i)
   {
-    fprintf(stderr, "NÃO FOI POSSÍVEL ABRIR/CRIAR O ARQUIVO! (rejected.txt na função results_statistics)\n");
-    exit(-1);
-  }
-
-  //printf("FILENAME[2] = %s, tamanho = %lu\n", filename, strlen(filename));
-  fprintf(archive, "(TABELA) - LEVANTAMENTO DA QUANTIDADE DE ALELOS UTILIZADOS PARA O LOCUS %s\n\n", locus);
-
-
-  fprintf(archive, "LISTA DE ALELOS          |");
-  for (i = 0; i < intron_counter; ++i)
-  {
-    fprintf(archive, "%*s %d %*s", 12, "INTRON", i+1, 3, "|");
-  }
-    fprintf(archive, "\n");
-
-
-
-  auxiliar = L->head;
-  while (auxiliar)
-  {
-    fprintf(archive, "%*s %*s", -15, auxiliar->allele, 10, "|");
-
-    for (i = 0; i < intron_counter; ++i)
+    if (id_temp != auxiliar_i->id)
     {
-      fprintf(archive, "%*d %*s", 12, auxiliar->alleles_used[i], 5, "|");
-    }
-    fprintf(archive, "\n");
+      //fechar o arquivo anterior
+      if (id_temp)
+        fclose(archive);
 
-    auxiliar = auxiliar->next;
+
+      id_temp = auxiliar_i->id;
+      snprintf(folder, strlen(path)+1, "%s", path);
+    
+      snprintf(intron, 10, "%s", "seq-exon0");
+      snprintf(id, 10, "%d", (int)auxiliar_i->id);
+      strcat(intron, id);
+
+
+      strcat(folder, "/");
+      strcat(folder, intron);
+    
+      snprintf(filename, strlen(folder)+1, "%s", folder);
+
+      strcat(filename, txt);
+
+      //abrir um novo arquivo
+      archive = fopen(filename, "w");
+
+      if (!archive)
+      {
+        fprintf(stderr, "Erro na função results_one_file_fastaE\n");
+        exit(-1);
+      }
+      counter = 0;
+    }
+    else
+    {
+      counter++;    
+      fprintf(archive, ">EXON %d.%d  %lu bp\n%s\n", auxiliar_i->id, counter, strlen(auxiliar_i->sequence), auxiliar_i->sequence);
+      auxiliar_i = auxiliar_i->next;
+    }
   }
   fclose(archive);
 }; //FINALIZADO

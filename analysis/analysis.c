@@ -1,4 +1,5 @@
-// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED 2> not_contigous[HLA-A].txt
+// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -k intron -r /mnt/hgfs/SHARED 2> not_contigous[HLA-A].txt
+// ./analysis -l HLA-A -d ~/LIGH/TESTE/HLA-A.txt -k intron -r ~/LIGH/TESTE
 // valgrind --leak-check=full ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,13 +19,11 @@ static void usage(char *progname)
 
 int main (int argc, char *argv[])
 {
-	int opt, intron_counter, int_counter;
-  char *locus, *archive, *path, *int_c  = NULL;
+	int opt;
+  char *locus, *archive, *path, *type_analysis  = NULL;
 
-  des *description;
   sample *samples;
   global *parameters = (global *) malloc (sizeof(global));
-  i_list *intron_list = (i_list *) malloc (sizeof(i_list));
   al_list *allele_list = (al_list *) malloc (sizeof(al_list));
 
 
@@ -34,7 +33,7 @@ int main (int argc, char *argv[])
   if ( argc < 9 )
     usage(argv[0]);
   //l:d: - o uso do : significa que l recebe um parâmetro adicional, assim como o d
-  while ( (opt = getopt (argc, argv, "l:d:r:i:")) != -1 )
+  while ( (opt = getopt (argc, argv, "l:d:r:k:")) != -1 )
   {
     switch (opt)
     {
@@ -50,8 +49,8 @@ int main (int argc, char *argv[])
         path = optarg;
         break;
 
-      case 'i':
-        int_c = optarg;
+      case 'k':
+        type_analysis = optarg;
         break;
 
       case ':':
@@ -67,19 +66,18 @@ int main (int argc, char *argv[])
     }
   }
 /* ====================== FIM DO TRATAMENTO DE LINHA DE COMANDO ====================== */
-  
-  
+
   printf("LOCUS = %s\n", locus);
   printf("PATH TO FILE = %s\n", archive);
+  printf("type_analysis = %s\n", type_analysis);
 
   read_parameters(parameters, archive);
 
-  description = allocate_desc(parameters->number_of_regions);
   samples = allocate_samp(parameters->total_of_samples);
   
-  if (samples && description)
+  if (samples)
   {
-    read_file(archive, description, samples);
+    read_file(archive, samples, parameters);
   }
   else
   {
@@ -88,63 +86,63 @@ int main (int argc, char *argv[])
   }
 
 
-  //FAZER A EXCLUSÃO DAS AMOSTRAS AQUI
-  int_counter = atoi(int_c);
-  remove_samples(parameters, description, samples, int_counter);
-
-
-
-
-
   printf("TOTAL OF SAMPLES = %d\n", parameters->total_of_samples);
   printf("TOTAL OF ALLELES = %d\n", parameters->total_of_alleles);
   printf("\n\n");
-  printf("\nNUMBER OF REGIONS (description) = %d\n", parameters->number_of_regions);
 
   
-  //IMPRESSÃO DO CABEÇALHO E DA LISTA DE AMOSTRAS ENCONTRADAS
-  impressao_d(description, parameters->number_of_regions);
+  //IMPRESSÃO DA LISTA DE AMOSTRAS ENCONTRADAS
   //impressao_s(samples, parameters->total_of_samples);
 
 
-
-  //ANÁLISE
-  initialize_i_list(intron_list);
-  intron_counter = analysis_freq_intron(parameters, description, samples, intron_list);
-  analysis_freq_allele(parameters, description, samples, allele_list, intron_counter);
-
-  printf("\nTHE LOCUS %s HAS %d INTRONS IN THE DNA SEQUENCE.\n", locus, intron_counter);
-  printf("\nNUMBER OF INTRONS FOUNDED (all locus included) = %d\n", intron_list->size);
-  printf("\nSAVING LOCATION = %s/RESULTS/%s\n", path, locus);
-
+  
+  //ANÁLISE de INTRON
+  if (!strcmp(type_analysis, "intron"))
+  {
+    ie_list *intron_list = (ie_list *) malloc (sizeof(ie_list));
+    initialize_ie_list(intron_list);
+    analysis_freq_intron(parameters, samples, intron_list);
+    //analysis_freq_allele(parameters, description, samples, allele_list, intron_counter);
 
 
+    printf("\nTHE LOCUS %s HAS %d INTRONS IN THE DNA SEQUENCE.\n", locus, parameters->N_REGIONS);
+    printf("\nNUMBER OF INTRONS FOUNDED (all locus included) = %d\n", intron_list->size);
+    printf("\nSAVING LOCATION = %s/RESULTS/%s\n", path, locus);
 
-  //IMPRESSÃO DO RESULTADO
-  //impressao_r(intron_list);
-  results_many_files(locus, path, intron_list);
-  results_one_file(locus, path, intron_list);
-  results_statistics(parameters, locus, path, allele_list);
-  results_rejected_list(parameters, description, samples, locus, path);
-  results_used_table(allele_list, intron_counter, locus, path);
+    //IMPRESSÃO DO RESULTADO
+    //impressao_r(intron_list);
+    
+    results_many_files_i(locus, path, intron_list);
+    results_one_file_i(locus, path, intron_list);
+    results_one_file_fastaI(locus, path, intron_list);
+    //results_statistics(parameters, locus, path, allele_list);
+
+  }
+  else
+  {
+    ie_list *exon_list = (ie_list *) malloc (sizeof(ie_list));
+    initialize_ie_list(exon_list);
+    analysis_freq_exon(parameters, samples, exon_list);
+
+
+    printf("\nTHE LOCUS %s HAS %d EXONS IN THE DNA SEQUENCE.\n", locus, parameters->N_REGIONS);
+    printf("\nNUMBER OF EXONS FOUNDED (all locus included) = %d\n", exon_list->size);
+    printf("\nSAVING LOCATION = %s/RESULTS/%s\n", path, locus);
+
+    //IMPRESSÃO DO RESULTADO
+    //impressao_r(exon_list);
+
+    results_many_files_e(locus, path, exon_list);
+    results_one_file_e(locus, path, exon_list);
+    results_one_file_fastaE(locus, path, exon_list);
+  }
   
 
-
-  //DESALOCAGEM
-  deallocate_desc(description);
-  //printf("finalizou    deallocate_desc\n");
-
-  deallocate_sample(samples);
+  //deallocate_sample(samples);
   //printf("finalizou    deallocate_sample\n");
   
-  deallocate_global(parameters);
+  //deallocate_global(parameters);
   //printf("finalizou    deallocate_global\n");
-
-  //deallocate_i_list(intron_list);
-  //printf("finalizou    deallocate_i_list\n");
-
-  //deallocate_al_list(allele_list);
-  //printf("finalizou    deallocate_al_list\n");
 
 
 return 0;

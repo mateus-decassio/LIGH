@@ -4,7 +4,7 @@
 cd python
 python3 extraction_TXT_v4.py -d /mnt/hgfs/SHARED -k intron
 
-cd ../analysis2
+cd ../analysis
 make
 
 ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -k intron -r /mnt/hgfs/SHARED
@@ -18,7 +18,7 @@ make
 cd ../python
 python3 extraction_TXT_v4.py -d /mnt/hgfs/SHARED -k exon
 
-cd ../analysis2
+cd ../analysis
 
 ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -k exon -r /mnt/hgfs/SHARED
 

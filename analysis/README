@@ -1,7 +1,4 @@
-código ideal para fazer a filtragem dos arquivos com sequência não contígua e incompleta.
+código que está funcionando direitinho o corte das amostras.
 
-NÃO ESTÁ FUNCIONANDO DIREITO O CORTE. VER analysis2
-
-
-Código em python que funciona para a extração desses dados: extraction_TXT_v3
+Código em python que funciona para a extração desses dados: extraction_TXT_v4
 

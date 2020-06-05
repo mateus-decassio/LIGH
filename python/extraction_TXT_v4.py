@@ -90,6 +90,10 @@ for dir in directories:
                         count_feat += 1
                 parameter = str(count_feat)+to_print+"/\n"
                 
+                if (dir == 'HLA-C'):
+                    parameter = parameter.replace('<', '')
+                    parameter = parameter.replace('>', '')
+                
                 w_file.write(parameter)
                 
                 fasta = sample+'/\n'+match_ID+'/\n'+sequence+'\n'

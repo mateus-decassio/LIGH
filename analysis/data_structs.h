@@ -1,13 +1,6 @@
 #ifndef __DATA_STRUCTS__
 #define __DATA_STRUCTS__
 
-typedef struct
-{
-    int begin;              //início daquele ID
-    int end;                //fim daquele ID
-    char *id;               //guarda o ID (UTR, INTRO, EXON)
-} des;
-
 
 typedef struct
 {
@@ -31,6 +24,7 @@ typedef struct
     int valid;              //0-VÁLIDO   1-INVÁLIDO por sequência não contígua   2 - INVÁLIDO por não ter todos os íntrons
     bool homozygous;
     char *id;               //guarda o identificador da amostra
+    int pos_begining;       //guarda a posição inicial do primeiro nucleotídeo da amostra
     alleles *allele;        //guarda o vetor de alelos que essa amostra possui. Esse valor só pode ser
                             //1 (homozigoto) ou 2 (heterozigoto)
 } __attribute__((packed, aligned(1))) sample;
@@ -38,9 +32,9 @@ typedef struct
 
 typedef struct
 {
-    unsigned int number_of_regions;
     unsigned int total_of_samples;
     unsigned int total_of_alleles;
+    unsigned int N_REGIONS;
 } global;
 
 
@@ -63,21 +57,21 @@ typedef struct al_list
 
 //-------------------------------------------------------------------------------------------------
 
-typedef struct i_node
+typedef struct ie_node
 {
 	short int id;           //guarda o valor de qual intron aquele nó esta quardando(1,2,3,4,...)
-    struct i_node *next;    //ponteiro para o próximo elemento da lista
+    struct ie_node *next;    //ponteiro para o próximo elemento da lista
     char *sequence;         //guarda a sequência recortada do íntron da sequência maior
     al_list *list;          //lista de alelos encontrados para aquela sequência naquele nó 
-} __attribute__((packed, aligned(1))) i_node;
+} __attribute__((packed, aligned(1))) ie_node;
 
 
 typedef struct i_list
 {
     int size;
-	struct i_node *head;      //cabeça da lista
-	struct i_node *tail;      //cauda da lista
-    struct i_node *point;     //ponteiro apontando para a cauda parcial (a busca por diferentes regiões de íntrons (1,2,3,...) para comparar o resultado é feita a partir dele)
-} __attribute__((packed, aligned(1))) i_list;
+	struct ie_node *head;      //cabeça da lista
+	struct ie_node *tail;      //cauda da lista
+    struct ie_node *point;     //ponteiro apontando para a cauda parcial (a busca por diferentes regiões de íntrons (1,2,3,...) para comparar o resultado é feita a partir dele)
+} __attribute__((packed, aligned(1))) ie_list;
 
 #endif

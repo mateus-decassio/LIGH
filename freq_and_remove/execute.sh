@@ -1,7 +1,6 @@
 #!/bin/bash
 
 
-cd analysis2
 make
 
 ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED -i 7 2> not_contigous[HLA-A].txt
