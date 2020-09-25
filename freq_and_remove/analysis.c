@@ -1,4 +1,4 @@
-// ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED 2> not_contigous[HLA-A].txt
+// ./analysis -l HLA-B -d /mnt/hgfs/SHARED/HLA-B.txt -r /mnt/hgfs/SHARED 2> not_contigous[HLA-B].txt
 // valgrind --leak-check=full ./analysis -l HLA-A -d /mnt/hgfs/SHARED/HLA-A.txt -r /mnt/hgfs/SHARED
 #include <stdio.h>
 #include <stdlib.h>

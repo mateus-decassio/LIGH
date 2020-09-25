@@ -1,0 +1,1 @@
+Forma de uso: ./analysis -l <locus[HLA-A/B/C/...]> -d <path_to_file.txt>
